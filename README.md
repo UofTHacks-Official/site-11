@@ -1,1 +1,17 @@
-# site-11
+# Site-11
+
+## Getting Started
+
+Install the required dependencies by running the following command in the terminal of the root folder (site-11):
+
+```bash
+npm ci
+```
+
+Then start the development server by running:
+
+```bash
+npm run dev
+```
+
+Open your web browser and go to http://localhost:3000 to view the app.
