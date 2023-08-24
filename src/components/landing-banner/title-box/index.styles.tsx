@@ -2,27 +2,32 @@ import styled from "styled-components";
 
 const TitleBoxContainer = styled.div`
   display: inline-flex;
+  position: absolute;
   padding: 40px 60px 20px 60px;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  height: 30%;
-  width: 54.6%;
+  height: 216px;
+  width: 1000px;
   border-radius: 5px;
   border: 2px solid var(--black, #282828);
   background: var(--white, #F9F9F9);
   /* Default Shadow */
   box-shadow: 0px 4px 0px 0px #282828;
-  padding: 20px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding: 0px;
   z-index: 1;
+  @media screen and (max-width: 1328px) {
+    width: 800px;
+  }
+  @media screen and (max-width: 697px) {
+    top: 45%;
+    height: 20%;
+    width: 80%;
+  }
 `;
 
 const InnerTitleBoxContainer = styled.div`
-  margin-top: 3%;
+  padding-top: 1%;
   width: 84%;
   display: flex;
   flex-direction: column;
@@ -44,11 +49,25 @@ const MainTitleContainer = styled.h1`
 
   /* H1 */
   font-family: Subjectivity;
-  font-size: 10em;
+  font-size: 9em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -4.8px;
+
+  @media screen and (max-width: 1813px) {
+    font-size: 9em; 
+  }
+  @media screen and (max-width: 1633px) {
+    font-size: 7em; 
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 4.7em; 
+  }
+  @media screen and (max-width: 568px) {
+    font-size: 4.1em;
+  }
+
 `;
 
 const SubTitleContainer = styled.p`
@@ -56,6 +75,15 @@ const SubTitleContainer = styled.p`
   text-align: center;
   font-family: Inter;
   font-size: 2em;
+  @media screen and (max-width: 1070px) {
+    font-size: 1.7em; 
+  }
+  @media screen and (max-width: 700px) {
+    font-size: 2em; 
+  }
+  @media screen and (max-width: 568px) {
+    font-size: 1.7em;
+  }
   font-style: normal;
   font-weight: 700;
   line-height: normal;
