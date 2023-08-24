@@ -71,4 +71,4 @@ const SecondaryButtonTextContainer = styled.div`
   letter-spacing: 0.28px;
   text-transform: uppercase;
 `;
-export { ButtonGroupContainer, PrimaryButtonContainer, PrimaryButtonTextContainer, SecondaryButtonContainer, SecondaryButtonTextContainer};
+export { ButtonGroupContainer, PrimaryButtonContainer, PrimaryButtonTextContainer, SecondaryButtonContainer, SecondaryButtonTextContainer };
