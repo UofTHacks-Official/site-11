@@ -1,31 +1,30 @@
-import styled from "styled-components";
-import { ButtonGroupContainer, ButtonContainer, ButtonTextContainer } from "./index.styles";
+import { ButtonGroupContainer, PrimaryButtonContainer, PrimaryButtonTextContainer, SecondaryButtonContainer, SecondaryButtonTextContainer} from "./index.styles";
 
 interface ButtonProps {
-    section: number;
+    appsOpen: boolean;
 }
 
-const getButtonColor = (ColourNum: number) => {
-    switch (ColourNum) {
-      case 1:
-        return "#2850A0";
-      case 2:
-        return "#F0A0C8";
-      default:
-        return "#282828";
-    }
-  };
-
-
-const ButtonGroup = () => {
-  return <ButtonGroupContainer>
-    <ButtonContainer>
-      <ButtonTextContainer>Apply</ButtonTextContainer>
-    </ButtonContainer>
-    <ButtonContainer>
-      <ButtonTextContainer>Sponsor</ButtonTextContainer>
-    </ButtonContainer>
+const ButtonCollection = ({ appsOpen }: ButtonProps) => {
+  if (appsOpen == true) {
+    return <ButtonGroupContainer>
+    <PrimaryButtonContainer>
+      <PrimaryButtonTextContainer>Apply</PrimaryButtonTextContainer>
+    </PrimaryButtonContainer>
+    <SecondaryButtonContainer>
+      <SecondaryButtonTextContainer>Sponsor</SecondaryButtonTextContainer>
+    </SecondaryButtonContainer>
   </ButtonGroupContainer>
+  } else {
+    return <ButtonGroupContainer>
+    <PrimaryButtonContainer>
+      <PrimaryButtonTextContainer>INTERESTED IN SPONSORING?</PrimaryButtonTextContainer>
+    </PrimaryButtonContainer>
+  </ButtonGroupContainer>
+  }
+} 
+
+const ButtonGroup = ({appsOpen}:ButtonProps) => {
+  return <ButtonCollection appsOpen = { appsOpen }/>
 };
 
 export default ButtonGroup;

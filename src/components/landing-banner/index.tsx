@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { LandingBannerContainer, QuadrantContainer, QuadrantRowContainer } from "./index.styles";
 import Quandrant from "./quadrant";
 import TitleBox from "./title-box";
@@ -7,9 +6,10 @@ import ButtonGroup from "./button-group";
 interface LandingBannerProps {
   mainTitle: string
   subTitle: string
+  appsOpen: boolean
 }
 
-const LandingBanner = ({mainTitle, subTitle} : LandingBannerProps) => {
+const LandingBanner = ({mainTitle, subTitle, appsOpen} : LandingBannerProps) => {
   return (
     <LandingBannerContainer> 
       <QuadrantContainer>
@@ -23,7 +23,7 @@ const LandingBanner = ({mainTitle, subTitle} : LandingBannerProps) => {
         </QuadrantRowContainer >
       </QuadrantContainer>
       <TitleBox mainTitle= { mainTitle } subTitle= { subTitle }/>
-      <ButtonGroup/>
+      <ButtonGroup appsOpen= {appsOpen}/>
     </LandingBannerContainer>
   );
 };
