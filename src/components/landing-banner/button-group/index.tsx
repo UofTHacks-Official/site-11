@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ButtonGroupContainer, ButtonContainer } from "./index.styles";
+import { ButtonGroupContainer, ButtonContainer, ButtonTextContainer } from "./index.styles";
 
 interface ButtonProps {
     section: number;
@@ -19,8 +19,12 @@ const getButtonColor = (ColourNum: number) => {
 
 const ButtonGroup = () => {
   return <ButtonGroupContainer>
-    <ButtonContainer>Apply</ButtonContainer>
-    <ButtonContainer>Sponsor</ButtonContainer>
+    <ButtonContainer>
+      <ButtonTextContainer>Apply</ButtonTextContainer>
+    </ButtonContainer>
+    <ButtonContainer>
+      <ButtonTextContainer>Sponsor</ButtonTextContainer>
+    </ButtonContainer>
   </ButtonGroupContainer>
 };
 

@@ -8,13 +8,13 @@ interface QuandrantProps {
 const getQuadrantColor = (section: number) => {
     switch (section) {
       case 1:
-        return "#2850A0";
+        return "#007D7D";
       case 2:
         return "#F0A0C8";
       case 3:
         return "#A050A0";
       case 4:
-        return "#F0C800";
+        return "#F0A000";
       default:
         return "#ffffff";
     }
