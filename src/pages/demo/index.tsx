@@ -5,7 +5,7 @@ type DemoAppProps = {
 };
 
 const DemoApp = ({ isMobile }: DemoAppProps) => {
-  return <DemoAppComponent isMobile={isMobile}/>;
+  return <DemoAppComponent isMobile={isMobile} />;
 };
 
 export default DemoApp;
