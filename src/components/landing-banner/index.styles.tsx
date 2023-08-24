@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const LandingBannerContainer = styled.div`
-  display: grid;
+  align-items: center;
+  display: flex;
   flex-direction: column;
   color: black;
   font-size: 14px;
@@ -9,7 +10,7 @@ const LandingBannerContainer = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
   margin: 3% 10%;
-  min-height: 70%;
+  min-height: 80%;
 `;
 
 const QuadrantRowContainer = styled.div`
@@ -18,4 +19,11 @@ const QuadrantRowContainer = styled.div`
   width: 100%;
 `;
 
-export { LandingBannerContainer, QuadrantRowContainer };
+const QuadrantContainer = styled.div`
+  display: grid;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+`;
+
+export { LandingBannerContainer, QuadrantContainer, QuadrantRowContainer };

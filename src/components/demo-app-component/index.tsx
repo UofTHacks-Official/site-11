@@ -9,7 +9,7 @@ const DemoAppComponent = ({ isMobile }: DemoAppProps) => {
   return (
     <MainContainer>
       <h1>{isMobile ? <span>Mobile</span> : <span>Desktop</span>}</h1>
-      <LandingBanner/>
+      <LandingBanner mainTitle="UofTHacks 11" subTitle="MONTH XX, 2024" />
     </MainContainer>
   );
 };
