@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { QuandrantContainer } from "./index.styles";
+import React from "react";
 
 interface QuandrantProps {
   section: number;

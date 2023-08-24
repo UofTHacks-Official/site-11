@@ -1,4 +1,5 @@
 import { ButtonGroupContainer, PrimaryButtonContainer, PrimaryButtonTextContainer, SecondaryButtonContainer, SecondaryButtonTextContainer } from "./index.styles";
+import React from "react";
 
 interface ButtonProps {
   appsOpen: boolean;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { TitleBoxContainer, InnerTitleBoxContainer, MainTitleContainer, SubTitleContainer } from "./index.styles";
+import React from "react";
 
 interface TitleBoxProps {
   mainTitle: string;

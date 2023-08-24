@@ -2,6 +2,7 @@ import { LandingBannerContainer, QuadrantContainer, QuadrantRowContainer } from 
 import Quandrant from "./quadrant";
 import TitleBox from "./title-box";
 import ButtonGroup from "./button-group";
+import React from "react";
 
 interface LandingBannerProps {
   mainTitle: string
