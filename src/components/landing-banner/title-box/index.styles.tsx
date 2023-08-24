@@ -75,15 +75,6 @@ const SubTitleContainer = styled.p`
   text-align: center;
   font-family: Inter;
   font-size: 2em;
-  @media screen and (max-width: 1070px) {
-    font-size: 1.7em; 
-  }
-  @media screen and (max-width: 700px) {
-    font-size: 2em; 
-  }
-  @media screen and (max-width: 568px) {
-    font-size: 1.7em;
-  }
   font-style: normal;
   font-weight: 700;
   line-height: normal;
