@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { LandingBannerContainer, QuadrantContainer, QuadrantRowContainer } from "./index.styles";
 import Quandrant from "./quadrant";
 import TitleBox from "./title-box";
+import ButtonGroup from "./button-group";
 
 interface LandingBannerProps {
   mainTitle: string
@@ -22,6 +23,7 @@ const LandingBanner = ({mainTitle, subTitle} : LandingBannerProps) => {
         </QuadrantRowContainer >
       </QuadrantContainer>
       <TitleBox mainTitle= { mainTitle } subTitle= { subTitle }/>
+      <ButtonGroup/>
     </LandingBannerContainer>
   );
 };
