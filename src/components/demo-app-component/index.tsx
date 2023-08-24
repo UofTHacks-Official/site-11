@@ -1,5 +1,5 @@
 import { MainContainer } from "./index.styles";
-import LandingBanner from "../landing-banner/LandingBanner"
+import LandingBanner from "../landing-banner"
 
 type DemoAppProps = {
   isMobile: boolean | null;
