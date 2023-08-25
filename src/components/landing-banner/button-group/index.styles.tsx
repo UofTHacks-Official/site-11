@@ -31,7 +31,6 @@ const PrimaryButtonTextContainer = styled.div`
   text-edge: cap;
 
   /* Button */
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -63,7 +62,6 @@ const SecondaryButtonTextContainer = styled.div`
   text-edge: cap;
 
   /* Button */
-  font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;

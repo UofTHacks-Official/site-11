@@ -52,7 +52,6 @@ const MainTitleContainer = styled.h1`
   text-shadow: 0px 4px 0px #282828;
 
   /* H1 */
-  font-family: Subjectivity;
   font-size: 9em;
   font-style: normal;
   font-weight: 700;
@@ -74,11 +73,10 @@ const MainTitleContainer = styled.h1`
 const SubTitleContainer = styled.p`
   color: var(--black, #282828);
   text-align: center;
-  font-family: Inter;
   font-size: 2em;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 `;
 
-export { TitleBoxContainer, InnerTitleBoxContainer, MainTitleContainer, SubTitleContainer};
+export { TitleBoxContainer, InnerTitleBoxContainer, MainTitleContainer, SubTitleContainer };
