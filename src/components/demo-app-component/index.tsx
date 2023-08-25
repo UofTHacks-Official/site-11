@@ -1,11 +1,12 @@
 import { MainContainer } from "./index.styles";
 import LandingBanner from "../landing-banner"
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
-type DemoAppProps = {
-  isMobile: boolean | null;
-};
+// This component is just a demo component
+// You can delete it and create your own component
+const CreateNewComponent = () => {
+  const isMobile = useMobileDetect();
 
-const DemoAppComponent = ({ isMobile }: DemoAppProps) => {
   return (
     <MainContainer>
       <h1>{isMobile ? <span>Mobile</span> : <span>Desktop</span>}</h1>
@@ -14,4 +15,4 @@ const DemoAppComponent = ({ isMobile }: DemoAppProps) => {
   );
 };
 
-export default DemoAppComponent;
+export default CreateNewComponent;
