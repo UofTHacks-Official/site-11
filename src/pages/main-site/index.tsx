@@ -1,7 +1,17 @@
-import CreateNewComponent from "@/components/demo-app-component";
+import LandingPage from "@/modules/landing-page";
+import AboutUs from "@/modules/about-us";
+import Sponsors from "@/modules/Sponsorship";
+import FAQ from "@/modules/FAQ";
 
 const Site11 = () => {
-  return <CreateNewComponent />;
+  return (
+    <>
+      <LandingPage />
+      <AboutUs />
+      <Sponsors />
+      <FAQ />
+    </>
+  );
 };
 
 export default Site11;

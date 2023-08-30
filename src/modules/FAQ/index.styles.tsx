@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-const MainContainer = styled.div`
+const FAQContainer = styled.div`
   display: flex;
   flex-direction: column;
-  color: black;
-  font-size: 14px;
   height: 100vh;
+  width: 100vw;
+  background-color: red;
 `;
 
-export { MainContainer };
+export { FAQContainer };
