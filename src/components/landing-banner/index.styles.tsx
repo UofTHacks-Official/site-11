@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const LandingBannerContainer = styled.div`
   align-items: center;
-  position: relative;
   justify-content: center;
   align-items: center;
   border-radius: 25px;

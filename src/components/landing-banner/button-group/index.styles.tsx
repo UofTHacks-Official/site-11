@@ -14,29 +14,14 @@ const PrimaryButtonContainer = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s ease-out;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
   border-radius: 15px;
   border: 2px solid var(--black, #282828);
   background: var(--black, #282828);
 `;
 
 const PrimaryButtonTextContainer = styled.div`
-  color: var(--white, #F9F9F9);
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-
-  /* Button */
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.28px;
   text-transform: uppercase;
+  color: var(--white, #f9f9f9);
 `;
 
 const SecondaryButtonContainer = styled.button`
@@ -45,28 +30,19 @@ const SecondaryButtonContainer = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s ease-out;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
   border-radius: 15px;
   border: 2px solid var(--black, #282828);
-  color: solid var(--white, #F9F9F9);
+  color: solid var(--white, #f9f9f9);
 `;
 
 const SecondaryButtonTextContainer = styled.div`
-  color: var(--black, #282828);
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-
-  /* Button */
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.28px;
   text-transform: uppercase;
+  color: var(--black, #282828);
 `;
-export { ButtonGroupContainer, PrimaryButtonContainer, PrimaryButtonTextContainer, SecondaryButtonContainer, SecondaryButtonTextContainer };
+export {
+  ButtonGroupContainer,
+  PrimaryButtonContainer,
+  PrimaryButtonTextContainer,
+  SecondaryButtonContainer,
+  SecondaryButtonTextContainer,
+};

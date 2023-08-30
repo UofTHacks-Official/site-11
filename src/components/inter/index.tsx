@@ -33,7 +33,6 @@ const InterFont = css<StyledInterTextProps>`
 const StyledInterText = styled.p<StyledInterTextProps>`
   ${InterFont}
   font-family: Inter;
-  color: #282828;
   text-align: center;
   font-size: 20px;
   font-style: normal;

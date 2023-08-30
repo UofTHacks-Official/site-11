@@ -3,7 +3,11 @@ import LandingBanner from "@/components/landing-banner";
 const LandingPage = () => {
   return (
     <LandingPageContainer>
-      <LandingBanner mainTitle="UofTHacks 11" subTitle="JANUARY, 2024" appsOpen={false} />
+      <LandingBanner
+        mainTitle="UofTHacks 11"
+        subTitle="JANUARY, 2024"
+        appsOpen={false}
+      />
     </LandingPageContainer>
   );
 };

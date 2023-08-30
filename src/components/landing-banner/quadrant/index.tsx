@@ -9,24 +9,48 @@ interface QuandrantProps {
 const getQuadrantColor = (section: number) => {
   switch (section) {
     case 1:
-      return "#007D7D";
+      return `background-color: #007D7D;
+              border-top-left-radius: 24px;
+              @media screen and (max-width: 700px) {
+                border-top-left-radius: 0;
+            
+              }
+      `;
     case 2:
-      return "#F0A0C8";
+      return `background-color: #F0A0C8;
+              border-top-right-radius: 24px;
+              @media screen and (max-width: 700px) {
+                border-top-right-radius: 0;
+            
+              }
+      `;
     case 3:
-      return "#A050A0";
+      return `background-color: #A050A0;
+              border-bottom-left-radius: 24px;
+              @media screen and (max-width: 700px) {
+                border-bottom-left-radius: 0;
+            
+              }
+      `;
     case 4:
-      return "#F0A000";
+      return `background-color: #F0A000;
+              border-bottom-right-radius: 24px;
+              @media screen and (max-width: 700px) {
+                border-bottom-right-radius: 0;
+            
+              }
+      `;
     default:
-      return "#ffffff";
+      return `background-color: #ffffff;`;
   }
 };
 
-const ColourQuadrant = styled(QuandrantContainer) <QuandrantProps>`
-  background-color: ${(props) => getQuadrantColor(props.section)};
+const ColourQuadrant = styled(QuandrantContainer)<QuandrantProps>`
+  ${(props) => getQuadrantColor(props.section)};
 `;
 
 const Quandrant = ({ section }: QuandrantProps) => {
-  return <ColourQuadrant section={section} />
+  return <ColourQuadrant section={section} />;
 };
 
 export default Quandrant;
