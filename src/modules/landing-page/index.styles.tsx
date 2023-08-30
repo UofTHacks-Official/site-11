@@ -5,7 +5,7 @@ const LandingPageContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: blue;
+  background-color: white;
 `;
 
 export { LandingPageContainer };

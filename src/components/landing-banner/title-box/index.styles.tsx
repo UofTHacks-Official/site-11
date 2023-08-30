@@ -16,18 +16,6 @@ const TitleBoxContainer = styled.div`
   box-shadow: 0px 4px 0px 0px #282828;
   padding: 0px;
   z-index: 1;
-  @media screen and (max-width: 1300px) {
-    width: 95%; 
-    height: 200px;
-  }
-  @media screen and (max-width: 933px) {
-    height: 175px;
-    
-  }
-  @media screen and (max-width: 697px) {
-    height: 150px;
-    
-  }
 `;
 
 const InnerTitleBoxContainer = styled.div`
@@ -52,28 +40,16 @@ const MainTitleContainer = styled.h1`
   text-shadow: 0px 4px 0px #282828;
 
   /* H1 */
-  font-size: 9em;
+  font-size: 96px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: -4.8px;
-
-  @media screen and (max-width: 1300px) {
-    font-size: 7.0em; 
-  }
-
-  @media screen and (max-width: 933px) {
-    font-size: 6em; 
-  }
-  @media screen and (max-width: 700px) {
-    font-size: 4.7em; 
-  }
 `;
 
 const SubTitleContainer = styled.p`
-  color: var(--black, #282828);
   text-align: center;
-  font-size: 2em;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;

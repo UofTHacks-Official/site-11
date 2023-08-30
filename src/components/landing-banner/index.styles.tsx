@@ -5,13 +5,10 @@ const LandingBannerContainer = styled.div`
   position: relative;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  color: black;
-  font-size: 14px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
   margin: 5% 10%;
   min-height: 680px;
   border: 1px solid var(--black, #282828);

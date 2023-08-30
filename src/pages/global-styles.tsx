@@ -1,16 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { Inter, Roboto } from 'next/font/google'
-
-export const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-})
-
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 
 export const subjectivity = `
 @font-face {
