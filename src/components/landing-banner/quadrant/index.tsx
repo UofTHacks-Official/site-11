@@ -5,7 +5,7 @@ import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 interface QuandrantProps {
   section: number;
-  mobile: boolean;
+  mobile?: boolean;
 }
 
 const getQuadrantStyle = (section: number, mobile: boolean) => {

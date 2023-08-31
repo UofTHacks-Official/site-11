@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 type LandingBannerProps = {
-  mobile: boolean;
+  mobile?: boolean;
 };
 
 const LandingBannerContainer = styled.div<LandingBannerProps>`

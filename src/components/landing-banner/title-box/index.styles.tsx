@@ -43,6 +43,11 @@ const MainTitleContainer = styled.div`
   justify-content: center;
 `;
 
+const ShiftedContainer = styled.span`
+  display: inline-block;
+  transform: translateX(-1%);
+`;
+
 const SubTitleContainer = styled.div`
   text-align: center;
   line-height: normal;
@@ -52,5 +57,6 @@ export {
   TitleBoxContainer,
   InnerTitleBoxContainer,
   MainTitleContainer,
+  ShiftedContainer,
   SubTitleContainer,
 };
