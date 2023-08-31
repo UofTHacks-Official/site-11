@@ -6,6 +6,7 @@ type FontStyle = "regular" | "bold" | "semibold";
 type StyledInterTextProps = {
   style?: React.CSSProperties;
   fontStyle?: FontStyle;
+  mobile?: boolean;
 };
 
 const getFontSrc = (fontStyle: FontStyle) => {
@@ -34,10 +35,7 @@ const StyledInterText = styled.p<StyledInterTextProps>`
   ${InterFont}
   font-family: Inter;
   text-align: center;
-  font-size: 20px;
-  @media screen and (max-width: 875px) {
-    font-size: 10px;
-  }
+  font-size: ${(props) => (props.mobile ? "10px" : "20px")};
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -45,11 +43,12 @@ const StyledInterText = styled.p<StyledInterTextProps>`
 
 type InterProps = StyledInterTextProps & {
   children: ReactNode;
+  mobile: boolean;
 };
 
-const Inter: React.FC<InterProps> = ({ children, style, ...props }) => {
+const Inter: React.FC<InterProps> = ({ children, style, mobile, ...props }) => {
   return (
-    <StyledInterText style={style} {...props}>
+    <StyledInterText style={style} mobile={mobile} {...props}>
       {children}
     </StyledInterText>
   );

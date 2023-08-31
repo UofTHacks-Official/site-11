@@ -21,10 +21,10 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
     <TitleBoxContainer mobile={isMobile}>
       <InnerTitleBoxContainer mobile={isMobile}>
         <MainTitleContainer>
-          <Subjectivity>{mainTitle}</Subjectivity>
+          <Subjectivity mobile={isMobile}>{mainTitle}</Subjectivity>
         </MainTitleContainer>
         <SubTitleContainer>
-          <Inter>{subTitle}</Inter>
+          <Inter mobile={isMobile}>{subTitle}</Inter>
         </SubTitleContainer>
       </InnerTitleBoxContainer>
     </TitleBoxContainer>
