@@ -35,6 +35,9 @@ const StyledInterText = styled.p<StyledInterTextProps>`
   font-family: Inter;
   text-align: center;
   font-size: 20px;
+  @media screen and (max-width: 875px) {
+    font-size: 10px;
+  }
   font-style: normal;
   font-weight: 700;
   line-height: normal;

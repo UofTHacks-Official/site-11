@@ -27,6 +27,9 @@ const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
   text-shadow: 0px 4px 0px #282828;
   /* H1 */
   font-size: 96px;
+  @media screen and (max-width: 875px) {
+    font-size: 50px;
+  }
   font-style: normal;
   font-weight: 700;
   line-height: normal;

@@ -8,13 +8,12 @@ const LandingBannerContainer = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 5% 10%;
+  margin: 100px 10%;
   min-height: 680px;
   border: 1px solid var(--black, #282828);
-  @media screen and (max-width: 700px) {
-    margin: 5% 0;
+  @media screen and (max-width: 875px) {
+    margin: 100px 0;
     border-radius: 0;
-
   }
 `;
 

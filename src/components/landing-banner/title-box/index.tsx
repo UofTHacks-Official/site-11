@@ -8,6 +8,7 @@ import {
 import React from "react";
 import Inter from "@/components/inter";
 import Subjectivity from "@/components/subjectivity";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 interface TitleBoxProps {
   mainTitle: string;

@@ -11,7 +11,7 @@ const getQuadrantColor = (section: number) => {
     case 1:
       return `background-color: #007D7D;
               border-top-left-radius: 24px;
-              @media screen and (max-width: 700px) {
+              @media screen and (max-width: 875px) {
                 border-top-left-radius: 0;
             
               }
@@ -19,7 +19,7 @@ const getQuadrantColor = (section: number) => {
     case 2:
       return `background-color: #F0A0C8;
               border-top-right-radius: 24px;
-              @media screen and (max-width: 700px) {
+              @media screen and (max-width: 875px) {
                 border-top-right-radius: 0;
             
               }
@@ -27,7 +27,7 @@ const getQuadrantColor = (section: number) => {
     case 3:
       return `background-color: #A050A0;
               border-bottom-left-radius: 24px;
-              @media screen and (max-width: 700px) {
+              @media screen and (max-width: 875px) {
                 border-bottom-left-radius: 0;
             
               }
@@ -35,7 +35,7 @@ const getQuadrantColor = (section: number) => {
     case 4:
       return `background-color: #F0A000;
               border-bottom-right-radius: 24px;
-              @media screen and (max-width: 700px) {
+              @media screen and (max-width: 875px) {
                 border-bottom-right-radius: 0;
             
               }
