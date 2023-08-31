@@ -16,9 +16,10 @@ interface TitleBoxProps {
 }
 
 const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
+  const isMobile = useMobileDetect();
   return (
-    <TitleBoxContainer>
-      <InnerTitleBoxContainer>
+    <TitleBoxContainer mobile={isMobile}>
+      <InnerTitleBoxContainer mobile={isMobile}>
         <MainTitleContainer>
           <Subjectivity>{mainTitle}</Subjectivity>
         </MainTitleContainer>

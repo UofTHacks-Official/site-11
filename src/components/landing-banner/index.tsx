@@ -7,6 +7,7 @@ import Quandrant from "./quadrant";
 import TitleBox from "./title-box";
 import ButtonGroup from "./button-group";
 import React from "react";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 interface LandingBannerProps {
   mainTitle: string;
@@ -19,8 +20,9 @@ const LandingBanner = ({
   subTitle,
   appsOpen,
 }: LandingBannerProps) => {
+  const isMobile = useMobileDetect();
   return (
-    <LandingBannerContainer>
+    <LandingBannerContainer mobile={isMobile}>
       <QuadrantContainer>
         <QuadrantRowContainer>
           <Quandrant section={1} />
