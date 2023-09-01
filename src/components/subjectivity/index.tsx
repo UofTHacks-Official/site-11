@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 type StyledSubjectivityTextProps = {
   style?: React.CSSProperties;
+  mobile: boolean;
 };
 
 const SubjectivityFont = css`
@@ -26,7 +27,7 @@ const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
   text-edge: cap;
   text-shadow: 0px 4px 0px #282828;
   /* H1 */
-  font-size: 96px;
+  font-size: ${(props) => (props.mobile ? "50px" : "96px")};
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -36,15 +37,17 @@ const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
 
 type SubjectivityProps = StyledSubjectivityTextProps & {
   children: ReactNode;
+  mobile: boolean;
 };
 
 const Subjectivity: React.FC<SubjectivityProps> = ({
   children,
+  mobile,
   style,
   ...props
 }) => {
   return (
-    <StyledSubjectivityText style={style} {...props}>
+    <StyledSubjectivityText style={style} mobile={mobile} {...props}>
       {children}
     </StyledSubjectivityText>
   );
