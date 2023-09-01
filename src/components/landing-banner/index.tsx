@@ -21,6 +21,7 @@ const LandingBanner = ({
   appsOpen,
 }: LandingBannerProps) => {
   const isMobile = useMobileDetect();
+
   return (
     <LandingBannerContainer mobile={isMobile}>
       <QuadrantContainer>

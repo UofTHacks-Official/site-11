@@ -5,10 +5,10 @@ import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 interface QuandrantProps {
   section: number;
-  mobile?: boolean;
+  mobile?: boolean | null;
 }
 
-const getQuadrantStyle = (section: number, mobile: boolean) => {
+const getQuadrantStyle = (section: number, mobile?: boolean | null) => {
   switch (section) {
     case 1:
       return `background-color: #007D7D;

@@ -1,12 +1,13 @@
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 type FontStyle = "regular" | "bold" | "semibold";
 
 type StyledInterTextProps = {
   style?: React.CSSProperties;
   fontStyle?: FontStyle;
-  mobile?: boolean;
+  isMobile?: boolean | null;
 };
 
 const getFontSrc = (fontStyle: FontStyle) => {
@@ -35,7 +36,7 @@ const StyledInterText = styled.p<StyledInterTextProps>`
   ${InterFont}
   font-family: Inter;
   text-align: center;
-  font-size: ${(props) => (props.mobile ? "10px" : "20px")};
+  font-size: ${(props) => (props.isMobile ? "10px" : "20px")};
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -43,12 +44,12 @@ const StyledInterText = styled.p<StyledInterTextProps>`
 
 type InterProps = StyledInterTextProps & {
   children: ReactNode;
-  mobile: boolean;
 };
 
-const Inter: React.FC<InterProps> = ({ children, style, mobile, ...props }) => {
+const Inter: React.FC<InterProps> = ({ children, style, ...props }) => {
+  const isMobile = useMobileDetect();
   return (
-    <StyledInterText style={style} mobile={mobile} {...props}>
+    <StyledInterText style={style} isMobile={isMobile} {...props}>
       {children}
     </StyledInterText>
   );

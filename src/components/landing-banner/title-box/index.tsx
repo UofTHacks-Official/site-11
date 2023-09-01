@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import {
   TitleBoxContainer,
   InnerTitleBoxContainer,
@@ -22,14 +21,14 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
     <TitleBoxContainer mobile={isMobile}>
       <InnerTitleBoxContainer mobile={isMobile}>
         <MainTitleContainer>
-          <Subjectivity mobile={isMobile}>
+          <Subjectivity>
             {mainTitle.slice(0, 3)}
             <ShiftedContainer>{mainTitle[3]}</ShiftedContainer>
             {mainTitle.slice(4)}
           </Subjectivity>
         </MainTitleContainer>
         <SubTitleContainer>
-          <Inter mobile={isMobile}>{subTitle}</Inter>
+          <Inter>{subTitle}</Inter>
         </SubTitleContainer>
       </InnerTitleBoxContainer>
     </TitleBoxContainer>

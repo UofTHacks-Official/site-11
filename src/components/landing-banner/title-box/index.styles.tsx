@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 type TitleBoxContainerProps = {
-  mobile: boolean;
+  mobile?: boolean | null;
 };
 
 type InnerTitleBoxContainerProps = {
-  mobile: boolean;
+  mobile?: boolean | null;
 };
 
 const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
