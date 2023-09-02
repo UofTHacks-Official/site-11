@@ -1,9 +1,10 @@
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 type StyledSubjectivityTextProps = {
   style?: React.CSSProperties;
-  mobile: boolean;
+  mobile?: boolean | null;
 };
 
 const SubjectivityFont = css`
@@ -37,17 +38,16 @@ const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
 
 type SubjectivityProps = StyledSubjectivityTextProps & {
   children: ReactNode;
-  mobile: boolean;
 };
 
 const Subjectivity: React.FC<SubjectivityProps> = ({
   children,
-  mobile,
   style,
   ...props
 }) => {
+  const isMobile = useMobileDetect();
   return (
-    <StyledSubjectivityText style={style} mobile={mobile} {...props}>
+    <StyledSubjectivityText style={style} mobile={isMobile} {...props}>
       {children}
     </StyledSubjectivityText>
   );

@@ -17,6 +17,9 @@ const PrimaryButtonContainer = styled.button`
   border-radius: 15px;
   border: 2px solid var(--black, #282828);
   background: var(--black, #282828);
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const PrimaryButtonTextContainer = styled.div`
@@ -33,6 +36,9 @@ const SecondaryButtonContainer = styled.button`
   border-radius: 15px;
   border: 2px solid var(--black, #282828);
   color: solid var(--white, #f9f9f9);
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 const SecondaryButtonTextContainer = styled.div`
