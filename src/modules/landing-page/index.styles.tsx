@@ -7,6 +7,7 @@ const LandingPageContainer = styled.div`
   min-height: 900px;
   width: 100vw;
   background-color: white;
+  margin: 10rem 0 0 0;
 `;
 
 export { LandingPageContainer };
