@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const CardContainer = styled.div`
+  cursor: pointer;
   margin: 0 auto;
   text-align: left;
   text-decoration: none;
   height: fit-content;
   transition: all 0.3s ease 0s;
-  display: flex;
   width: 842px;
-  padding: 24px 32px 32px 32px;
+  padding: 24px 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
@@ -20,7 +20,6 @@ const CardContainer = styled.div`
 
   & > div {
     padding: 1px;
-    max-width: 100%
     background-origin: border-box;
     background-clip: padding-box, border-box;
     overflow: hidden;
@@ -29,10 +28,10 @@ const CardContainer = styled.div`
 
 const QuestionContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: center;
-  cursor: pointer;
+`;
+
+const ImageContainer = styled.div`
+  margin-left: auto;
 `;
 
 const AnswerContainer = styled.div`
@@ -40,4 +39,4 @@ const AnswerContainer = styled.div`
   transition: all 0.3s ease;
 `;
 
-export { CardContainer, QuestionContainer, AnswerContainer };
+export { CardContainer, QuestionContainer, AnswerContainer, ImageContainer };
