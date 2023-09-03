@@ -4,7 +4,7 @@ const LandingPage = () => {
   return (
     <LandingPageContainer>
       <LandingBanner
-        mainTitle="Test Landing Page"
+        mainTitle="Test Deploy"
         subTitle="Test2"
         appsOpen={false}
       />
