@@ -18,30 +18,40 @@ interface CardProps {
 }
 
 const Card = ({ index, question, answer }: CardProps) => {
+  const isMobile = useMobileDetect();
   const [clicked, setClicked] = useState(false);
 
-  const AnswerStyle = {
+  const QuestionStyle = (mobile: boolean | null) => ({
+    fontSize: mobile ? "16px" : "24px",
+    textAlign: "start",
+  });
+
+  const AnswerStyle = (mobile: boolean | null) => ({
     paddingTop: "32px",
     color: "#282828",
-    fontSize: "16px",
+    fontSize: mobile ? "14px" : "16px",
     fontWeight: "400",
     textAlign: "start",
-  };
+  });
 
   const iconSrc = clicked ? openedCardIcon : closedCardIcon;
 
   return (
-    <CardContainer onClick={() => setClicked(!clicked)}>
+    <CardContainer
+      borderColourIndex={index}
+      mobile={isMobile}
+      onClick={() => setClicked(!clicked)}
+    >
       <div>
         <QuestionContainer>
-          <Inter>{question}</Inter>
+          <Inter style={QuestionStyle(isMobile)}>{question}</Inter>
           <ImageContainer>
             <Image src={iconSrc} alt="Card Icon" />
           </ImageContainer>
         </QuestionContainer>
         {clicked && (
           <AnswerContainer>
-            <Inter style={AnswerStyle}>{answer}</Inter>
+            <Inter style={AnswerStyle(isMobile)}>{answer}</Inter>
           </AnswerContainer>
         )}
       </div>

@@ -17,6 +17,7 @@ const FAQCollection = ({ faqs }: FAQProps) => {
   const manualCards = (
     <>
       <Card
+        index={faqList.length}
         question="What are your COVID-19 regulations?"
         answer={
           <span>
@@ -38,7 +39,10 @@ const FAQCollection = ({ faqs }: FAQProps) => {
 
   return (
     <FAQCollectionContainer>
-      <FAQs>{faqList}</FAQs>
+      <FAQs>
+        {faqList}
+        {manualCards}
+      </FAQs>
     </FAQCollectionContainer>
   );
 };
