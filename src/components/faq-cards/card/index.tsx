@@ -5,6 +5,7 @@ import {
 } from "./index.styles";
 import React, { useState } from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
+import Inter from "@/components/inter";
 
 interface CardProps {
   index?: number | null;
@@ -15,12 +16,16 @@ interface CardProps {
 const Card = ({ index, question, answer }: CardProps) => {
   const [clicked, setClicked] = useState(false);
   return (
-    <CardContainer>
+    <CardContainer onClick={() => setClicked(!clicked)}>
       <div>
-        <QuestionContainer onClick={() => setClicked(!clicked)}>
-          {question}
+        <QuestionContainer>
+          <Inter>{question}</Inter>
         </QuestionContainer>
-        {clicked && <AnswerContainer>{answer}</AnswerContainer>}
+        {clicked && (
+          <AnswerContainer>
+            <Inter>{answer}</Inter>
+          </AnswerContainer>
+        )}
       </div>
     </CardContainer>
   );
