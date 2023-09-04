@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const FAQContainer = styled.div`
-  display: flex;
+  position: absolute;
   flex-direction: column;
   width: 100vw;
   background: var(--white, #f9f9f9);
