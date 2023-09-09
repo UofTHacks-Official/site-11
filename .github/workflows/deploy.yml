@@ -1,23 +1,24 @@
-name: Auto Deploy
+name: Deploy Workflow
 
 on:
   push:
     branches:
       - deploy
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout Repo Site-11
         uses: actions/checkout@v2
 
-      - name: Deploy
-        env:
-          PAT: ${{ secrets.PAT }}
+      - name: Trigger Workflow in Another Repo
         run: |
-          git config --global user.email ${{ secrets.email }}
-          git config --global user.name ${{ secrets.user }}
-          git remote add repo-url ${{ secrets.REPO_URL }}
-          git push repo-url deploy
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            ${{ secrets.REPO_URL }}" \
+            -d '{"ref":"main"}'
+
