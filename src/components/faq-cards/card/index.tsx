@@ -3,6 +3,7 @@ import {
   CardContainer,
   ImageContainer,
   QuestionContainer,
+  StarCornerStyle,
 } from "./index.styles";
 import React, { useState } from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
@@ -11,13 +12,22 @@ import closedCardIcon from "public/closed-card.png";
 import openedCardIcon from "public/opened-card.png";
 import Image from "next/image";
 
-interface CardProps {
+type CardProps = {
   index?: number | null;
   question: string;
   answer: React.ReactNode;
-}
+  star?: {
+    src: any;
+    cornerPosition?: string;
+    transformX?: string;
+    transformY?: string;
+    zIndex?: number;
+    width?: string;
+    height?: string;
+  };
+};
 
-const Card = ({ index, question, answer }: CardProps) => {
+const Card = ({ index, question, answer, star }: CardProps) => {
   const isMobile = useMobileDetect();
   const [clicked, setClicked] = useState(false);
 
@@ -37,13 +47,16 @@ const Card = ({ index, question, answer }: CardProps) => {
   const iconSrc = clicked ? openedCardIcon : closedCardIcon;
 
   return (
-    <CardContainer
-      borderColourIndex={index}
-      mobile={isMobile}
-      onClick={() => setClicked(!clicked)}
-    >
+    <CardContainer borderColourIndex={index} mobile={isMobile}>
+      {/* so I want to 1. ask to show star here or not */}
+      {/* 2. if showing a star then where top right left bottom */}
+      {/* 3. if showing a star then what size */}
+      {/* 4. if showing a star then which star */}
+      {star && (
+        <StarCornerStyle src={star.src} starStyle={star} alt="Star Sticker" />
+      )}
       <div>
-        <QuestionContainer>
+        <QuestionContainer onClick={() => setClicked(!clicked)}>
           <Inter style={QuestionStyle(isMobile)}>{question}</Inter>
           <ImageContainer>
             <Image src={iconSrc} alt="Card Icon" />

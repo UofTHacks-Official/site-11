@@ -11,15 +11,13 @@ const FAQ = () => {
     letterSpacing: "0.72px",
   };
 
-  const faqs = require("./faqs.json");
-
   return (
     <FAQContainer>
-      <StarSky front={false}></StarSky>
+      {/* <StarSky front={false} /> */}
       <Subjectivity style={titleStyle}>
         Frequently Asked <ColourText>Questions</ColourText>
       </Subjectivity>
-      <FAQCollection faqs={faqs}></FAQCollection>
+      <FAQCollection />
     </FAQContainer>
   );
 };
