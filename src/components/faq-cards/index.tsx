@@ -11,6 +11,7 @@ const FAQCollection = () => {
       question={faq.question}
       answer={faq.answer}
       star={faq.star}
+      borderColor={faq.borderColor}
     />
   ));
 

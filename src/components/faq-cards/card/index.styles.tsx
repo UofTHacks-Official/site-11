@@ -4,7 +4,7 @@ import Image from "next/image";
 
 type CardContainerProps = {
   mobile?: boolean | null;
-  borderColourIndex?: number | null;
+  borderColor?: string | null;
 };
 
 type StarCornerStyleProps = {
@@ -52,7 +52,7 @@ const getBorderColour = (colourIndex: number) => {
 };
 
 const BorderColour = css<CardContainerProps>`
-  border: ${(props) => getBorderColour(props.borderColourIndex || 0)};
+  border: ${(props) => props.borderColor || "4px solid var(--Teal, #007d7d)"};
 `;
 
 const CardContainer = styled.div<CardContainerProps>`

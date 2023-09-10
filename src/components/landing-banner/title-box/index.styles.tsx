@@ -43,7 +43,7 @@ const MainTitleContainer = styled.div`
   justify-content: center;
 `;
 
-const ShiftedContainer = styled.span`
+const ShiftedContainer = styled.span`=
   display: inline-block;
   transform: translateX(-1%);
 `;

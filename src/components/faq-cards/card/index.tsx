@@ -25,9 +25,10 @@ type CardProps = {
     width?: string;
     height?: string;
   };
+  borderColor?: string | null;
 };
 
-const Card = ({ index, question, answer, star }: CardProps) => {
+const Card = ({ index, question, answer, star, borderColor }: CardProps) => {
   const isMobile = useMobileDetect();
   const [clicked, setClicked] = useState(false);
 
@@ -47,7 +48,7 @@ const Card = ({ index, question, answer, star }: CardProps) => {
   const iconSrc = clicked ? openedCardIcon : closedCardIcon;
 
   return (
-    <CardContainer borderColourIndex={index} mobile={isMobile}>
+    <CardContainer borderColor={borderColor} mobile={isMobile}>
       {/* so I want to 1. ask to show star here or not */}
       {/* 2. if showing a star then where top right left bottom */}
       {/* 3. if showing a star then what size */}
@@ -55,19 +56,17 @@ const Card = ({ index, question, answer, star }: CardProps) => {
       {star && (
         <StarCornerStyle src={star.src} starStyle={star} alt="Star Sticker" />
       )}
-      <div>
-        <QuestionContainer onClick={() => setClicked(!clicked)}>
-          <Inter style={QuestionStyle(isMobile)}>{question}</Inter>
-          <ImageContainer>
-            <Image src={iconSrc} alt="Card Icon" />
-          </ImageContainer>
-        </QuestionContainer>
-        {clicked && (
-          <AnswerContainer>
-            <Inter style={AnswerStyle(isMobile)}>{answer}</Inter>
-          </AnswerContainer>
-        )}
-      </div>
+      <QuestionContainer onClick={() => setClicked(!clicked)}>
+        <Inter style={QuestionStyle(isMobile)}>{question}</Inter>
+        <ImageContainer>
+          <Image src={iconSrc} alt="Card Icon" />
+        </ImageContainer>
+      </QuestionContainer>
+      {clicked && (
+        <AnswerContainer>
+          <Inter style={AnswerStyle(isMobile)}>{answer}</Inter>
+        </AnswerContainer>
+      )}
     </CardContainer>
   );
 };
