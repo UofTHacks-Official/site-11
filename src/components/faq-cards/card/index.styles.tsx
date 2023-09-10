@@ -98,10 +98,7 @@ const ImageContainer = styled.div`
   margin-left: auto;
 `;
 
-const AnswerContainer = styled.div`
-  overflow: hidden;
-  transition: all 0.3s ease;
-`;
+const AnswerContainer = styled.div``;
 
 const StarCornerStyle = styled(Image)<StarCornerStyleProps>`
   position: absolute;
