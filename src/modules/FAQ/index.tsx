@@ -9,6 +9,7 @@ const FAQ = () => {
     color: "#F9F9F9",
     fontSize: "48px",
     letterSpacing: "0.72px",
+    WebkitTextStroke: "1.7px #282828",
   };
 
   return (
