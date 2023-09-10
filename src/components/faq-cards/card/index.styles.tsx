@@ -19,38 +19,6 @@ type StarCornerStyleProps = {
   } | null;
 };
 
-const getBorderColour = (colourIndex: number) => {
-  let borderColor = "";
-
-  switch (colourIndex) {
-    case 0:
-    case 6:
-    case 7:
-      borderColor = "4px solid var(--Teal, #007d7d)";
-      break;
-    case 1:
-    case 5:
-    case 8:
-      borderColor = "4px solid var(--Orange, #F0A000)";
-      break;
-    case 2:
-    case 11:
-      borderColor = "4px solid var(--Pink, #F0A0C8)";
-      break;
-    case 3:
-      borderColor = "4px solid var(--Blue, #2850A0)";
-      break;
-    case 4:
-    case 7:
-    case 9:
-      borderColor = "4px solid var(--Blue, #2850A0)";
-      break;
-    default:
-      borderColor = "4px solid var(--Purple, #A050A0)";
-  }
-  return borderColor;
-};
-
 const BorderColour = css<CardContainerProps>`
   border: ${(props) => props.borderColor || "4px solid var(--Teal, #007d7d)"};
 `;
