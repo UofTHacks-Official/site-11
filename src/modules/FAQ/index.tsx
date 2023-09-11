@@ -1,9 +1,24 @@
-import { FAQContainer } from "./index.styles";
+import { FAQContainer, ColourText } from "./index.styles";
+import Subjectivity from "@/components/subjectivity";
+import Inter from "@/components/inter";
+import FAQCollection from "@/components/faq-cards";
+import StarSky from "@/components/star-sky";
 
 const FAQ = () => {
+  const titleStyle = {
+    color: "#F9F9F9",
+    fontSize: "48px",
+    letterSpacing: "0.72px",
+    WebkitTextStroke: "1.7px #282828",
+  };
+
   return (
     <FAQContainer>
-      <h1>FAQ Page</h1>
+      {/* <StarSky front={false} /> */}
+      <Subjectivity style={titleStyle}>
+        Frequently Asked <ColourText>Questions</ColourText>
+      </Subjectivity>
+      <FAQCollection />
     </FAQContainer>
   );
 };

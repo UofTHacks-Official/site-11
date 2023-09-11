@@ -11,17 +11,16 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 100px 10%;
   min-height: 680px;
   border: 1px solid var(--black, #282828);
   ${(props) =>
     props.mobile
       ? `
-    margin: 100px 0;
+    margin: 0 0;
     border-radius: 0;
   `
       : `
-    margin: 100px 10%;
+    margin: 0 10%;
     border-radius: 25px;
   `}
 `;

@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 const FAQContainer = styled.div`
-  display: flex;
+  position: absolute;
   flex-direction: column;
-  height: 100vh;
   width: 100vw;
-  background-color: red;
+  background: var(--white, #f9f9f9);
+  padding: 10rem 0 0 0;
 `;
 
-export { FAQContainer };
+const ColourText = styled.span`
+  color: #f0a000;
+`;
+
+export { FAQContainer, ColourText };

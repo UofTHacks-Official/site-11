@@ -5,7 +5,7 @@ import { useMobileDetect } from "@/hooks/useMobileDetect";
 type FontStyle = "regular" | "bold" | "semibold";
 
 type StyledInterTextProps = {
-  style?: React.CSSProperties;
+  style?: any;
   fontStyle?: FontStyle;
   isMobile?: boolean | null;
 };

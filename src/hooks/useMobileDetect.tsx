@@ -5,14 +5,10 @@ export const useMobileDetect = (): boolean | null => {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   const widthThreshold = 875;
-  const heightThreshold = 430;
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(
-        window.innerWidth <= widthThreshold ||
-          window.innerHeight <= heightThreshold
-      );
+      setIsMobile(window.innerWidth <= widthThreshold);
     };
 
     handleResize();
