@@ -94,7 +94,7 @@ const StarSky = ({ front }: StarSkyProps) => {
       {starPositions.map((star, index) => (
         <StarField>
           <Star key={index}>
-            <Image src={star.iconSrc} style={star.style} alt="Card Icon" />
+            {/* <Image src={star.iconSrc} style={star.style} alt="Card Icon" /> */}
           </Star>
         </StarField>
       ))}
