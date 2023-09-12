@@ -18,7 +18,8 @@ type PolaroidProps = {
 };
 
 const PolaroidWrapper = styled.div<PolaroidProps>`
-  width: 14.625rem;
+  width: 40vw;
+  max-width: 14.625rem;
   height: 18.3125rem;
   flex-shrink: 0;
   border-radius: 15px;
