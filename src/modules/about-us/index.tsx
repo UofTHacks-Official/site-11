@@ -1,6 +1,7 @@
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import { AboutUsContainer } from "./index.styles";
 import AboutUsDesktop from "@/components/about-us/desktop";
+import AboutUsMobile from "@/components/about-us/mobile";
 
 const AboutUs = () => {
   const isMobile = useMobileDetect();
@@ -24,10 +25,17 @@ const AboutUs = () => {
 
   return (
     <AboutUsContainer>
-      <AboutUsDesktop
-        aboutUsHeader={["About", "us"]}
-        aboutUsDescription={aboutUsDescription}
-      />
+      {isMobile ? (
+        <AboutUsMobile
+          aboutUsHeader={["About", "us"]}
+          aboutUsDescription={aboutUsDescription}
+        />
+      ) : (
+        <AboutUsDesktop
+          aboutUsHeader={["About", "us"]}
+          aboutUsDescription={aboutUsDescription}
+        />
+      )}
     </AboutUsContainer>
   );
 };

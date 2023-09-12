@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const BoxContainer = styled.div`
   display: flex;
-  width: 100%;
+  justify-content: center;
 `;
 
 const FirstPolaroid = styled.div`
@@ -10,8 +10,6 @@ const FirstPolaroid = styled.div`
   display: flex;
   align-items: center;
   margin-right: 1.25rem;
-  width: 100%;
-  height: 100%;
 `;
 
 const SmallQuadrantContainer = styled.div`

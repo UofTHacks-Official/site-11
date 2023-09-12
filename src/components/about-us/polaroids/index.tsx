@@ -56,7 +56,7 @@ const Polaroid: React.FC<PolaroidProps> = ({
         <ImageContainer>
           <Image src={imageUrl} alt="Polaroid Photo" />
         </ImageContainer>
-        we can put up the text image here and then style it
+        SOME TEXT AS AN IMAGE. NEED STICKER IMAGES ALSO
       </PolaroidWrapper>
     );
 };

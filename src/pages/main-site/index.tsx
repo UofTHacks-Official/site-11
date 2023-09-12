@@ -6,10 +6,10 @@ import FAQ from "@/modules/FAQ";
 const Site11 = () => {
   return (
     <>
-      {/* <LandingPage /> */}
+      <LandingPage />
       <AboutUs />
-      {/* <Sponsors />
-      <FAQ /> */}
+      <Sponsors />
+      <FAQ />
     </>
   );
 };

@@ -21,7 +21,7 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   width: 14.625rem;
   height: 18.3125rem;
   flex-shrink: 0;
-  border-radius: 0.9375rem;
+  border-radius: 15px;
   border: 2px solid ${(props) => props.borderColor || "var(--Purple, #a050a0)"};
   background: var(--white, #f9f9f9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
