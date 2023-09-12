@@ -35,18 +35,22 @@ const StyledInter = styled(Inter)`
 const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 31.5625rem;
+  flex: 1;
   justify-content: center;
   height: 100%;
+  width: 100%;
 `;
 
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 44.6875rem;
-  flex: 1;
-  flex-wrap: wrap;
+  flex: 1.25;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 `;
+
 export {
   DesktopContainer,
   ColourText,
