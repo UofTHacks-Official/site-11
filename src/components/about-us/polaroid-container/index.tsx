@@ -12,7 +12,7 @@ const PolaroidContainer = () => {
     <BoxContainer>
       <FirstPolaroid>
         <Polaroid
-          imageUrl={"/stars/star4.png"}
+          imageUrl={"/stars/star5.png"}
           borderColor={"#A050A0"}
           stickers={[
             {
@@ -32,13 +32,31 @@ const PolaroidContainer = () => {
             imageUrl={"/stars/star5.png"}
             rotation={20}
             borderColor={"#2850A0"}
+            stickers={[
+              {
+                imageUrl: "/stars/star14.png",
+                x: "-17%", // move left-right
+                y: "-7%", // move top-bottom
+                size: "70px",
+                zIndex: 2,
+              },
+            ]}
           />
         </SecondPolaroid>
         <ThirdPolaroid>
           <Polaroid
-            imageUrl={"/stars/star6.png"}
+            imageUrl={"/stars/star5.png"}
             rotation={-10}
             borderColor={"#F0A000"}
+            stickers={[
+              {
+                imageUrl: "/stars/star4.png",
+                x: "-7%", // move left-right
+                y: "50%", // move top-bottom
+                size: "30px",
+                zIndex: 2,
+              },
+            ]}
           />
         </ThirdPolaroid>
       </SmallQuadrantContainer>

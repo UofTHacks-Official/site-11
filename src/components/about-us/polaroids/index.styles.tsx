@@ -25,17 +25,10 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   border: 2px solid ${(props) => props.borderColor || "var(--Purple, #a050a0)"};
   background: var(--white, #f9f9f9);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 
   transform: rotate(${(props) => props.rotation || 0}deg);
   box-shadow: 10px 16px 0px 0px #282828;
   z-index: ${(props) => props.zIndex || "auto"}; // Set z-index
-  &:hover {
-    transform: scale(1.1) rotate(3deg);
-    z-index: 100;
-    box-shadow: 10px #282828;
-    cursor: default;
-  }
   user-select: none;
   -webkit-user-select: none;
   touch-action: none;
@@ -45,6 +38,12 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   -moz-user-drag: none;
   -ms-user-drag: none;
   user-drag: none;
+  
+  &:hover {
+    transform: scale(1.1) rotate(3deg);
+    z-index: 100;
+    box-shadow: 10px #282828;
+  }
 };
 `;
 
@@ -80,4 +79,9 @@ const StickerContainer = styled.img<Sticker>`
   user-drag: none;
 `;
 
-export { PolaroidWrapper, Image, StickerContainer };
+const ImageContainer = styled.div`
+  margin: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--Black, #282828);
+`;
+export { PolaroidWrapper, Image, StickerContainer, ImageContainer };

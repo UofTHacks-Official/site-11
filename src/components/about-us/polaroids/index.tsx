@@ -1,5 +1,10 @@
 import React from "react";
-import { PolaroidWrapper, Image, StickerContainer } from "./index.styles";
+import {
+  PolaroidWrapper,
+  Image,
+  StickerContainer,
+  ImageContainer,
+} from "./index.styles";
 
 type Sticker = {
   imageUrl: string;
@@ -48,7 +53,10 @@ const Polaroid: React.FC<PolaroidProps> = ({
               {...sticker}
             />
           ))}
-        <Image src={imageUrl} alt="Polaroid Photo" />
+        <ImageContainer>
+          <Image src={imageUrl} alt="Polaroid Photo" />
+        </ImageContainer>
+        we can put up the text image here and then style it
       </PolaroidWrapper>
     );
 };
