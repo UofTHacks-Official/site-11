@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import React, { ReactNode } from "react";
 import Image from "next/image";
 
 type CardContainerProps = {
@@ -27,32 +26,15 @@ const CardContainer = styled.div<CardContainerProps>`
   ${BorderColour}
   margin: 0 auto;
   text-align: start;
-  text-decoration: none;
-  height: fit-content;
-  transition: all 0.3s ease 0s;
-  ${(props) =>
-    props.mobile
-      ? `
-      width: 90%;
-  `
-      : `
-      width: 842px;
-  `}
-  padding: 24px 32px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
+  width: 90%;
+  ${(props) => !props.mobile && ` max-width: 842px;`}
+  padding: 1.5rem 2rem;
   border-radius: 15px;
   background: var(--White, #f9f9f9);
-  /* Default Shadow */
   box-shadow: 0px 4px 0px 0px #282828;
   position: relative;
-  & > div {
-    padding: 1px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    overflow: hidden;
-  }
+  margin-bottom: 2rem;
+  min-width: 300px;
 `;
 
 const QuestionContainer = styled.div`
@@ -60,13 +42,21 @@ const QuestionContainer = styled.div`
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  align-items: center;
 `;
 
-const ImageContainer = styled.div`
+const SignContainer = styled.div<CardContainerProps>`
+  color: #282828;
+  font-size: ${(props) => (props.mobile ? "24px" : "30px")};
+  font-weight: 700;
   margin-left: auto;
+  align-items: center;
 `;
 
-const AnswerContainer = styled.div``;
+const AnswerContainer = styled.div`
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+`;
 
 const StarCornerStyle = styled(Image)<StarCornerStyleProps>`
   position: absolute;
@@ -111,6 +101,6 @@ export {
   CardContainer,
   QuestionContainer,
   AnswerContainer,
-  ImageContainer,
+  SignContainer,
   StarCornerStyle,
 };

@@ -9,38 +9,28 @@ type InnerTitleBoxContainerProps = {
 };
 
 const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
-  display: inline-flex;
   position: absolute;
-  padding: 40px 60px 20px 60px;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 70%;
+
+  padding: ${(props) =>
+    props.mobile
+      ? "2.5rem 1.88rem 1.25rem 1.88rem"
+      : "2.5rem 3.75rem 1.25rem 3.75rem"};
+
   border-radius: 5px;
   border: 2px solid var(--black, #282828);
   background: var(--white, #f9f9f9);
-  /* Default Shadow */
   box-shadow: 0px 4px 0px 0px #282828;
-  padding: 0px;
-  z-index: 1;
-  height: ${(props) => (props.mobile ? "175px" : "250px")};
+
+  justify-content: center;
+  align-items: center;
 `;
 
 const InnerTitleBoxContainer = styled.div<InnerTitleBoxContainerProps>`
-  padding-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  width: ${(props) => (props.mobile ? "100%" : "130%")};
-`;
-
-const MainTitleContainer = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 `;
 
 const ShiftedContainer = styled.span`=
@@ -56,7 +46,6 @@ const SubTitleContainer = styled.div`
 export {
   TitleBoxContainer,
   InnerTitleBoxContainer,
-  MainTitleContainer,
   ShiftedContainer,
   SubTitleContainer,
 };

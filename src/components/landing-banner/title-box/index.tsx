@@ -1,7 +1,6 @@
 import {
   TitleBoxContainer,
   InnerTitleBoxContainer,
-  MainTitleContainer,
   ShiftedContainer,
   SubTitleContainer,
 } from "./index.styles";
@@ -20,13 +19,11 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
   return (
     <TitleBoxContainer mobile={isMobile}>
       <InnerTitleBoxContainer mobile={isMobile}>
-        <MainTitleContainer>
-          <Subjectivity>
-            {mainTitle.slice(0, 3)}
-            <ShiftedContainer>{mainTitle[3]}</ShiftedContainer>
-            {mainTitle.slice(4)}
-          </Subjectivity>
-        </MainTitleContainer>
+        <Subjectivity>
+          {mainTitle.slice(0, 3)}
+          <ShiftedContainer>{mainTitle[3]}</ShiftedContainer>
+          {mainTitle.slice(4)}
+        </Subjectivity>
         <SubTitleContainer>
           <Inter>{subTitle}</Inter>
         </SubTitleContainer>

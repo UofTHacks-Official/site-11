@@ -1,15 +1,23 @@
 import styled from "styled-components";
+import Subjectivity from "@/components/subjectivity";
 
 const FAQContainer = styled.div`
-  position: absolute;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 100vw;
-  background: var(--white, #f9f9f9);
-  padding: 10rem 0 0 0;
 `;
 
 const ColourText = styled.span`
   color: #f0a000;
 `;
 
-export { FAQContainer, ColourText };
+const StyledSubjectivity = styled(Subjectivity)`
+  color: #f9f9f9;
+  font-size: 48px;
+  letter-spacing: 0.72px;
+  -webkit-text-stroke: 1.7px #282828;
+  margin-bottom: 4rem;
+`;
+
+export { FAQContainer, ColourText, StyledSubjectivity };

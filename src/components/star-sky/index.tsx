@@ -2,17 +2,17 @@ import { StarSkyContainer } from "./index.styles";
 import React, { useState } from "react";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
-import starIcon4 from "public/stars/star4.png";
-import starIcon5 from "public/stars/star5.png";
-import starIcon6 from "public/stars/star6.png";
-import starIcon7 from "public/stars/star7.png";
-import starIcon8 from "public/stars/star8.png";
-import starIcon9 from "public/stars/star9.png";
-import starIcon10 from "public/stars/star10.png";
-import starIcon12 from "public/stars/star12.png";
-import starIcon13 from "public/stars/star13.png";
-import starIcon14 from "public/stars/star14.png";
-import starIcon15 from "public/stars/star15.png";
+import starIcon4 from "public/assets/stars/star4.png";
+import starIcon5 from "public/assets/stars/star5.png";
+import starIcon6 from "public/assets/stars/star6.png";
+import starIcon7 from "public/assets/stars/star7.png";
+import starIcon8 from "public/assets/stars/star8.png";
+import starIcon9 from "public/assets/stars/star9.png";
+import starIcon10 from "public/assets/stars/star10.png";
+import starIcon12 from "public/assets/stars/star12.png";
+import starIcon13 from "public/assets/stars/star13.png";
+import starIcon14 from "public/assets/stars/star14.png";
+import starIcon15 from "public/assets/stars/star15.png";
 
 interface StarSkyProps {
   front: boolean;
