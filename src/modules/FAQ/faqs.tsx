@@ -11,7 +11,7 @@ const faqs = [
     star: {
       src: starIcon5,
       cornerPosition: "top-left",
-      transformX: "-60%",
+      transformX: "-40%",
       transformY: "-40%",
       width: "4em",
       height: "4em",
@@ -115,7 +115,7 @@ const faqs = [
     star: {
       src: starIcon15,
       cornerPosition: "top-right",
-      transformX: "50%",
+      transformX: "20%",
       transformY: "-70%",
       width: "5.2em",
       height: "5.2em",

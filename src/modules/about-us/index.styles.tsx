@@ -4,6 +4,8 @@ const AboutUsContainer = styled.div`
   display: flex;
   min-height: 100%;
   min-width: 100%;
+  width: 100vw;
+  overflow: hidden;
 `;
 
 const DesktopContainer = styled.div`

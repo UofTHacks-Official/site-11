@@ -20,8 +20,9 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
     border-radius: 0;
   `
       : `
-    margin: 0 10%;
-    border-radius: 25px;
+      margin: 0 10%;
+      min-width: 750px;
+      border-radius: 25px;
   `}
 `;
 
