@@ -1,6 +1,6 @@
-import starIcon5 from "public/stars/star5.png";
-import starIcon7 from "public/stars/star7.png";
-import starIcon15 from "public/stars/star15.png";
+import starIcon5 from "public/assets/stars/star5.png";
+import starIcon7 from "public/assets/stars/star7.png";
+import starIcon15 from "public/assets/stars/star15.png";
 import Link from "next/link";
 
 const faqs = [
