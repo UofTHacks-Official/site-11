@@ -7,6 +7,7 @@ type Sticker = {
   size?: string;
   zIndex?: number;
   opacity?: number;
+  rotate?: number;
 };
 
 type PolaroidProps = {
@@ -72,6 +73,7 @@ const StickerContainer = styled.img<Sticker>`
     ${({ zIndex }) => zIndex && `z-index: ${zIndex};`}
     ${({ opacity }) => opacity && `opacity: ${opacity};`} 
     -webkit-user-select: none;
+  ${({ rotate }) => rotate && `transform: rotate(${rotate}deg);`}
   touch-action: none;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;

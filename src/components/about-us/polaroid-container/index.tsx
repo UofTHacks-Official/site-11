@@ -16,12 +16,18 @@ const PolaroidContainer = () => {
           borderColor={"#A050A0"}
           stickers={[
             {
-              imageUrl: "/stars/star12.png",
-              x: "-5%", // move left-right
-              y: "-5%", // move top-bottom
-              size: "40px",
+              imageUrl: "assets/tape/tape-1.png",
+              x: "-14%", // move left-right
+              y: "-7%", // move top-bottom
+              size: "100px",
               zIndex: 2,
-              opacity: 0.5,
+            },
+            {
+              imageUrl: "assets/tape/tape-1.png",
+              x: "70%", // move left-right
+              y: "87%", // move top-bottom
+              size: "100px",
+              zIndex: 2,
             },
           ]}
         />
@@ -34,10 +40,17 @@ const PolaroidContainer = () => {
             borderColor={"#2850A0"}
             stickers={[
               {
-                imageUrl: "/stars/star14.png",
+                imageUrl: "/assets/stars/star-1.png",
                 x: "-17%", // move left-right
                 y: "-7%", // move top-bottom
                 size: "70px",
+                zIndex: 2,
+              },
+              {
+                imageUrl: "assets/tape/tape-2.png",
+                x: "30%", // move left-right
+                y: "-5%", // move top-bottom
+                size: "100px",
                 zIndex: 2,
               },
             ]}
@@ -50,10 +63,25 @@ const PolaroidContainer = () => {
             borderColor={"#F0A000"}
             stickers={[
               {
-                imageUrl: "/stars/star4.png",
-                x: "-7%", // move left-right
-                y: "50%", // move top-bottom
-                size: "30px",
+                imageUrl: "assets/stars/star-2.png",
+                x: "-17%", // move left-right
+                y: "60%", // move top-bottom
+                size: "70px",
+                zIndex: 2,
+              },
+              {
+                imageUrl: "assets/tape/tape-3.png",
+                x: "-14%", // move left-right
+                y: "88%", // move top-bottom
+                size: "100px",
+                zIndex: 2,
+                rotate: 30,
+              },
+              {
+                imageUrl: "assets/tape/tape-3.png",
+                x: "70%", // move left-right
+                y: "-5%", // move top-bottom
+                size: "100px",
                 zIndex: 2,
               },
             ]}

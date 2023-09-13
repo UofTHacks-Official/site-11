@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  PolaroidWrapper,
-  Image,
-  StickerContainer,
-  ImageContainer,
-} from "./index.styles";
+import { PolaroidWrapper, Image, StickerContainer } from "./index.styles";
 
 type Sticker = {
   imageUrl: string;
@@ -13,6 +8,7 @@ type Sticker = {
   size?: string;
   zIndex?: number;
   opacity?: number;
+  rotate?: number;
 };
 
 type PolaroidProps = {
