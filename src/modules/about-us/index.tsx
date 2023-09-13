@@ -12,14 +12,13 @@ const AboutUs = () => {
       consecutive year!
       <br />
       <br />
-      To celebrate this milestone, we will be even bigger and better than ever
-      before! Over 600 innovators, developers, designers, and entrepreneurs will
-      participate in a 36-hour competition entirely in-person, where they will
-      build unique and impactful projects.
+      Our event brings together over 600 innovators, developers, designers, and
+      entrepreneurs for a memorable 36-hour in-person hackathon, where they
+      collaboratively craft unique and meaningful projects.
       <br />
       <br />
-      We strive to provide a space where hackers can discover their passions,
-      and we want your support in helping these hackers shape the future!
+      At UofTHacks, we strive to provide a space where everyone feels supported,
+      empowered, and encouraged to transform their dreams into reality!
     </span>
   );
 
