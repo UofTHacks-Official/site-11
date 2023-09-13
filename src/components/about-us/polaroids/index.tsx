@@ -53,10 +53,7 @@ const Polaroid: React.FC<PolaroidProps> = ({
               {...sticker}
             />
           ))}
-        <ImageContainer>
-          <Image src={imageUrl} alt="Polaroid Photo" />
-        </ImageContainer>
-        SOME TEXT AS AN IMAGE. NEED STICKER IMAGES ALSO
+        <Image src={imageUrl} alt="Polaroid Photo" />
       </PolaroidWrapper>
     );
 };

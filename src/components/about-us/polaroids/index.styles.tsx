@@ -21,6 +21,7 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   width: 40vw;
   max-width: 14.625rem;
   height: 18.3125rem;
+  max-height: 100%;
   flex-shrink: 0;
   border-radius: 15px;
   border: 2px solid ${(props) => props.borderColor || "var(--Purple, #a050a0)"};
@@ -49,9 +50,9 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
 `;
 
 const Image = styled.img`
+  padding: 0.25rem;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   -webkit-user-select: none;
   touch-action: none;
   -webkit-touch-callout: none;
@@ -81,8 +82,7 @@ const StickerContainer = styled.img<Sticker>`
 `;
 
 const ImageContainer = styled.div`
-  margin: 12px 15px;
-  border-radius: 10px;
-  border: 2px solid var(--Black, #282828);
+  overflow: hidden;
 `;
+
 export { PolaroidWrapper, Image, StickerContainer, ImageContainer };
