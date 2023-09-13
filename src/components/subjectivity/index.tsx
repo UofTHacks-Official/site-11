@@ -3,7 +3,7 @@ import React, { ReactNode } from "react";
 import styled, { css } from "styled-components";
 
 type StyledSubjectivityTextProps = {
-  style?: React.CSSProperties;
+  style?: any;
   mobile?: boolean | null;
 };
 

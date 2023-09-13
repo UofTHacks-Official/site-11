@@ -5,9 +5,7 @@ const LandingPageContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   min-height: 900px;
-  width: 100vw;
-  background-color: white;
-  margin: 10rem 0 0 0;
+  justify-content: center;
 `;
 
 export { LandingPageContainer };
