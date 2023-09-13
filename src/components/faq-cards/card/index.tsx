@@ -5,7 +5,7 @@ import {
   QuestionContainer,
   StarCornerStyle,
 } from "./index.styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import Inter from "@/components/inter";
 
@@ -26,7 +26,7 @@ type CardProps = {
 
 const Card = ({ question, answer, star, borderColor }: CardProps) => {
   const isMobile = useMobileDetect();
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(true);
 
   const QuestionStyle = (mobile: boolean | null) => ({
     fontSize: mobile ? "16px" : "24px",
@@ -40,6 +40,11 @@ const Card = ({ question, answer, star, borderColor }: CardProps) => {
     fontWeight: "400",
     textAlign: "start",
   });
+
+  // Reset the clicked state when the component is mounted
+  useEffect(() => {
+    setClicked(false);
+  }, []);
 
   return (
     <CardContainer borderColor={borderColor} mobile={isMobile}>
