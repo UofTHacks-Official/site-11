@@ -4,6 +4,7 @@ import {
   SignContainer,
   QuestionContainer,
   StarCornerStyle,
+  StyledInter,
 } from "./index.styles";
 import React, { useEffect, useState } from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
@@ -53,7 +54,7 @@ const Card = ({ question, answer, star, borderColor }: CardProps) => {
       )}
 
       <QuestionContainer onClick={() => setClicked(!clicked)}>
-        <Inter style={QuestionStyle(isMobile)}>{question}</Inter>
+        <StyledInter style={QuestionStyle(isMobile)}>{question}</StyledInter>
         <SignContainer mobile={isMobile}>
           {clicked ? <>&minus;</> : "+"}
         </SignContainer>

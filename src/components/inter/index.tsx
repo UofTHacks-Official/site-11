@@ -40,6 +40,7 @@ const StyledInterText = styled.p<StyledInterTextProps>`
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  color: #282828;
 `;
 
 type InterProps = StyledInterTextProps & {
