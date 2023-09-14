@@ -10,23 +10,22 @@ type StyledInterTextProps = {
   isMobile?: boolean | null;
 };
 
-const getFontSrc = (fontStyle: FontStyle) => {
+const getFontSrc = (fontStyle?: FontStyle) => {
   switch (fontStyle) {
     case "bold":
-      return "Inter-Bold.ttf";
+      return "Inter-Bold.woff2";
     case "semibold":
-      return "Inter-SemiBold.ttf";
+      return "Inter-SemiBold.woff2";
     case "regular":
     default:
-      return "Inter-Regular.ttf";
+      return "Inter-Regular.woff2";
   }
 };
 
 const InterFont = css<StyledInterTextProps>`
   @font-face {
     font-family: "Inter";
-    src: url("/fonts/${(props) => getFontSrc(props.fontStyle || "regular")}")
-      format("woff2");
+    src: url("/fonts/${(props) => getFontSrc(props.fontStyle)}") format("woff2");
     font-weight: normal;
     font-style: normal;
   }
