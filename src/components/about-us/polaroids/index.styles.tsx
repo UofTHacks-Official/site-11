@@ -16,6 +16,7 @@ type PolaroidProps = {
   borderColor?: string;
   zIndex?: number;
   stickers?: Sticker[];
+  mobile?: boolean | null;
 };
 
 const PolaroidWrapper = styled.div<PolaroidProps>`
@@ -47,6 +48,12 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
     z-index: 100;
     box-shadow: 10px #282828;
   }
+  ${(props) =>
+    props.mobile &&
+    `height: 100%;
+     max-height: 50vw;
+  `}
+  
 };
 `;
 
