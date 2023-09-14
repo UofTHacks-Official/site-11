@@ -28,7 +28,7 @@ const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
   text-edge: cap;
   text-shadow: 0px 4px 0px #282828;
   /* H1 */
-  font-size: ${(props) => (props.mobile ? "50px" : "96px")};
+  font-size: ${(props) => (props.mobile ? "48px" : "96px")};
   font-style: normal;
   font-weight: 700;
   line-height: normal;

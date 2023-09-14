@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
+import Inter from "@/components/inter";
 
 type CardContainerProps = {
   mobile?: boolean | null;
@@ -39,17 +40,28 @@ const CardContainer = styled.div<CardContainerProps>`
 
 const QuestionContainer = styled.div`
   display: flex;
+  flex: 1;
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
   align-items: center;
+  justify-content: space-around;
 `;
 
 const SignContainer = styled.div<CardContainerProps>`
+  display: flex;
   color: #282828;
   font-size: ${(props) => (props.mobile ? "24px" : "30px")};
   font-weight: 700;
-  margin-left: auto;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  padding: 0.2rem;
+`;
+
+const StyledInter = styled(Inter)`
+  display: flex;
+  flex: 10;
   align-items: center;
 `;
 
@@ -103,4 +115,5 @@ export {
   AnswerContainer,
   SignContainer,
   StarCornerStyle,
+  StyledInter,
 };

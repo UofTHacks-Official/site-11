@@ -1,5 +1,6 @@
 import React from "react";
 import { PolaroidWrapper, Image, StickerContainer } from "./index.styles";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 type Sticker = {
   imageUrl: string;
@@ -33,12 +34,15 @@ const Polaroid: React.FC<PolaroidProps> = ({
     stickers: [],
   };
 
+  const isMobile = useMobileDetect();
+
   if (imageUrl)
     return (
       <PolaroidWrapper
         rotation={rotation}
         borderColor={borderColor}
         zIndex={zIndex}
+        mobile={isMobile}
       >
         {stickers &&
           stickers.map((sticker, index) => (
