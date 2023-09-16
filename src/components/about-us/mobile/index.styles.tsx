@@ -24,12 +24,11 @@ const StyledSubjectivity = styled(Subjectivity)`
 `;
 
 const StyledInter = styled(Inter)`
-  text-align: left;
-  font-size: 16px;
+  text-align: center;
   padding: 0.62rem;
-  color: #000;
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
 `;
 
 export { MobileContainer, ColourText, StyledSubjectivity, StyledInter };
