@@ -2,7 +2,7 @@ import { LandingPageContainer } from "./index.styles";
 import LandingBanner from "@/components/landing-banner";
 const LandingPage = () => {
   return (
-    <LandingPageContainer>
+    <LandingPageContainer id="landing-page">
       <LandingBanner
         mainTitle="UofTHacks 11"
         subTitle="JANUARY 2024"
