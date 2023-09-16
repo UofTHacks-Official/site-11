@@ -4,14 +4,25 @@ type HamburgerProps = {
   mobile?: boolean | null;
 };
 
-const NavigationBar = styled.nav`
+type NavbarProps = {
+  mobile?: boolean | null;
+};
+
+const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 100px;
+  ${(props) =>
+    props.mobile
+      ? `
+    margin: 40px 0;
+  `
+      : `
+      margin: 40px 10%;
+  `}
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 80%;
   transition: top 0.3s; /* Add smooth transition effect */
   z-index: 1000; /* Ensure it appears above other content */
 `;
@@ -38,23 +49,22 @@ const NavLink = styled.a`
   transition: color 0.3s;
 
   &:hover {
-    color: #ff5733; /* Change color on hover as needed */
+    color: #ff5733;
   }
 `;
 
 const HamburgerMenu = styled.div<HamburgerProps>`
-  display: none; // Hide the hamburger menu icon by default
   cursor: pointer;
   ${(props) =>
     props.mobile
       ? `
         position: absolute;
-        top: 20px;
-        right: 20px;
-        font-size: 24px;
+        top: 0px;
+        justify-content: center;
+        font-size: 20px;
         z-index: 1001;
       `
-      : ""}
+      : `display: none;`}
 `;
 
 export { NavigationBar, Logo, NavLinks, NavLinkItem, NavLink, HamburgerMenu };
