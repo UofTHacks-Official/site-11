@@ -49,7 +49,7 @@ const NavLink = styled.a`
   transition: color 0.3s;
 
   &:hover {
-    color: #ff5733;
+    color: grey;
   }
 `;
 
