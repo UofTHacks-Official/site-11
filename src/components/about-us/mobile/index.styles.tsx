@@ -24,7 +24,7 @@ const StyledSubjectivity = styled(Subjectivity)`
 `;
 
 const StyledInter = styled(Inter)`
-  text-align: center;
+  text-align: left;
   padding: 0.62rem;
   font-style: normal;
   font-weight: 400;
