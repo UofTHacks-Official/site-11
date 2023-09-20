@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
-import Inter from "@/components/inter";
+import InterSemiBold from "@/components/inter-semi-bold";
 
 type CardContainerProps = {
   mobile?: boolean | null;
@@ -59,7 +59,7 @@ const SignContainer = styled.div<CardContainerProps>`
   padding: 0.2rem;
 `;
 
-const StyledInter = styled(Inter)`
+const StyledInter = styled(InterSemiBold)`
   display: flex;
   flex: 10;
   align-items: center;

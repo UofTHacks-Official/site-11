@@ -21,7 +21,7 @@ const AboutUsMobile: React.FC<AboutUsProps> = ({
         <ColourText>{aboutUsHeader[0]}</ColourText> {aboutUsHeader[1]}
       </StyledSubjectivity>
       <PolaroidContainer />
-      <StyledInter fontStyle={"regular"}>{aboutUsDescription}</StyledInter>
+      <StyledInter>{aboutUsDescription}</StyledInter>
     </MobileContainer>
   );
 };

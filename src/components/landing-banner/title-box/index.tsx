@@ -5,9 +5,9 @@ import {
   SubTitleContainer,
 } from "./index.styles";
 import React from "react";
-import Inter from "@/components/inter";
 import Subjectivity from "@/components/subjectivity";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
+import InterSemiBold from "@/components/inter-semi-bold";
 
 interface TitleBoxProps {
   mainTitle: string;
@@ -25,7 +25,7 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
           {mainTitle.slice(3)}
         </Subjectivity>
         <SubTitleContainer>
-          <Inter>{subTitle}</Inter>
+          <InterSemiBold>{subTitle}</InterSemiBold>
         </SubTitleContainer>
       </InnerTitleBoxContainer>
     </TitleBoxContainer>

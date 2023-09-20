@@ -7,28 +7,33 @@ type StyledInterTextProps = {
   isMobile?: boolean | null;
 };
 
-const InterFont = css<StyledInterTextProps>`
+const InterSemiBoldFont = css<StyledInterTextProps>`
   @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter-Regular.woff2") format("woff2");
+    font-family: "InterSemiBold";
+
+    src: url("/fonts/Inter-SemiBold.woff2") format("woff2");
+
     font-weight: normal;
     font-style: normal;
   }
 `;
 
 const StyledInterText = styled.p<StyledInterTextProps>`
-  ${InterFont}
-  font-family: Inter;
-  font-size: ${(props) => (props.isMobile ? "10px" : "20px")};
+  ${InterSemiBoldFont}
+  font-family: InterSemiBold;
+  text-align: center;
+  font-size: ${(props) => (props.isMobile ? "14px" : "20px")};
   font-style: normal;
+  font-weight: 700;
   line-height: normal;
+  color: var(--black, #282828);
 `;
 
 type InterProps = StyledInterTextProps & {
   children: ReactNode;
 };
 
-const Inter: React.FC<InterProps> = ({ children, style, ...props }) => {
+const InterSemiBold: React.FC<InterProps> = ({ children, style, ...props }) => {
   const isMobile = useMobileDetect();
   return (
     <StyledInterText style={style} isMobile={isMobile} {...props}>
@@ -37,4 +42,4 @@ const Inter: React.FC<InterProps> = ({ children, style, ...props }) => {
   );
 };
 
-export default Inter;
+export default InterSemiBold;
