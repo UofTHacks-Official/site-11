@@ -48,7 +48,7 @@ const QuestionContainer = styled.div`
   justify-content: space-around;
 `;
 
-const SignContainer = styled.div<CardContainerProps>`
+const SignContainer = styled(InterSemiBold)<CardContainerProps>`
   display: flex;
   color: #282828;
   font-size: ${(props) => (props.mobile ? "24px" : "30px")};
