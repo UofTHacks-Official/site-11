@@ -4,10 +4,6 @@ type TitleBoxContainerProps = {
   mobile?: boolean | null;
 };
 
-type InnerTitleBoxContainerProps = {
-  mobile?: boolean | null;
-};
-
 const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
   position: absolute;
 
@@ -23,29 +19,26 @@ const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
 
   justify-content: center;
   align-items: center;
-`;
-
-const InnerTitleBoxContainer = styled.div<InnerTitleBoxContainerProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  // can be removed - testing only
+  ${(props) =>
+    props.mobile &&
+    `
+  width: 90%;
+  min-width: 350px;
+  `}
 `;
 
 const ShiftedContainer = styled.span`=
     position: relative;
     margin-right: 0.2rem;
+    text-align: center;
+    line-height: normal;
 `;
 
-const SubTitleContainer = styled.div`
-  text-align: center;
-  line-height: normal;
-`;
-
-export {
-  TitleBoxContainer,
-  InnerTitleBoxContainer,
-  ShiftedContainer,
-  SubTitleContainer,
-};
+export { TitleBoxContainer, ShiftedContainer };

@@ -33,8 +33,22 @@ const faqs = [
   },
   {
     question: "Can I attend if I live far away?",
-    answer:
-      "Yes, as long as you registered with UofTHacks, you are more than welcome to attend! However, all participants are responsible for getting themselves to the event and bringing their own personal essentials for an overnight stay. We will have designated spaces at the venue for hackers to rest and sleep. Unfortunately, we will not be providing any travel reimbursements.\n\nPlease note: If you will be attending from outside of Canada, you need to ensure you are following the Government of Canada’s travel policies. Please contact us by sending a direct message on Instagram or at contact@uofthacks.ca for more information.",
+    answer: (
+      <p>
+        Yes, as long as you registered with UofTHacks, you are more than welcome
+        to attend! However, all participants are responsible for getting
+        themselves to the event and bringing their own personal essentials for
+        an overnight stay. We will have designated spaces at the venue for
+        hackers to rest and sleep. Unfortunately, we will not be providing any
+        travel reimbursements. <br />
+        <br />
+        Please note: If you will be attending from outside of Canada, you need
+        to ensure you are following the Government of Canada’s travel policies.
+        Please contact us by sending a direct message on Instagram or at{" "}
+        <Link href="mailto:contact@uofthacks.ca">contact@uofthacks.ca</Link> for
+        more information. We’d be happy to help!
+      </p>
+    ),
     borderColor: "4px solid var(--Blue, #2850A0)",
   },
   {
