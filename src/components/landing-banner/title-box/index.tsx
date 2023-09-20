@@ -20,9 +20,9 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
     <TitleBoxContainer mobile={isMobile}>
       <InnerTitleBoxContainer mobile={isMobile}>
         <Subjectivity>
-          {mainTitle.slice(0, 3)}
-          <ShiftedContainer>{mainTitle[3]}</ShiftedContainer>
-          {mainTitle.slice(4)}
+          {mainTitle.slice(0, 2)}
+          <ShiftedContainer>{mainTitle[2]}</ShiftedContainer>
+          {mainTitle.slice(3)}
         </Subjectivity>
         <SubTitleContainer>
           <Inter>{subTitle}</Inter>

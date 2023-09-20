@@ -34,8 +34,8 @@ const InnerTitleBoxContainer = styled.div<InnerTitleBoxContainerProps>`
 `;
 
 const ShiftedContainer = styled.span`=
-  display: inline-block;
-  transform: translateX(-1%);
+    position: relative;
+    margin-right: 0.2rem;
 `;
 
 const SubTitleContainer = styled.div`
