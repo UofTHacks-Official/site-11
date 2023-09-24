@@ -51,22 +51,22 @@ const NavBar = () => {
           <NavLinks>
             <div style={{ display: isMobile && isMenuOpen ? "none" : "flex" }}>
               <NavLinkItem>
-                <NavLink href="#" onClick={() => scrollToSection("about-us")}>
+                <NavLink onClick={() => scrollToSection("about-us")}>
                   <Inter>ABOUT US</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
-                <NavLink href="#" onClick={() => scrollToSection("sponsors")}>
+                <NavLink onClick={() => scrollToSection("sponsors")}>
                   <Inter>SPONSORS</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
-                <NavLink href="#" onClick={() => scrollToSection("faq")}>
+                <NavLink onClick={() => scrollToSection("faq")}>
                   <Inter>FAQ</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
-                <NavLink href="#" onClick={() => scrollToSection("contact-us")}>
+                <NavLink onClick={() => scrollToSection("contact-us")}>
                   <Inter>CONTACT US</Inter>
                 </NavLink>
               </NavLinkItem>
