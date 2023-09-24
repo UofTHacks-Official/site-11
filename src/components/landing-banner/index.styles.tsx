@@ -10,7 +10,6 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
   align-items: center;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   min-height: 680px;
   border: 1px solid var(--black, #282828);
   ${(props) =>

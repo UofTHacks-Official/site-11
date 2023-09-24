@@ -23,7 +23,7 @@ const AboutUsDesktop: React.FC<AboutUsProps> = ({
         <StyledSubjectivity>
           <ColourText>{aboutUsHeader[0]}</ColourText> {aboutUsHeader[1]}
         </StyledSubjectivity>
-        <StyledInter fontStyle={"regular"}>{aboutUsDescription}</StyledInter>
+        <StyledInter>{aboutUsDescription}</StyledInter>
       </LeftContainer>
       <RightContainer>
         <PolaroidContainer />
