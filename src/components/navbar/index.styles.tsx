@@ -37,6 +37,7 @@ const NavLinks = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
+  cursor: pointer;
 `;
 
 const NavLinkItem = styled.li`
