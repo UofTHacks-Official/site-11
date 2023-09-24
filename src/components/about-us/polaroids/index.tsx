@@ -1,5 +1,9 @@
 import React from "react";
-import { PolaroidWrapper, Image, StickerContainer } from "./index.styles";
+import {
+  PolaroidWrapper,
+  PolaroidImage,
+  StickerContainer,
+} from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 type Sticker = {
@@ -53,7 +57,7 @@ const Polaroid: React.FC<PolaroidProps> = ({
               {...sticker}
             />
           ))}
-        <Image src={imageUrl} alt="Polaroid Photo" />
+        <PolaroidImage src={imageUrl} alt="Polaroid Photo" />
       </PolaroidWrapper>
     );
 };

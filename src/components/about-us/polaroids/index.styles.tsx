@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styled from "styled-components";
 
 type Sticker = {
@@ -51,13 +52,12 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   ${(props) =>
     props.mobile &&
     `height: 100%;
-     max-height: 50vw;
+      max-height: min(50vw, 320px);
   `}
-  
 };
 `;
 
-const Image = styled.img`
+const PolaroidImage = styled.img`
   padding: 0.25rem;
   width: 100%;
   height: 100%;
@@ -94,4 +94,4 @@ const ImageContainer = styled.div`
   overflow: hidden;
 `;
 
-export { PolaroidWrapper, Image, StickerContainer, ImageContainer };
+export { PolaroidWrapper, PolaroidImage, StickerContainer, ImageContainer };
