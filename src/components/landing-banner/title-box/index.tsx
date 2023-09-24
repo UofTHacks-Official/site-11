@@ -11,16 +11,10 @@ interface TitleBoxProps {
 
 const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
   const isMobile = useMobileDetect();
-  const fontSize = isMobile ? "12vw" : "96px";
-  const minFontSize = "48px";
 
   return (
     <TitleBoxContainer mobile={isMobile}>
-      <Subjectivity
-        style={{
-          fontSize: `max(${fontSize}, ${minFontSize})`,
-        }}
-      >
+      <Subjectivity>
         {mainTitle.slice(0, 2)}
         <ShiftedContainer>{mainTitle[2]}</ShiftedContainer>
         {mainTitle.slice(3)}
