@@ -5,7 +5,7 @@ const LandingPage = () => {
     <LandingPageContainer>
       <LandingBanner
         mainTitle="UofTHacks 11"
-        subTitle="JANUARY 2024"
+        subTitle="JANUARY 26-28, 2024"
         appsOpen={false}
       />
     </LandingPageContainer>

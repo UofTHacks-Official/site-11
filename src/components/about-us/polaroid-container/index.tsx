@@ -12,7 +12,7 @@ const PolaroidContainer = () => {
     <BoxContainer>
       <FirstPolaroid>
         <Polaroid
-          imageUrl={"/assets/polaroid/polaroid-1.png"}
+          imageUrl={"/assets/polaroid/polaroid1.jpg"}
           borderColor={"#A050A0"}
           stickers={[
             {
@@ -35,7 +35,7 @@ const PolaroidContainer = () => {
       <SmallQuadrantContainer>
         <SecondPolaroid>
           <Polaroid
-            imageUrl={"/assets/polaroid/polaroid-2.png"}
+            imageUrl={"/assets/polaroid/polaroid2.jpg"}
             rotation={20}
             borderColor={"#2850A0"}
             stickers={[
@@ -58,7 +58,7 @@ const PolaroidContainer = () => {
         </SecondPolaroid>
         <ThirdPolaroid>
           <Polaroid
-            imageUrl={"/assets/polaroid/polaroid-3.png"}
+            imageUrl={"/assets/polaroid/polaroid3.jpg"}
             rotation={-10}
             borderColor={"#F0A000"}
             stickers={[
