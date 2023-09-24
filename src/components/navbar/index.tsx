@@ -23,6 +23,29 @@ const NavBar = () => {
     }
   };
 
+  const [prevScrollY, setPrevScrollY] = useState(0); // Track previous scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const scrollDirection = scrollY > prevScrollY ? "down" : "up";
+
+      // Determine visibility based on scroll direction
+      if (scrollDirection === "down") {
+        setNavBarVisible(false);
+      } else {
+        setNavBarVisible(true);
+      }
+
+      setPrevScrollY(scrollY); // Update previous scroll position
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
