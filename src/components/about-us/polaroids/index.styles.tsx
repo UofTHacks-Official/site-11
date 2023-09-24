@@ -52,7 +52,8 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
   ${(props) =>
     props.mobile &&
     `height: 100%;
-      max-height: min(50vw, 320px);
+    // max-height: min(50vw, 320px);
+      max-height: 50vw;
   `}
 };
 `;
