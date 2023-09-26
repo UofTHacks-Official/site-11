@@ -1,21 +1,16 @@
 // components/sponsors/index.styles.tsx
+import Image from "next/image";
 import styled from "styled-components";
 
 // Style for the sponsors container
-export const Wrapper = styled.section`
+const Wrapper = styled.section`
   display: flex;
-  //   min-height: 100%;
-  min-height: min-content;
   height: 100%;
   width: 100%;
-  //   border: 1px solid var(--black, #282828);
-  //   background: green;
-
-  scroll-margin-top: 12vh;
 `;
 
 // Style for the sponsors grid
-export const SponsorsGrid = styled.div`
+const SponsorsGrid = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -32,19 +27,16 @@ export const SponsorsGrid = styled.div`
 `;
 
 // Style for individual sponsor items
-export const SponsorItem = styled.a`
+const SponsorItem = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 
   height: 100%;
   width: 100%;
-  //   max-width: 100%;
-  //   max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   overflow: hidden;
-
-  // background: blue;
 
   &:hover {
     transition: all 0.3s ease 0s;
@@ -54,8 +46,9 @@ export const SponsorItem = styled.a`
   }
 `;
 
-export const RowStyle = styled.div`
+const RowStyle = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
   //   max-height: 18.125 rem;
@@ -67,67 +60,68 @@ export const RowStyle = styled.div`
   gap: 1rem;
 `;
 
-export const DiamondStyle = styled.div`
+const DiamondStyle = styled.div`
+  width: 100%;
+  height: 18.125rem;
+
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 18.125rem;
-  width: 100%;
-  //   height: 100%;
-  box-sizing: border-box;
-
   border-radius: 5px;
   border: 1px solid var(--black, #282828);
   background: #d9d9d9;
   box-shadow: 0px 4px 0px 0px #282828;
 `;
 
-export const PlatinumStyle = styled.div`
-  display: flex;
-  justify-content: center;
+const PlatinumStyle = styled.div`
   width: 50%;
   height: 18.125 rem;
-  max-height: 18.125 rem;
-  box-sizing: border-box;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid var(--black, #282828);
   background: #d9d9d9;
   box-shadow: 0px 4px 0px 0px #282828;
 `;
 
-export const GoldStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 33.33333%;
+const GoldStyle = styled.div`
   width: 33.33333%;
-  height: 15.875 rem;
-  box-sizing: border-box;
+  height: 16rem;
 
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
-export const SilverStyle = styled.div`
   display: flex;
   justify-content: center;
-  max-width: 25%;
-  max-height: 12.625 rem;
+  align-items: center;
   box-sizing: border-box;
-
   border-radius: 5px;
   border: 1px solid var(--black, #282828);
   background: #d9d9d9;
   box-shadow: 0px 4px 0px 0px #282828;
 `;
 
-export const BronzeStyle = styled.div`
+const SilverStyle = styled.div`
+  width: 25%;
+  height: 12.625rem;
+
   display: flex;
   justify-content: center;
-  width: 16.666667%;
-  min-height: 18.125 rem;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid var(--black, #282828);
+  background: #d9d9d9;
+  box-shadow: 0px 4px 0px 0px #282828;
+`;
+
+const BronzeStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17%;
+  max-height: 11rem;
   box-sizing: border-box;
 
   border-radius: 5px;
@@ -136,7 +130,7 @@ export const BronzeStyle = styled.div`
   box-shadow: 0px 4px 0px 0px #282828;
 `;
 
-// export const PlatinumStyle = styled.div`
+//  const PlatinumStyle = styled.div`
 //   display: flex;
 //   flex-wrap: wrap;
 //   place-content: center;
@@ -161,3 +155,58 @@ export const BronzeStyle = styled.div`
 //     transform: scale(1.1);
 //   }
 // `;
+
+type ImageProps = {
+  mobile?: boolean | null;
+};
+
+type TierProps = {
+  width?: string;
+  height?: string;
+};
+
+const StyledImage = styled(Image)<ImageProps>`
+  padding: ${(props) => (props.mobile ? "0.5rem;" : "4vw")};
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+`;
+
+const TierStyle = styled.div<TierProps>`
+  min-width: ${(props) => props.width};
+  max-width: ${(props) => props.width};
+  min-height: ${(props) => props.height};
+  max-height: ${(props) => props.height};
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid var(--black, #282828);
+  background: #d9d9d9;
+  box-shadow: 0px 4px 0px 0px #282828;
+`;
+
+export {
+  Wrapper,
+  SponsorsGrid,
+  SponsorItem,
+  RowStyle,
+  DiamondStyle,
+  PlatinumStyle,
+  GoldStyle,
+  SilverStyle,
+  BronzeStyle,
+  StyledImage,
+  TierStyle,
+};

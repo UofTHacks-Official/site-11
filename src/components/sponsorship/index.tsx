@@ -1,6 +1,6 @@
 // components/sponsors/index.tsx
 import React from "react";
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import {
   Wrapper,
   SponsorsGrid,
@@ -11,6 +11,8 @@ import {
   GoldStyle,
   SilverStyle,
   BronzeStyle,
+  StyledImage,
+  TierStyle,
 } from "./index.styles";
 
 // Import sponsor images
@@ -26,6 +28,7 @@ import echo3D from "public/assets/sponsors/echo3D.webp";
 import Voiceflow from "public/assets/sponsors/Voiceflow.webp";
 import AMD from "public/assets/sponsors/AMD.svg";
 import XYZ from "public/assets/sponsors/XYZ.svg";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
 
 // Define sponsor data
 const sponsorsData = {
@@ -111,14 +114,38 @@ const Sponsor: React.FC<{
   width?: number;
   height?: number;
 }> = ({ href, src, name }) => {
+  const isMobile = useMobileDetect();
   return (
     <SponsorItem href={href} target="_blank" rel="noopener">
-      <Image src={src} alt={name} width={200} height={210} />
+      <StyledImage src={src} alt={name} layout="responsive" mobile={isMobile} />
     </SponsorItem>
   );
 };
 
 // Sponsor tier components
+
+type TierComponentProps = {
+  data: typeof sponsorsData.diamond;
+  width: string;
+  height: string;
+};
+
+const TierComponent: React.FC<TierComponentProps> = ({
+  data,
+  width,
+  height,
+}) => {
+  return (
+    <RowStyle>
+      {data.map((s, index) => (
+        <TierStyle width={width} height={height} key={index}>
+          <Sponsor href={s.url} src={s.img} name={s.name} key={index} />
+        </TierStyle>
+      ))}
+    </RowStyle>
+  );
+};
+
 const DiamondTier: React.FC = () => {
   const list = sponsorsData.diamond.map((s, index) => (
     <RowStyle>
@@ -171,13 +198,21 @@ const Sponsors: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <SponsorsGrid>
-        <DiamondTier />
-        <RowStyle>
-          <PlatinumTier />
-        </RowStyle>
-        <RowStyle>
-          <GoldTier />
-        </RowStyle>
+        <TierComponent
+          data={sponsorsData.diamond}
+          width={"100%"}
+          height={"18.125rem"}
+        />
+        <TierComponent
+          data={sponsorsData.platinum}
+          width={"50%"}
+          height={"18.125rem"}
+        />
+        <TierComponent
+          data={sponsorsData.gold}
+          width={"34%"}
+          height={"16rem"}
+        />
         <RowStyle>
           <SilverTier />
         </RowStyle>
