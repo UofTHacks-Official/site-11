@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import Image from "next/image";
-import Inter from "@/components/inter";
+import InterSemiBold from "@/components/inter-semi-bold";
 
 type CardContainerProps = {
   mobile?: boolean | null;
@@ -48,7 +48,7 @@ const QuestionContainer = styled.div`
   justify-content: space-around;
 `;
 
-const SignContainer = styled.div<CardContainerProps>`
+const SignContainer = styled(InterSemiBold)<CardContainerProps>`
   display: flex;
   color: #282828;
   font-size: ${(props) => (props.mobile ? "24px" : "30px")};
@@ -59,7 +59,7 @@ const SignContainer = styled.div<CardContainerProps>`
   padding: 0.2rem;
 `;
 
-const StyledInter = styled(Inter)`
+const StyledInter = styled(InterSemiBold)`
   display: flex;
   flex: 10;
   align-items: center;
