@@ -1,9 +1,18 @@
-import { SponsorshipContainer } from "./index.styles";
+import {
+  SponsorshipContainer,
+  ColourText,
+  StyledSubjectivity,
+} from "./index.styles";
+import { useMobileDetect } from "@/hooks/useMobileDetect";
+import Sponsors from "@/components/sponsorship";
 
 const Sponsorship = () => {
   return (
     <SponsorshipContainer>
-      <h1>Sponsorship Page</h1>
+      <StyledSubjectivity>
+        Previous<ColourText> Sponsors</ColourText>
+      </StyledSubjectivity>
+      <Sponsors />
     </SponsorshipContainer>
   );
 };
