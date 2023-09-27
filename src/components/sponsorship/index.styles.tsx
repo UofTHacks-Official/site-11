@@ -10,19 +10,20 @@ const Wrapper = styled.section`
 `;
 
 // Style for the sponsors grid
-const SponsorsGrid = styled.div`
+type SponsorsGridProps = {
+  mobile?: boolean | null;
+};
+const SponsorsGrid = styled.div<SponsorsGridProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: white;
   box-sizing: border-box;
   // border: 1px solid var(--black, #282828);
 
   backdrop-filter: blur(20px);
 
-  border-radius: 10px;
-  padding: 50px;
+  padding: ${(props) => (props.mobile ? "0" : "50px")};
   gap: 1.25rem;
 `;
 
@@ -163,6 +164,7 @@ type ImageProps = {
 type TierProps = {
   width?: string;
   height?: string;
+  maxHeight?: string;
 };
 
 const StyledImage = styled(Image)<ImageProps>`
@@ -180,7 +182,7 @@ const TierStyle = styled.div<TierProps>`
   min-width: ${(props) => props.width};
   max-width: ${(props) => props.width};
   min-height: ${(props) => props.height};
-  max-height: ${(props) => props.height};
+  max-height: ${(props) => (props.maxHeight ? props.maxHeight : props.height)};
 
   display: flex;
   flex-direction: row;
@@ -195,6 +197,7 @@ const TierStyle = styled.div<TierProps>`
   border: 1px solid var(--black, #282828);
   background: #d9d9d9;
   box-shadow: 0px 4px 0px 0px #282828;
+  overflow: hidden;
 `;
 
 export {
