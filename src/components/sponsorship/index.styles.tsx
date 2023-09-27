@@ -61,76 +61,6 @@ const RowStyle = styled.div`
   gap: 1rem;
 `;
 
-const DiamondStyle = styled.div`
-  width: 100%;
-  height: 18.125rem;
-
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
-const PlatinumStyle = styled.div`
-  width: 50%;
-  height: 18.125 rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
-const GoldStyle = styled.div`
-  width: 33.33333%;
-  height: 16rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
-const SilverStyle = styled.div`
-  width: 25%;
-  height: 12.625rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
-const BronzeStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 17%;
-  max-height: 11rem;
-  box-sizing: border-box;
-
-  border-radius: 5px;
-  border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
-  box-shadow: 0px 4px 0px 0px #282828;
-`;
-
 //  const PlatinumStyle = styled.div`
 //   display: flex;
 //   flex-wrap: wrap;
@@ -200,16 +130,4 @@ const TierStyle = styled.div<TierProps>`
   overflow: hidden;
 `;
 
-export {
-  Wrapper,
-  SponsorsGrid,
-  SponsorItem,
-  RowStyle,
-  DiamondStyle,
-  PlatinumStyle,
-  GoldStyle,
-  SilverStyle,
-  BronzeStyle,
-  StyledImage,
-  TierStyle,
-};
+export { Wrapper, SponsorsGrid, SponsorItem, RowStyle, StyledImage, TierStyle };
