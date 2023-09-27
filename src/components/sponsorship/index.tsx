@@ -83,21 +83,17 @@ const Sponsors: React.FC = () => {
           height={"16vw"}
           maxHeight={"250px"}
         />
-        <RowStyle>
-          <TierComponent
-            data={sponsorsData.silver}
-            width={"25%"}
-            height={"15vw"}
-            maxHeight={"200px"}
-          />
-        </RowStyle>
-        <RowStyle>
-          <TierComponent
-            data={sponsorsData.bronze}
-            width={"15%"}
-            height={"10vw"}
-          />
-        </RowStyle>
+        <TierComponent
+          data={sponsorsData.silver}
+          width={"22.5%"}
+          height={"14vw"}
+          maxHeight={"200px"}
+        />
+        <TierComponent
+          data={sponsorsData.bronze}
+          width={"15%"}
+          height={"10vw"}
+        />
       </SponsorsGrid>
     </Wrapper>
   );
