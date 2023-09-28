@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Inter from "@/components/inter";
 import {
+  NavigationContainer,
   NavigationBar,
   Logo,
   NavLinks,
@@ -34,6 +35,7 @@ const NavBar = () => {
       // Determine visibility based on scroll direction
       if (scrollDirection === "down") {
         setNavBarVisible(false);
+        setIsMenuOpen(false);
       } else {
         setNavBarVisible(true);
       }
@@ -68,75 +70,77 @@ const NavBar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const MobileInterStyle = () => ({
+    fontSize: "20px",
+  });
+
   return (
     <>
       {isNavBarVisible && (
-        <NavigationBar>
-          <Logo>LOGO</Logo>
-          <NavLinks>
-            <div style={{ display: isMobile ? "none" : "flex" }}>
-              <NavLinkItem>
-                <NavLink onClick={() => scrollToSection("about-us")}>
-                  <Inter>ABOUT US</Inter>
-                </NavLink>
-              </NavLinkItem>
-              <NavLinkItem>
-                <NavLink onClick={() => scrollToSection("sponsors")}>
-                  <Inter>SPONSORS</Inter>
-                </NavLink>
-              </NavLinkItem>
-              <NavLinkItem>
-                <NavLink onClick={() => scrollToSection("faq")}>
-                  <Inter>FAQ</Inter>
-                </NavLink>
-              </NavLinkItem>
-              <NavLinkItem>
-                <NavLink onClick={() => scrollToSection("contact-us")}>
-                  <Inter>CONTACT US</Inter>
-                </NavLink>
-              </NavLinkItem>
-            </div>
-            <NavLinkItem>
+        <NavigationContainer>
+          <NavigationBar>
+            <Logo>LOGO</Logo>
+            <NavLinks>
+              <div style={{ display: isMobile ? "none" : "flex" }}>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("about-us")}>
+                    <Inter>ABOUT US</Inter>
+                  </NavLink>
+                </NavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("sponsors")}>
+                    <Inter>SPONSORS</Inter>
+                  </NavLink>
+                </NavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("faq")}>
+                    <Inter>FAQ</Inter>
+                  </NavLink>
+                </NavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("contact-us")}>
+                    <Inter>CONTACT US</Inter>
+                  </NavLink>
+                </NavLinkItem>
+              </div>
               <HamburgerMenu mobile={isMobile} onClick={toggleMenu}>
                 ☰
               </HamburgerMenu>
-            </NavLinkItem>
-          </NavLinks>
+            </NavLinks>
+          </NavigationBar>
           {isMobile && (
             <MobileMenu open={isMenuOpen}>
               <MobileNavLinkItem>
                 <NavLinkItem>
                   <NavLink onClick={() => scrollToSection("about-us")}>
-                    <Inter>ABOUT US</Inter>
+                    <Inter style={MobileInterStyle()}>ABOUT US</Inter>
                   </NavLink>
                 </NavLinkItem>
               </MobileNavLinkItem>
               <MobileNavLinkItem>
                 <NavLinkItem>
                   <NavLink onClick={() => scrollToSection("sponsors")}>
-                    <Inter>SPONSORS</Inter>
+                    <Inter style={MobileInterStyle()}>SPONSORS</Inter>
                   </NavLink>
                 </NavLinkItem>
               </MobileNavLinkItem>
               <MobileNavLinkItem>
                 <NavLinkItem>
                   <NavLink onClick={() => scrollToSection("faq")}>
-                    <Inter>FAQ</Inter>
+                    <Inter style={MobileInterStyle()}>FAQ</Inter>
                   </NavLink>
                 </NavLinkItem>
               </MobileNavLinkItem>
               <MobileNavLinkItem>
                 <NavLinkItem>
                   <NavLink onClick={() => scrollToSection("contact-us")}>
-                    <Inter>CONTACT US</Inter>
+                    <Inter style={MobileInterStyle()}>CONTACT US</Inter>
                   </NavLink>
                 </NavLinkItem>
               </MobileNavLinkItem>
-
-              {/* ... other links ... */}
             </MobileMenu>
           )}
-        </NavigationBar>
+        </NavigationContainer>
       )}
     </>
   );

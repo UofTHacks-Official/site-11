@@ -12,8 +12,17 @@ type MobileMenuProps = {
   open?: boolean | null;
 };
 
+const NavigationContainer = styled.div`
+  width: 100%;
+  height: 120px;
+  background-color: #f9f9f9;
+  position: fixed;
+  z-index: 1000;
+`;
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
+  position: fixed;
+  height: 40px;
   justify-content: space-between;
   align-items: center;
   ${(props) =>
@@ -24,11 +33,9 @@ const NavigationBar = styled.nav<NavbarProps>`
       : `
       margin: 40px 10%;
   `}
-  position: fixed;
   top: 0;
   width: 80%;
-  transition: top 0.3s; /* Add smooth transition effect */
-  z-index: 1000; /* Ensure it appears above other content */
+  transition: top 0.3s;
 `;
 
 const Logo = styled.div`
@@ -41,11 +48,11 @@ const NavLinks = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
-  cursor: pointer;
 `;
 
 const NavLinkItem = styled.li`
   margin-right: 20px;
+  cursor: pointer;
 `;
 
 const NavLink = styled.a`
@@ -64,9 +71,9 @@ const HamburgerMenu = styled.div<HamburgerProps>`
     props.mobile
       ? `
         position: absolute;
-        top: 0px;
+        top: 0;
         justify-content: center;
-        font-size: 20px;
+        font-size: 30px;
         z-index: 1001;
       `
       : `display: none;`}
@@ -74,16 +81,21 @@ const HamburgerMenu = styled.div<HamburgerProps>`
 
 const MobileMenu = styled.div<MobileMenuProps>`
   display: ${(props) => (props.open ? "block" : "none")};
+
   position: absolute;
-  top: 100%; // This will position the menu right below the NavBar
+  background-color: #f0f0f0;
+  top: 100%;
   left: 0;
   width: 100%;
-  z-index: 1000; // This ensures the menu appears above other elements
+  z-index: 1000;
 `;
 
 const MobileNavLinkItem = styled(NavLinkItem)`
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 30px;
   width: 100%;
-  padding: 10px 0; // Add some padding for better spacing
+  padding: 10px 0;
   list-style-type: none;
 `;
 
@@ -96,4 +108,5 @@ export {
   HamburgerMenu,
   MobileMenu,
   MobileNavLinkItem,
+  NavigationContainer,
 };
