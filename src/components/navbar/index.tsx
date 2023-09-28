@@ -8,6 +8,8 @@ import {
   NavLinkItem,
   NavLink,
   HamburgerMenu,
+  MobileMenu,
+  MobileNavLinkItem,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 const NavBar = () => {
@@ -72,7 +74,7 @@ const NavBar = () => {
         <NavigationBar>
           <Logo>LOGO</Logo>
           <NavLinks>
-            <div style={{ display: isMobile && isMenuOpen ? "none" : "flex" }}>
+            <div style={{ display: isMobile ? "none" : "flex" }}>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("about-us")}>
                   <Inter>ABOUT US</Inter>
@@ -100,6 +102,40 @@ const NavBar = () => {
               </HamburgerMenu>
             </NavLinkItem>
           </NavLinks>
+          {isMobile && (
+            <MobileMenu open={isMenuOpen}>
+              <MobileNavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("about-us")}>
+                    <Inter>ABOUT US</Inter>
+                  </NavLink>
+                </NavLinkItem>
+              </MobileNavLinkItem>
+              <MobileNavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("sponsors")}>
+                    <Inter>SPONSORS</Inter>
+                  </NavLink>
+                </NavLinkItem>
+              </MobileNavLinkItem>
+              <MobileNavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("faq")}>
+                    <Inter>FAQ</Inter>
+                  </NavLink>
+                </NavLinkItem>
+              </MobileNavLinkItem>
+              <MobileNavLinkItem>
+                <NavLinkItem>
+                  <NavLink onClick={() => scrollToSection("contact-us")}>
+                    <Inter>CONTACT US</Inter>
+                  </NavLink>
+                </NavLinkItem>
+              </MobileNavLinkItem>
+
+              {/* ... other links ... */}
+            </MobileMenu>
+          )}
         </NavigationBar>
       )}
     </>

@@ -8,6 +8,10 @@ type NavbarProps = {
   mobile?: boolean | null;
 };
 
+type MobileMenuProps = {
+  open?: boolean | null;
+};
+
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
   justify-content: space-between;
@@ -68,4 +72,28 @@ const HamburgerMenu = styled.div<HamburgerProps>`
       : `display: none;`}
 `;
 
-export { NavigationBar, Logo, NavLinks, NavLinkItem, NavLink, HamburgerMenu };
+const MobileMenu = styled.div<MobileMenuProps>`
+  display: ${(props) => (props.open ? "block" : "none")};
+  position: absolute;
+  top: 100%; // This will position the menu right below the NavBar
+  left: 0;
+  width: 100%;
+  z-index: 1000; // This ensures the menu appears above other elements
+`;
+
+const MobileNavLinkItem = styled(NavLinkItem)`
+  width: 100%;
+  padding: 10px 0; // Add some padding for better spacing
+  list-style-type: none;
+`;
+
+export {
+  NavigationBar,
+  Logo,
+  NavLinks,
+  NavLinkItem,
+  NavLink,
+  HamburgerMenu,
+  MobileMenu,
+  MobileNavLinkItem,
+};
