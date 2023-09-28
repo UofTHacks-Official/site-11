@@ -11,6 +11,7 @@ interface TitleBoxProps {
 
 const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
   const isMobile = useMobileDetect();
+
   return (
     <TitleBoxContainer mobile={isMobile}>
       <Subjectivity>
