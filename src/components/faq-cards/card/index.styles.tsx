@@ -5,6 +5,11 @@ import InterSemiBold from "@/components/inter-semi-bold";
 type CardContainerProps = {
   mobile?: boolean | null;
   borderColor?: string | null;
+  clicked?: boolean | null;
+};
+
+type AnswerContainerProps = {
+  clicked?: boolean | null;
 };
 
 type StarCornerStyleProps = {
@@ -24,6 +29,8 @@ const BorderColour = css<CardContainerProps>`
 `;
 
 const CardContainer = styled.div<CardContainerProps>`
+  max-height: ${(props) => (props.clicked ? "500px" : "100px")};
+  transition: max-height 0.3s ease-in-out;
   ${BorderColour}
   margin: 0 auto;
   text-align: start;
@@ -65,7 +72,9 @@ const StyledInter = styled(InterSemiBold)`
   align-items: center;
 `;
 
-const AnswerContainer = styled.div`
+const AnswerContainer = styled.div<AnswerContainerProps>`
+  opacity: ${(props) => (props.clicked ? "1" : "0")};
+  transition: opacity 0.3s ease-in-out;
   margin-bottom: 0.5rem;
   overflow: hidden;
 `;

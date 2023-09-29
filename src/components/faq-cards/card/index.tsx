@@ -48,7 +48,11 @@ const Card = ({ question, answer, star, borderColor }: CardProps) => {
   }, []);
 
   return (
-    <CardContainer borderColor={borderColor} mobile={isMobile}>
+    <CardContainer
+      borderColor={borderColor}
+      mobile={isMobile}
+      clicked={clicked}
+    >
       {star && (
         <StarCornerStyle src={star.src} starStyle={star} alt="Star Sticker" />
       )}
@@ -59,12 +63,9 @@ const Card = ({ question, answer, star, borderColor }: CardProps) => {
           {clicked ? <>&minus;</> : "+"}
         </SignContainer>
       </QuestionContainer>
-
-      {clicked && (
-        <AnswerContainer>
-          <Inter style={AnswerStyle(isMobile)}>{answer}</Inter>
-        </AnswerContainer>
-      )}
+      <AnswerContainer clicked={clicked}>
+        <Inter style={AnswerStyle(isMobile)}>{answer}</Inter>
+      </AnswerContainer>
     </CardContainer>
   );
 };
