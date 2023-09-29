@@ -124,6 +124,13 @@ const NavBar = () => {
           </MobileNavLinkItem>
           <MobileNavLinkItem>
             <NavLinkItem>
+              <NavLink onClick={() => scrollToSection("statistics")}>
+                <Inter>STATISTICS</Inter>
+              </NavLink>
+            </NavLinkItem>
+          </MobileNavLinkItem>
+          <MobileNavLinkItem>
+            <NavLinkItem>
               <NavLink onClick={() => scrollToSection("sponsors")}>
                 <Inter style={MobileInterStyle()}>SPONSORS</Inter>
               </NavLink>
