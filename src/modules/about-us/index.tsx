@@ -23,7 +23,7 @@ const AboutUs = () => {
   );
 
   return (
-    <AboutUsContainer>
+    <AboutUsContainer id="about-us">
       {isMobile ? (
         <AboutUsMobile
           aboutUsHeader={["About", "us"]}

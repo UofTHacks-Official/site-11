@@ -3,7 +3,7 @@ import FAQCollection from "@/components/faq-cards";
 
 const FAQ = () => {
   return (
-    <FAQContainer>
+    <FAQContainer id="faq">
       <StyledSubjectivity>
         Frequently Asked <ColourText>Questions</ColourText>
       </StyledSubjectivity>

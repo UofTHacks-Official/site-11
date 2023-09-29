@@ -1,3 +1,4 @@
+import NavBar from "@/components/navbar";
 import LandingPage from "@/modules/landing-page";
 import AboutUs from "@/modules/about-us";
 import Sponsors from "@/modules/Sponsorship";
@@ -7,6 +8,7 @@ import Stats from "@/modules/stats";
 const Site11 = () => {
   return (
     <div style={{ backgroundColor: "#f9f9f9" }}>
+      <NavBar />
       <LandingPage />
       <AboutUs />
       <Stats />
