@@ -89,12 +89,12 @@ const MobileMenu = styled.div<MobileMenuProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-200%")});
   transition: transform 0.3s ease-in-out;
 
-  position: absolute;
+  position: fixed;
   background-color: #f0f0f0;
   top: 120px;
   left: 0;
   width: 100%;
-  z-index: 0; // Increased this value
+  z-index: 999;
 `;
 
 const MobileNavLinkItem = styled(NavLinkItem)`
