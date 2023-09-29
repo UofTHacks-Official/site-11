@@ -8,7 +8,7 @@ import Sponsors from "@/components/sponsorship";
 
 const Sponsorship = () => {
   return (
-    <SponsorshipContainer>
+    <SponsorshipContainer id="sponsors">
       <StyledSubjectivity>
         Previous<ColourText> Sponsors</ColourText>
       </StyledSubjectivity>

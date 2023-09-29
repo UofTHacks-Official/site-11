@@ -87,6 +87,11 @@ const NavBar = () => {
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
+                <NavLink onClick={() => scrollToSection("statistics")}>
+                  <Inter>STATISTICS</Inter>
+                </NavLink>
+              </NavLinkItem>
+              <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("sponsors")}>
                   <Inter>SPONSORS</Inter>
                 </NavLink>

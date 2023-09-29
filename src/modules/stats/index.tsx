@@ -13,7 +13,7 @@ import StatSchools from "public/assets/stats/Stat_Schools.png";
 
 const Stats = () => {
   return (
-    <StatsContainer>
+    <StatsContainer id="statistics">
       <StyledSubjectivity>
         Last Year’s <ColourText>Statistics</ColourText>
       </StyledSubjectivity>
