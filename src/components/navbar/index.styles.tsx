@@ -4,6 +4,9 @@ type HamburgerProps = {
   mobile?: boolean | null;
 };
 
+type NavContainerProps = {
+  open?: boolean | null;
+};
 type NavbarProps = {
   mobile?: boolean | null;
 };
@@ -12,7 +15,9 @@ type MobileMenuProps = {
   open?: boolean | null;
 };
 
-const NavigationContainer = styled.div`
+const NavigationContainer = styled.div<NavContainerProps>`
+  transform: translateY(${(props) => (props.open ? "0" : "-100%")});
+  transition: transform 0.3s ease-in-out;
   width: 100%;
   height: 120px;
   background-color: #f9f9f9;
@@ -23,6 +28,7 @@ const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
   position: fixed;
   height: 40px;
+  z-index: 1001;
   justify-content: space-between;
   align-items: center;
   ${(props) =>
@@ -74,20 +80,21 @@ const HamburgerMenu = styled.div<HamburgerProps>`
         top: 0;
         justify-content: center;
         font-size: 30px;
-        z-index: 1001;
+        z-index: 1002;
       `
       : `display: none;`}
 `;
 
 const MobileMenu = styled.div<MobileMenuProps>`
-  display: ${(props) => (props.open ? "block" : "none")};
+  transform: translateY(${(props) => (props.open ? "0" : "-200%")});
+  transition: transform 0.3s ease-in-out;
 
   position: absolute;
   background-color: #f0f0f0;
-  top: 100%;
+  top: 120px;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 0; // Increased this value
 `;
 
 const MobileNavLinkItem = styled(NavLinkItem)`
