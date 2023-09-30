@@ -31,6 +31,10 @@ const NavBar = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const scrollDirection = scrollY > prevScrollY ? "down" : "up";
+      if (scrollY < 70) {
+        setNavBarVisible(true);
+        return;
+      }
 
       // Determine visibility based on scroll direction
       if (scrollDirection === "down") {

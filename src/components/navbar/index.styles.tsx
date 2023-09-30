@@ -19,7 +19,7 @@ const NavigationContainer = styled.div<NavContainerProps>`
   transform: translateY(${(props) => (props.open ? "0" : "-100%")});
   transition: transform 0.3s ease-in-out;
   width: 100%;
-  height: 120px;
+  height: 100px;
   background-color: #f9f9f9;
   position: fixed;
   z-index: 1000;
