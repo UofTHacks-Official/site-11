@@ -4,6 +4,7 @@ import AboutUs from "@/modules/about-us";
 import Sponsors from "@/modules/Sponsorship";
 import FAQ from "@/modules/FAQ";
 import Stats from "@/modules/stats";
+import Footer from "@/modules/footer";
 
 const Site11 = () => {
   return (
@@ -14,6 +15,7 @@ const Site11 = () => {
       <Stats />
       <Sponsors />
       <FAQ />
+      <Footer />
     </div>
   );
 };
