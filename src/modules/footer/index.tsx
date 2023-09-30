@@ -62,7 +62,7 @@ const Footer = () => {
           <Twitter />
         </Icon>
         <Icon
-          href="https://www.twitter.com/uofthacks"
+          href="https://www.linkedin.com/company/uoftorontohacks"
           target="_blank"
           rel="noopener"
         >

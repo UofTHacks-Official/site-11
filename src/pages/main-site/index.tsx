@@ -8,7 +8,7 @@ import Footer from "@/modules/footer";
 
 const Site11 = () => {
   return (
-    <div style={{ backgroundColor: "#f9f9f9" }}>
+    <div style={{ backgroundColor: "#f9f9f9" }} id="start">
       <NavBar />
       <LandingPage />
       <AboutUs />

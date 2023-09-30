@@ -47,6 +47,9 @@ const NavigationBar = styled.nav<NavbarProps>`
 const Logo = styled.div`
   font-size: 24px;
   font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const NavLinks = styled.ul`
