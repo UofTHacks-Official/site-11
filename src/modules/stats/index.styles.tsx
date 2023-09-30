@@ -5,7 +5,7 @@ import Image from "next/image";
 const StatsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 5rem;
 `;
 
 const StyledSubjectivity = styled(Subjectivity)`
