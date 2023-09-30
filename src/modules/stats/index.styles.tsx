@@ -41,8 +41,6 @@ const StyledImage = styled(Image)`
 
   user-select: none;
   -webkit-user-select: none;
-  touch-action: none;
-  -webkit-touch-callout: none;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
   -moz-user-drag: none;

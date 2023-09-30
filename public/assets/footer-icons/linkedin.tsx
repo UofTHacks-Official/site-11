@@ -14,7 +14,6 @@ const Icon = styled.svg`
   &:hover {
     transition: 0.3s ease-out all;
     fill: #0077b5;
-    background: white;
   }
 `;
 

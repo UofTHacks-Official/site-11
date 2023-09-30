@@ -85,7 +85,7 @@ const Sponsors: React.FC = () => {
         />
         <TierComponent
           data={sponsorsData.silver}
-          width={"22.5%"}
+          width={"20%"}
           height={"14vw"}
           maxHeight={"200px"}
         />

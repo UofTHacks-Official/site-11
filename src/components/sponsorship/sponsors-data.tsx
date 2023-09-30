@@ -4,7 +4,7 @@ import Cohere from "public/assets/sponsors/cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
 import EngSoc from "public/assets/sponsors/EngSoc.svg";
 import UofTCS from "public/assets/sponsors/UofTCS.svg";
-import IBM from "public/assets/sponsors/IBM.svg";
+import Ubisoft from "public/assets/sponsors/Ubisoft.svg";
 import FDMGroup from "public/assets/sponsors/FDM.svg";
 import echo3D from "public/assets/sponsors/echo3D.webp";
 import Voiceflow from "public/assets/sponsors/Voiceflow.webp";
@@ -46,9 +46,9 @@ export const sponsorsData = {
   ],
   silver: [
     {
-      name: "IBM",
-      url: "https://www.ibm.com/",
-      img: IBM,
+      name: "UbiSoft",
+      url: "https://www.ubisoft.com/en-gb/",
+      img: Ubisoft,
     },
   ],
   bronze: [

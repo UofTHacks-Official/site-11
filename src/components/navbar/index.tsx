@@ -13,6 +13,7 @@ import {
   MobileNavLinkItem,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
+
 const NavBar = () => {
   const [isNavBarVisible, setNavBarVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,10 @@ const NavBar = () => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const scrollDirection = scrollY > prevScrollY ? "down" : "up";
+      if (scrollY < 70) {
+        setNavBarVisible(true);
+        return;
+      }
 
       // Determine visibility based on scroll direction
       if (scrollDirection === "down") {
@@ -78,7 +83,7 @@ const NavBar = () => {
     <>
       <NavigationContainer open={isNavBarVisible}>
         <NavigationBar>
-          <Logo>LOGO</Logo>
+          <Logo onClick={() => scrollToSection("start")}>LOGO</Logo>
           <NavLinks>
             <div style={{ display: isMobile ? "none" : "flex" }}>
               <NavLinkItem>
@@ -102,7 +107,7 @@ const NavBar = () => {
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
-                <NavLink onClick={() => scrollToSection("contact-us")}>
+                <NavLink href="mailto:contact@uofthacks.ca">
                   <Inter>CONTACT US</Inter>
                 </NavLink>
               </NavLinkItem>
