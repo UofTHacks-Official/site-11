@@ -94,7 +94,7 @@ const MobileMenu = styled.div<MobileMenuProps>`
 
   position: fixed;
   background-color: #f0f0f0;
-  top: 120px;
+  top: 100px;
   left: 0;
   width: 100%;
   z-index: 999;
