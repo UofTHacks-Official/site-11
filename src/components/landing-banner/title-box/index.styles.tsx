@@ -17,8 +17,6 @@ const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
   background: var(--white, #f9f9f9);
   box-shadow: 0px 4px 0px 0px #282828;
 
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +30,7 @@ const TitleBoxContainer = styled.div<TitleBoxContainerProps>`
   width: 90%;
   min-width: 350px;
   `}
+  margin-bottom: 2rem;
 `;
 
 const ShiftedContainer = styled.span`=
