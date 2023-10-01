@@ -38,7 +38,7 @@ const StyledImage = styled(Image)`
   max-width: 100%;
   max-height: 100%;
   aspect-ratio: 1;
-
+  object-fit: contain;
   user-select: none;
   -webkit-user-select: none;
   -webkit-user-drag: none;
