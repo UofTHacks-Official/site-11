@@ -1,19 +1,24 @@
 import {
   LandingBannerContainer,
-  QuadrantContainer,
-  QuadrantRowContainer,
+  Quadrant,
+  ImageInQuadrant,
 } from "./index.styles";
 import Quandrant from "./quadrant";
 import TitleBox from "./title-box";
 import ButtonGroup from "./button-group";
 import React from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
+import Polaroid1 from "public/assets/polaroid/polaroid1.jpg";
+import Polaroid3 from "public/assets/polaroid/polaroid3.jpg";
+import ImageCarousel from "./image-carousel";
 
-interface LandingBannerProps {
+type LandingBannerProps = {
   mainTitle: string;
   subTitle: string;
   appsOpen: boolean;
-}
+};
+
+const imageArray = [Polaroid1, Polaroid3];
 
 const LandingBanner = ({
   mainTitle,
@@ -24,16 +29,18 @@ const LandingBanner = ({
 
   return (
     <LandingBannerContainer mobile={isMobile}>
-      <QuadrantContainer>
-        <QuadrantRowContainer>
-          <Quandrant section={1} />
-          <Quandrant section={2} />
-        </QuadrantRowContainer>
-        <QuadrantRowContainer>
-          <Quandrant section={3} />
-          <Quandrant section={4} />
-        </QuadrantRowContainer>
-      </QuadrantContainer>
+      <Quadrant>
+        <ImageCarousel images={imageArray} interval={5000} />
+      </Quadrant>
+      <Quadrant>
+        <ImageInQuadrant src={Polaroid1} alt="Image 1" />
+      </Quadrant>
+      <Quadrant>
+        <ImageInQuadrant src={Polaroid1} alt="Image 1" />
+      </Quadrant>
+      <Quadrant>
+        <ImageInQuadrant src={Polaroid1} alt="Image 1" />
+      </Quadrant>
       <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
       <ButtonGroup appsOpen={appsOpen} />
     </LandingBannerContainer>

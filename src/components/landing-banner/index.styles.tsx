@@ -1,28 +1,60 @@
 import styled from "styled-components";
+import Image from "next/image";
 
 type LandingBannerProps = {
   mobile?: boolean | null;
 };
 
 const LandingBannerContainer = styled.div<LandingBannerProps>`
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 680px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--black, #282828);
+  height: calc(100vh - 125px);
+  min-height: 700px;
   ${(props) =>
     props.mobile
       ? `
-    margin: 0 0;
+    margin: 0;
     border-radius: 0;
+    width: 100%;
   `
       : `
-      margin: 0 10%;
-      min-width: 750px;
-      border-radius: 25px;
+    margin: 0 10%;
+    min-width: 750px;
+    border-radius: 25px;
   `}
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  justify-self: center;
+  justify-items: center;
+  position: relative;
+`;
+
+const Quadrant = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0.5;
+`;
+
+const ImageInQuadrant = styled(Image)`
+  width: 40vw;
+  height: 325px;
+  object-fit: cover;
+  aspect-ratio: 1;
+
+  user-select: none;
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 `;
 
 const QuadrantRowContainer = styled.div`
@@ -38,4 +70,10 @@ const QuadrantContainer = styled.div`
   height: 100%;
 `;
 
-export { LandingBannerContainer, QuadrantContainer, QuadrantRowContainer };
+export {
+  LandingBannerContainer,
+  QuadrantContainer,
+  QuadrantRowContainer,
+  Quadrant,
+  ImageInQuadrant,
+};

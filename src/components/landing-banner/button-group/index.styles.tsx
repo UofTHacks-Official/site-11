@@ -6,6 +6,7 @@ const ButtonGroupContainer = styled.div`
   justify-content: center;
   padding-top: 350px;
   z-index: 2;
+  justify-self: center;
 `;
 
 const PrimaryButtonContainer = styled.button`
