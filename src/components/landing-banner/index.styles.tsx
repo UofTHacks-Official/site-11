@@ -10,8 +10,8 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--black, #282828);
-  height: calc(100vh - 125px);
-  min-height: 700px;
+  min-height: 75vh;
+  height: 100%;
   ${(props) =>
     props.mobile
       ? `
@@ -39,7 +39,7 @@ const Quadrant = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: 0.7;
 `;
 
 const ImageInQuadrant = styled(Image)`

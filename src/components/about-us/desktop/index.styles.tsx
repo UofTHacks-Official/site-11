@@ -5,7 +5,7 @@ import styled from "styled-components";
 const DesktopContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 7.25rem 6.25rem;
+  margin: 10%;
   gap: 1.25rem;
   flex: 1;
 `;
