@@ -13,6 +13,8 @@ import {
   MobileNavLinkItem,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
+import Image from "next/image";
+import NavBarLogo from "public/assets/navbar_logo.svg";
 
 const NavBar = () => {
   const [isNavBarVisible, setNavBarVisible] = useState(true);
@@ -83,7 +85,9 @@ const NavBar = () => {
     <>
       <NavigationContainer open={isNavBarVisible}>
         <NavigationBar>
-          <Logo onClick={() => scrollToSection("start")}>LOGO</Logo>
+          <Logo onClick={() => scrollToSection("start")}>
+            <Image src={NavBarLogo} alt="UofTHacks Logo" />
+          </Logo>
           <NavLinks>
             <div style={{ display: isMobile ? "none" : "flex" }}>
               <NavLinkItem>
