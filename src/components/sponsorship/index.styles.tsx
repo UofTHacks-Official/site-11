@@ -2,6 +2,20 @@
 import Image from "next/image";
 import styled from "styled-components";
 
+type SponsorsGridProps = {
+  mobile?: boolean | null;
+};
+
+type ImageProps = {
+  mobile?: boolean | null;
+};
+
+type TierProps = {
+  width?: string;
+  height?: string;
+  maxHeight?: string;
+};
+
 // Style for the sponsors container
 const Wrapper = styled.section`
   display: flex;
@@ -10,9 +24,6 @@ const Wrapper = styled.section`
 `;
 
 // Style for the sponsors grid
-type SponsorsGridProps = {
-  mobile?: boolean | null;
-};
 const SponsorsGrid = styled.div<SponsorsGridProps>`
   display: flex;
   flex-direction: column;
@@ -52,50 +63,10 @@ const RowStyle = styled.div`
   flex-wrap: wrap;
   align-items: center;
   flex-direction: row;
-  //   max-height: 18.125 rem;
-  //   min-height: 187.4px;
-
-  //   background: red;
   justify-content: center;
   transition: all 0.3s ease 0s;
   gap: 1rem;
 `;
-
-//  const PlatinumStyle = styled.div`
-//   display: flex;
-//   flex-wrap: wrap;
-//   place-content: center;
-//   box-sizing: border-box;
-//   box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.25);
-//   min-height: 187.4px;
-//   max-width: 100vw;
-//   height: 100vh;
-//   background: #d9d9d9;
-
-//   transition: all 0.3s ease 0s;
-//   cursor: pointer;
-
-//   & > a {
-//     transition: all 0.3s ease 0s;
-//     max-width: 150px;
-//     min-width: 50px;
-//   }
-
-//   & > a:hover {
-//     transition: all 0.3s ease 0s;
-//     transform: scale(1.1);
-//   }
-// `;
-
-type ImageProps = {
-  mobile?: boolean | null;
-};
-
-type TierProps = {
-  width?: string;
-  height?: string;
-  maxHeight?: string;
-};
 
 const StyledImage = styled(Image)<ImageProps>`
   padding: ${(props) => (props.mobile ? "0.5rem;" : "4vw")};
