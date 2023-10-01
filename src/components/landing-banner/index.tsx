@@ -12,11 +12,11 @@ import Polaroid1 from "public/assets/polaroid/polaroid1.jpg";
 import Polaroid3 from "public/assets/polaroid/polaroid3.jpg";
 import ImageCarousel from "./image-carousel";
 
-interface LandingBannerProps {
+type LandingBannerProps = {
   mainTitle: string;
   subTitle: string;
   appsOpen: boolean;
-}
+};
 
 const imageArray = [Polaroid1, Polaroid3];
 
