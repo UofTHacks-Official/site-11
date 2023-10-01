@@ -39,7 +39,7 @@ const Quadrant = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0.5;
+  opacity: 0.7;
 `;
 
 const ImageInQuadrant = styled(Image)`
