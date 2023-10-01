@@ -47,6 +47,14 @@ const ImageInQuadrant = styled(Image)`
   height: 325px;
   object-fit: cover;
   aspect-ratio: 1;
+
+  user-select: none;
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 `;
 
 const QuadrantRowContainer = styled.div`
