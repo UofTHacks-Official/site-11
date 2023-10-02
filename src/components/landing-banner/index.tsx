@@ -30,20 +30,21 @@ const LandingBanner = ({
   appsOpen,
 }: LandingBannerProps) => {
   const isMobile = useMobileDetect();
+  const interval = 2000;
 
   return (
     <LandingBannerContainer mobile={isMobile}>
       <Quadrant>
-        <ImageCarousel images={imageArray1} interval={2000} />
+        <ImageCarousel images={imageArray1} interval={interval} />
       </Quadrant>
       <Quadrant>
-        <ImageCarousel images={imageArray2} interval={2000} />
+        <ImageCarousel images={imageArray2} interval={interval} />
       </Quadrant>
       <Quadrant>
-        <ImageCarousel images={imageArray3} interval={2000} />
+        <ImageCarousel images={imageArray3} interval={interval} />
       </Quadrant>
       <Quadrant>
-        <ImageCarousel images={imageArray4} interval={2000} />
+        <ImageCarousel images={imageArray4} interval={interval} />
       </Quadrant>
       <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
       <ButtonGroup appsOpen={appsOpen} />

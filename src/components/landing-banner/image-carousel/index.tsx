@@ -8,11 +8,7 @@ type ImageCarouselProps = {
 };
 
 const ImageInQuadrant = styled(Image)`
-  width: 40vw;
-  height: 325px;
-  object-fit: cover;
-  aspect-ratio: 1;
-
+  object-fit: contain;
   user-select: none;
   pointer-events: none;
   user-drag: none;

@@ -40,11 +40,12 @@ const Quadrant = styled.div`
   justify-content: center;
   overflow: hidden;
   opacity: 0.7;
+  height: 100%;
+  flex: 1;
+  width: 100%;
 `;
 
 const ImageInQuadrant = styled(Image)`
-  width: 40vw;
-  height: 325px;
   aspect-ratio: 1;
   object-fit: contain;
   user-select: none;
