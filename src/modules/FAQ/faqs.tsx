@@ -22,13 +22,13 @@ const faqs = [
   {
     question: "When and where is UofTHacks happening?",
     answer:
-      "The dates of when UofTHacks 11 will be announced soon! This year’s event will be hosted entirely in-person! All participants will be notified of the exact address and venue via email. The exact schedule of all the ceremonies, activities, and workshops will be released in the week leading up to the event!",
+      "UofTHacks 11 is set to take place from January 26th to January 28th, 2024! This year’s event will be hosted entirely in-person! All participants will be notified of the exact address and venue via email. The exact schedule of all the ceremonies, activities, and workshops will be released in the week leading up to the event!",
     borderColor: "4px solid var(--Orange, #F0A000)",
   },
   {
     question: "Who can participate?",
     answer:
-      "This year, we will be accepting high-school students! Any high-school or post-secondary student can apply as a hacker for UofTHacks! We encourage students of ALL experience and skill levels to apply. We will provide workshops and mentorship to help you build your project!",
+      "This year, UofTHacks is open to a wide range of participants, including high school students and post-secondary students. We encourage students of ALL experience and skill levels to apply. We will provide workshops and mentorship to help you build your project!",
     borderColor: "4px solid var(--Pink, #F0A0C8)",
   },
   {

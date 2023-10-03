@@ -6,6 +6,7 @@ type CardContainerProps = {
   mobile?: boolean | null;
   borderColor?: string | null;
   clicked?: boolean | null;
+  height?: string;
 };
 
 type AnswerContainerProps = {
@@ -29,7 +30,8 @@ const BorderColour = css<CardContainerProps>`
 `;
 
 const CardContainer = styled.div<CardContainerProps>`
-  max-height: ${(props) => (props.clicked ? "500px" : "100px")};
+  max-height: ${(props) =>
+    props.clicked ? "500px" : props.height ? props.height : "100px"};
   transition: max-height 0.3s ease-in-out;
   ${BorderColour}
   margin: 0 auto;
