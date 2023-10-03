@@ -7,6 +7,8 @@ const LandingPageContainer = styled.div`
   width: 100vw;
   min-width: 100%;
   justify-content: center;
+  height: 90vh;
+  max-height: 900px;
 `;
 
 export { LandingPageContainer };
