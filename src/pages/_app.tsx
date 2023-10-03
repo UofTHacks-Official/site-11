@@ -28,7 +28,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="og:image"
-          content="https://i.ibb.co/HNkxDpW/SEO-Photo.png"
+          content="https://i.ibb.co/wh9g3wR/Uof-THacks-11-SEO.png"
         />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.uofthacks.com/" />
@@ -39,7 +39,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         />
         <meta
           property="twitter:image"
-          content="https://i.ibb.co/HNkxDpW/SEO-Photo.png"
+          content="https://i.ibb.co/wh9g3wR/Uof-THacks-11-SEO.png"
         />
         <link
           rel="preload"
