@@ -14,6 +14,7 @@ type TierProps = {
   width?: string;
   height?: string;
   maxHeight?: string;
+  minWidth?: string;
 };
 
 // Style for the sponsors container
@@ -81,7 +82,7 @@ const StyledImage = styled(Image)<ImageProps>`
 `;
 
 const TierStyle = styled.div<TierProps>`
-  min-width: ${(props) => props.width};
+  min-width: ${(props) => (props.minWidth ? props.minWidth : props.width)};
   max-width: ${(props) => props.width};
   min-height: ${(props) => props.height};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : props.height)};

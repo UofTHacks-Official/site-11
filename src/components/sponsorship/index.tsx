@@ -35,6 +35,7 @@ type TierComponentProps = {
   width: string;
   height: string;
   maxHeight?: string;
+  minWidth?: string;
 };
 
 const TierComponent: React.FC<TierComponentProps> = ({
@@ -42,6 +43,7 @@ const TierComponent: React.FC<TierComponentProps> = ({
   width,
   height,
   maxHeight,
+  minWidth,
 }) => {
   return (
     <RowStyle>
@@ -50,6 +52,7 @@ const TierComponent: React.FC<TierComponentProps> = ({
           width={width}
           height={height}
           maxHeight={maxHeight}
+          minWidth={minWidth}
           key={index}
         >
           <Sponsor href={s.url} src={s.img} name={s.name} key={index} />
@@ -68,32 +71,33 @@ const Sponsors: React.FC = () => {
         <TierComponent
           data={sponsorsData.diamond}
           width={"100%"}
-          height={"19vw"}
+          height={isMobile ? "19vw" : "min(200px, 19vw)"}
           maxHeight={"290px"}
         />
         <TierComponent
           data={sponsorsData.platinum}
           width={"50%"}
-          height={"18vw"}
+          height={isMobile ? "18vw" : "min(200px, 18vw)"}
           maxHeight={"290px"}
         />
         <TierComponent
           data={sponsorsData.gold}
           width={"30%"}
-          height={"16vw"}
+          height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={"250px"}
         />
         <TierComponent
           data={sponsorsData.silver}
-          width={"20%"}
-          height={"14vw"}
+          width={"23%"}
+          height={isMobile ? "14vw" : "min(190px, 12vw)"}
           maxHeight={"200px"}
         />
         <TierComponent
           data={sponsorsData.bronze}
           width={"16.5%"}
-          height={"10vw"}
+          height={isMobile ? "10vw" : "min(150px, 10vw)"}
           maxHeight={"100px"}
+          minWidth={isMobile ? "16.5%" : "max(16.5%, 200px)"}
         />
       </SponsorsGrid>
     </Wrapper>
