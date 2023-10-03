@@ -1,8 +1,4 @@
-import {
-  LandingBannerContainer,
-  Quadrant,
-  ImageInQuadrant,
-} from "./index.styles";
+import { LandingBannerContainer, Quadrant } from "./index.styles";
 import TitleBox from "./title-box";
 import ButtonGroup from "./button-group";
 import React from "react";
