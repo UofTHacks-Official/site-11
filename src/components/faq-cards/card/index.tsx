@@ -47,11 +47,21 @@ const Card = ({ question, answer, star, borderColor }: CardProps) => {
     setClicked(false);
   }, []);
 
+  let height;
+  if (
+    question.includes(
+      "How much does it cost to attend UofTHacks and what should I bring?"
+    )
+  ) {
+    height = "110px";
+  }
+
   return (
     <CardContainer
       borderColor={borderColor}
       mobile={isMobile}
       clicked={clicked}
+      height={height}
     >
       {star && (
         <StarCornerStyle src={star.src} starStyle={star} alt="Star Sticker" />
