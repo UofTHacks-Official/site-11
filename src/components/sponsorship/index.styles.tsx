@@ -21,6 +21,10 @@ const Wrapper = styled.section`
   display: flex;
   height: 100%;
   width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
 `;
 
 // Style for the sponsors grid
@@ -31,9 +35,6 @@ const SponsorsGrid = styled.div<SponsorsGridProps>`
   height: 100%;
   box-sizing: border-box;
   // border: 1px solid var(--black, #282828);
-
-  backdrop-filter: blur(20px);
-
   padding: ${(props) => (props.mobile ? "0" : "50px")};
   gap: 1.25rem;
 `;
