@@ -79,25 +79,28 @@ const Sponsors: React.FC = () => {
           width={"50%"}
           height={isMobile ? "18vw" : "min(200px, 18vw)"}
           maxHeight={"290px"}
+          minWidth={isMobile ? "50%" : "20vw"}
         />
         <TierComponent
           data={sponsorsData.gold}
           width={"30%"}
           height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={"250px"}
+          minWidth={isMobile ? "30%" : "16vw"}
         />
         <TierComponent
           data={sponsorsData.silver}
           width={"23%"}
           height={isMobile ? "14vw" : "min(190px, 12vw)"}
           maxHeight={"200px"}
+          minWidth={isMobile ? "23%" : "14vw"}
         />
         <TierComponent
           data={sponsorsData.bronze}
           width={"16.5%"}
           height={isMobile ? "10vw" : "min(150px, 10vw)"}
           maxHeight={"100px"}
-          minWidth={isMobile ? "16.5%" : "max(16.5%, 200px)"}
+          minWidth={isMobile ? "16.5%" : "12vw"}
         />
       </SponsorsGrid>
     </Wrapper>
