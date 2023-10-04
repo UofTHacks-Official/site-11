@@ -98,7 +98,7 @@ const TierStyle = styled.div<TierProps>`
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
+  background: #e1ebff;
   box-shadow: 0px 4px 0px 0px #282828;
   overflow: hidden;
 `;

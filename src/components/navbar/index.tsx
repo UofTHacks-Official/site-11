@@ -111,7 +111,7 @@ const NavBar = () => {
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
-                <NavLink href="mailto:contact@uofthacks.ca">
+                <NavLink onClick={() => scrollToSection("footer")}>
                   <Inter>CONTACT US</Inter>
                 </NavLink>
               </NavLinkItem>
@@ -154,7 +154,7 @@ const NavBar = () => {
           </MobileNavLinkItem>
           <MobileNavLinkItem>
             <NavLinkItem>
-              <NavLink href="mailto:contact@uofthacks.ca">
+              <NavLink onClick={() => scrollToSection("footer")}>
                 <Inter style={MobileInterStyle()}>CONTACT US</Inter>
               </NavLink>
             </NavLinkItem>
