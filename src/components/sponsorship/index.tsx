@@ -99,7 +99,6 @@ const Sponsors: React.FC = () => {
           data={sponsorsData.bronze}
           width={"16.5%"}
           height={isMobile ? "10vw" : "min(150px, 10vw)"}
-          maxHeight={"100px"}
           minWidth={isMobile ? "16.5%" : "12vw"}
         />
       </SponsorsGrid>
