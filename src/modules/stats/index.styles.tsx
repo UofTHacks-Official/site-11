@@ -38,6 +38,7 @@ const SubContainer = styled.div`
 
 const StyledImage = styled(Image)`
   width: 100%;
+  max-width: 500px;
   height: 100%;
   aspect-ratio: 1;
   object-fit: contain;
