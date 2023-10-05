@@ -15,7 +15,7 @@ interface ButtonProps {
 
 const ButtonCollection = ({ appsOpen }: ButtonProps) => {
   const isMobile = useMobileDetect();
-  const sponsorLink = "mailto:sponsor@uofthacks.com";
+  const sponsorLink = "mailto:sponsors@uofthacks.com";
   const primaryLink = appsOpen ? "" : sponsorLink;
   // when apps will open, change primaryLink to dashboard link
 
