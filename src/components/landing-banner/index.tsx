@@ -4,10 +4,10 @@ import ButtonGroup from "./button-group";
 import React from "react";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import ImageCarousel from "./image-carousel";
-import Green from "public/green.png";
-import Yellow from "public/yellow.png";
-import Purple from "public/purple.png";
-import Pink from "public/pink.png";
+import Green from "public/assets/landing-banner/landing_rect_4.png";
+import Yellow from "public/assets/landing-banner/landing_rect_1.png";
+import Purple from "public/assets/landing-banner/landing_rect_2.png";
+import Pink from "public/assets/landing-banner/landing_rect_3.png";
 
 type LandingBannerProps = {
   mainTitle: string;

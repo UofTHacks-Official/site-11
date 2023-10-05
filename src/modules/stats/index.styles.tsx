@@ -27,6 +27,8 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  max-width: 1000px;
+  align-self: center;
 `;
 
 const SubContainer = styled.div`
