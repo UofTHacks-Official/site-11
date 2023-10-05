@@ -23,11 +23,12 @@ const ColourText = styled.span`
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   align-self: center;
 `;
 
