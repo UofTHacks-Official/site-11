@@ -11,6 +11,7 @@ const MainContainer = styled.div`
   background-color: #f9f9f9;
   background-image: url("/backgroundtile.svg");
   opacity: 1;
+  overflow: hidden;
 `;
 const Site11 = () => {
   return (
