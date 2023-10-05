@@ -12,6 +12,7 @@ const Wrapper = styled.footer<WrapperProps>`
   padding: 3rem 0;
   column-gap: 50px;
   row-gap: 25px;
+  overflow: hidden;
 `;
 
 export { Wrapper };

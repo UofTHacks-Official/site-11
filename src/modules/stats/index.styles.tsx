@@ -6,6 +6,7 @@ const StatsContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+  overflow: hidden;
 `;
 
 const StyledSubjectivity = styled(Subjectivity)`

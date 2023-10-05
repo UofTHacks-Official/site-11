@@ -23,6 +23,7 @@ const NavigationContainer = styled.div<NavContainerProps>`
   background-color: #f9f9f9;
   position: fixed;
   z-index: 1000;
+  overflow: hidden;
 `;
 const NavigationBar = styled.nav<NavbarProps>`
   display: flex;
@@ -98,6 +99,7 @@ const MobileMenu = styled.div<MobileMenuProps>`
   left: 0;
   width: 100%;
   z-index: 999;
+  overflow: hidden;
 `;
 
 const MobileNavLinkItem = styled(NavLinkItem)`
