@@ -23,7 +23,7 @@ export const sponsorsData = {
   platinum: [
     {
       name: "echo3D",
-      url: "https://www.echo3d.com/",
+      url: "https://cohere.com/",
       img: Cohere,
     },
   ],
