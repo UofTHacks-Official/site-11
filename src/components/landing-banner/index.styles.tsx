@@ -37,10 +37,10 @@ const Quadrant = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  opacity: 0.7;
   height: 100%;
   flex: 1;
   width: 100%;
+  outline: 1px solid var(--black, #282828);
 `;
 
 export { LandingBannerContainer, Quadrant };
