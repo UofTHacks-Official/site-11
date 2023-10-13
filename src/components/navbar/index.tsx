@@ -66,14 +66,12 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event: any) => {
-      console.log(isMenuOpen);
       if (
         isMenuOpen &&
         mobileMenuNode &&
         !mobileMenuNode.contains(event.target) &&
         !hamburgerNode?.contains(event.target)
       ) {
-        console.log("closing");
         setIsMenuOpen(false);
       }
     };
