@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import Inter from "../inter";
 
+type StyledInterProps = {
+  smallerFont?: boolean;
+  bold?: boolean;
+  isMobile?: boolean | null;
+};
 const SignupContainer = styled.div`
   max-width: 700px;
   width: 90%;
@@ -11,11 +16,7 @@ const SignupContainer = styled.div`
   gap: 10px;
 `;
 
-const StyledInter = styled(Inter)<{
-  smallerFont?: boolean;
-  bold?: boolean;
-  isMobile?: boolean;
-}>`
+const StyledInter = styled(Inter)<StyledInterProps>`
   font-size: ${(props) => {
     if (props.bold) return props.isMobile ? "0.9rem" : "1.5rem";
     if (props.smallerFont) return props.isMobile ? "0.7rem" : "1.1rem";
