@@ -74,10 +74,10 @@ const EmailSignupForm = () => {
         <SignupButton type="submit">Sign Up</SignupButton>
       </SignupForm>
       {message && (
-        <StyledInter style={{ textAlign: "center", marginTop: "10px" }}>
+        <StyledInter smallerFont={true} isMobile={isMobile}>
           {message}
         </StyledInter>
-      )}{" "}
+      )}
     </SignupContainer>
   );
 };

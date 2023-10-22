@@ -33,6 +33,7 @@ const SignupForm = styled.form`
   width: 58%;
   margin: 0 auto;
   border: black;
+  padding-bottom: 10px;
 `;
 
 const SignupInput = styled.input`
