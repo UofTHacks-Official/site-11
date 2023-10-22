@@ -13,11 +13,46 @@ import { MobileContainer } from "../about-us/mobile/index.styles";
 
 const EmailSignupForm = () => {
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState<string | null>(null); // State to store the message
   const isMobile = useMobileDetect();
 
-  const handleSignup = (e: any) => {
+  const handleSignup = async (e: any) => {
     e.preventDefault();
-    console.log(email);
+
+    // TODO add endpoint here once ready
+    const endpoint = "";
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          user_email: email,
+        }),
+      });
+
+      if (response.status === 200) {
+        setMessage(
+          "Your email has successfully been added to the mailing list!"
+        );
+      } else {
+        const errorData = await response.json();
+        if (
+          errorData.error ===
+          "Your email has already been added to the mailing list."
+        ) {
+          setMessage("Email already exists");
+        } else if (errorData.error === "email invalid") {
+          setMessage("Invalid email, please try again.");
+        } else {
+          setMessage("An unexpected error occurred");
+        }
+      }
+    } catch (error) {
+      setMessage("Error submitting email");
+    }
   };
 
   return (
@@ -38,9 +73,13 @@ const EmailSignupForm = () => {
         />
         <SignupButton type="submit">Sign Up</SignupButton>
       </SignupForm>
+      {message && (
+        <StyledInter style={{ textAlign: "center", marginTop: "10px" }}>
+          {message}
+        </StyledInter>
+      )}{" "}
     </SignupContainer>
   );
 };
 
 export default EmailSignupForm;
-``;
