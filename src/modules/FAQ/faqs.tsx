@@ -45,8 +45,10 @@ const faqs = [
         Please note: If you will be attending from outside of Canada, you need
         to ensure you are following the Government of Canada’s travel policies.
         Please contact us by sending a direct message on Instagram or at{" "}
-        <Link href="mailto:contact@uofthacks.ca">contact@uofthacks.ca</Link> for
-        more information. We’d be happy to help!
+        <Link href="mailto:contact@uofthacks.com">
+          contact@uofthacks.com
+        </Link>{" "}
+        for more information. We’d be happy to help!
       </p>
     ),
     borderColor: "4px solid var(--Blue, #2850A0)",
@@ -142,8 +144,8 @@ const faqs = [
       <p>
         We’d be happy to help! You can send us a direct message on Instagram or
         Twitter - @uofthacks. Alternatively, you can send the inquiry over to{" "}
-        <Link href="mailto:contact@uofthacks.ca">contact@uofthacks.ca</Link> and
-        we’ll get back to you as soon as possible.
+        <Link href="mailto:contact@uofthacks.com">contact@uofthacks.com</Link>{" "}
+        and we’ll get back to you as soon as possible.
       </p>
     ),
     borderColor: "4px solid var(--Orange, #F0A000)",
