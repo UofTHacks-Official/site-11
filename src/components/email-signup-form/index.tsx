@@ -61,13 +61,7 @@ const EmailSignupForm = () => {
         />
         <SignupButton type="submit">SIGN UP</SignupButton>
       </SignupForm>
-      {message ? (
-        <StyledInter isMobile={isMobile}>{message}</StyledInter>
-      ) : (
-        <StyledInter isMobile={isMobile} opacity={0}>
-          &nbsp;&nbsp;
-        </StyledInter>
-      )}
+      {message && <StyledInter isMobile={isMobile}>{message}</StyledInter>}
     </SignupContainer>
   );
 };

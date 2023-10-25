@@ -17,6 +17,7 @@ const SignupContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  height: 14rem;
 `;
 
 const StyledHeader = styled(Inter)<StyledInterProps>`
@@ -56,7 +57,6 @@ const SignupForm = styled.form`
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  margin-bottom: 10px;
 `;
 
 const SignupInput = styled.input`
@@ -64,19 +64,26 @@ const SignupInput = styled.input`
   border: 2px solid var(--black, #282828);
   border-right: 1px solid var(--black, #282828);
   padding: 10px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   &:focus {
     outline: none;
   }
   height: ${height};
+
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+
+  border-radius: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 `;
 
 const SignupButton = styled.button`
   border: 2px solid var(--black, #282828);
   border-left: 1px solid var(--black, #282828);
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
   background-color: #2850a0;
   color: white;
   cursor: pointer;
@@ -86,6 +93,17 @@ const SignupButton = styled.button`
     background-color: #1f3a7a;
     transition: 0.4s ease-out all;
   }
+
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.28px;
+
+  border-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 `;
 export {
   SignupContainer,
