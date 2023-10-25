@@ -61,5 +61,6 @@ const SignupButton = styled.button`
   padding: 10px 15px;
   background-color: #2850a0;
   color: white;
+  cursor: pointer;
 `;
 export { SignupContainer, StyledInter, SignupForm, SignupInput, SignupButton };
