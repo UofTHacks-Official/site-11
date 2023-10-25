@@ -7,8 +7,6 @@ const EmailFormContainer = styled.div`
   width: 100vw;
   min-width: 100%;
   justify-content: center;
-  height: 20vh;
-  max-height: 600px;
 `;
 
 export { EmailFormContainer };

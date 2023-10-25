@@ -5,39 +5,61 @@ type StyledInterProps = {
   smallerFont?: boolean;
   bold?: boolean;
   isMobile?: boolean | null;
+  opacity?: number;
 };
+
+const height = "40px";
 const SignupContainer = styled.div`
-  max-width: 700px;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 2rem;
+`;
+
+const StyledHeader = styled(Inter)<StyledInterProps>`
+  font-size: 1.5rem;
+  color: var(--Black, var(--black, #282828));
+  text-align: center;
+  leading-trim: both;
+
+  text-edge: cap;
+  /* H4 */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.03rem;
 `;
 
 const StyledInter = styled(Inter)<StyledInterProps>`
-  font-size: ${(props) => {
-    if (props.bold) return props.isMobile ? "0.9rem" : "1.5rem";
-    if (props.smallerFont) return props.isMobile ? "0.7rem" : "1.1rem";
-    return "inherit";
-  }};
-  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  padding-bottom: 20px;
+  color: var(--Black, var(--black, #282828));
+  text-align: center;
+  leading-trim: both;
+
+  text-edge: cap;
+  /* Body 1 (16px) */
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 1rem;
+  opacity: ${(props) => props.opacity || 1};
 `;
 
 const SignupForm = styled.form`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 58%;
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto;
   border: black;
   margin-bottom: 10px;
-
   &:focus-within {
     border-radius: 5px;
-    outline: 2px solid #282828;
+    outline: 1px solid #282828;
   }
 `;
 
@@ -49,8 +71,9 @@ const SignupInput = styled.input`
   border-bottom-left-radius: 5px;
   border-right: none;
   &:focus {
-    outline: 2px solid #282828;
+    outline: 1px solid #282828;
   }
+  height: ${height};
 `;
 
 const SignupButton = styled.button`
@@ -58,9 +81,21 @@ const SignupButton = styled.button`
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border-left: none;
-  padding: 10px 15px;
   background-color: #2850a0;
   color: white;
   cursor: pointer;
+  height: ${height};
+  padding: 0 10px;
+  &:hover {
+    background-color: #1f3a7a;
+    transition: 0.4s ease-out all;
+  }
 `;
-export { SignupContainer, StyledInter, SignupForm, SignupInput, SignupButton };
+export {
+  SignupContainer,
+  StyledInter,
+  SignupForm,
+  SignupInput,
+  SignupButton,
+  StyledHeader,
+};

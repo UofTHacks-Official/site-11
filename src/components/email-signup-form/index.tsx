@@ -7,6 +7,7 @@ import {
   SignupForm,
   SignupButton,
   SignupContainer,
+  StyledHeader,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import { MobileContainer } from "../about-us/mobile/index.styles";
@@ -17,6 +18,7 @@ const EmailSignupForm = () => {
   const isMobile = useMobileDetect();
 
   const handleSignup = async (e: any) => {
+    setMessage("");
     e.preventDefault();
 
     const endpoint = "https://api.uofthacks.com/xi/email_list/add";
@@ -36,18 +38,9 @@ const EmailSignupForm = () => {
         setMessage(
           "Your email has successfully been added to the mailing list!"
         );
+        setEmail("");
       } else {
-        const errorData = await response.json();
-        if (
-          errorData.error ===
-          "Your email has already been added to the mailing list."
-        ) {
-          setMessage("Your email has already been added to the mailing list.");
-        } else if (errorData.error === "email invalid") {
-          setMessage("Invalid email, please try again.");
-        } else {
-          setMessage("An unexpected error occurred");
-        }
+        setMessage("Your email has already been added to the mailing list.");
       }
     } catch (error) {
       setMessage("Error submitting email");
@@ -56,11 +49,11 @@ const EmailSignupForm = () => {
 
   return (
     <SignupContainer>
-      <StyledInter bold={true} isMobile={isMobile}>
+      <StyledHeader isMobile={isMobile}>
         Want to be the first to know when applications open up?
-      </StyledInter>
-      <StyledInter smallerFont={true} isMobile={isMobile}>
-        We will email you when applications open!
+      </StyledHeader>
+      <StyledInter isMobile={isMobile}>
+        Enter your email below to sign up for our mailing list!
       </StyledInter>
       <SignupForm onSubmit={handleSignup}>
         <SignupInput
@@ -70,11 +63,13 @@ const EmailSignupForm = () => {
           placeholder="Your email address"
           required
         />
-        <SignupButton type="submit">Sign Up</SignupButton>
+        <SignupButton type="submit">SIGN UP</SignupButton>
       </SignupForm>
-      {message && (
-        <StyledInter smallerFont={true} isMobile={isMobile}>
-          {message}
+      {message ? (
+        <StyledInter isMobile={isMobile}>{message}</StyledInter>
+      ) : (
+        <StyledInter isMobile={isMobile} opacity={0}>
+          &nbsp;&nbsp;
         </StyledInter>
       )}
     </SignupContainer>
