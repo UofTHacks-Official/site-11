@@ -49,7 +49,7 @@ const EmailSignupForm = () => {
         Want to be the first to know when applications open up?
       </StyledHeader>
       <StyledInter isMobile={isMobile}>
-        Enter your email below to sign up for our mailing list!
+        We will email you when applications open!
       </StyledInter>
       <SignupForm onSubmit={handleSignup}>
         <SignupInput
