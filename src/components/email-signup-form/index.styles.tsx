@@ -33,7 +33,12 @@ const SignupForm = styled.form`
   width: 58%;
   margin: 0 auto;
   border: black;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  &:focus-within {
+    border-radius: 5px;
+    outline: 2px solid #282828;
+  }
 `;
 
 const SignupInput = styled.input`
@@ -43,6 +48,9 @@ const SignupInput = styled.input`
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border-right: none;
+  &:focus {
+    outline: 2px solid #282828;
+  }
 `;
 
 const SignupButton = styled.button`

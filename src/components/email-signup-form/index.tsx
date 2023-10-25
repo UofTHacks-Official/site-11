@@ -19,8 +19,7 @@ const EmailSignupForm = () => {
   const handleSignup = async (e: any) => {
     e.preventDefault();
 
-    // TODO add endpoint here once ready
-    const endpoint = "";
+    const endpoint = "https://api.uofthacks.com/xi/email_list/add";
 
     try {
       const response = await fetch(endpoint, {
@@ -43,7 +42,7 @@ const EmailSignupForm = () => {
           errorData.error ===
           "Your email has already been added to the mailing list."
         ) {
-          setMessage("Email already exists");
+          setMessage("Your email has already been added to the mailing list.");
         } else if (errorData.error === "email invalid") {
           setMessage("Invalid email, please try again.");
         } else {
@@ -61,7 +60,7 @@ const EmailSignupForm = () => {
         Want to be the first to know when applications open up?
       </StyledInter>
       <StyledInter smallerFont={true} isMobile={isMobile}>
-        Enter your email below to sign up for our mailing list!
+        We will email you when applications open!
       </StyledInter>
       <SignupForm onSubmit={handleSignup}>
         <SignupInput
