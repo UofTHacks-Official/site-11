@@ -1,6 +1,4 @@
-import styled from "styled-components";
-import Inter from "../inter";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   SignupInput,
   StyledInter,
@@ -10,7 +8,6 @@ import {
   StyledHeader,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
-import { MobileContainer } from "../about-us/mobile/index.styles";
 
 const EmailSignupForm = () => {
   const [email, setEmail] = useState("");
@@ -38,7 +35,6 @@ const EmailSignupForm = () => {
         setMessage(
           "Your email has successfully been added to the mailing list!"
         );
-        setEmail("");
       } else {
         setMessage("Your email has already been added to the mailing list.");
       }
