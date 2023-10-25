@@ -6,6 +6,7 @@ const FAQContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 const ColourText = styled.span`

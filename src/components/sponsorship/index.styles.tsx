@@ -20,12 +20,13 @@ type TierProps = {
 // Style for the sponsors container
 const Wrapper = styled.section`
   display: flex;
-  height: 100%;
   width: 100%;
   max-width: 1200px;
   justify-content: center;
   align-items: center;
   align-self: center;
+  overflow: hidden;
+  padding-bottom: 10px;
 `;
 
 // Style for the sponsors grid
@@ -35,7 +36,6 @@ const SponsorsGrid = styled.div<SponsorsGridProps>`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  // border: 1px solid var(--black, #282828);
   padding: ${(props) => (props.mobile ? "0" : "50px")};
   gap: 1.25rem;
 `;
@@ -56,7 +56,6 @@ const SponsorItem = styled.a`
     transition: all 0.3s ease 0s;
     transform: scale(1.1);
     cursor: pointer;
-    /* Add other hover styles as needed */
   }
 `;
 
@@ -71,7 +70,7 @@ const RowStyle = styled.div`
 `;
 
 const StyledImage = styled(Image)<ImageProps>`
-  padding: ${(props) => (props.mobile ? "0.5rem;" : "4vw")};
+  padding: ${(props) => (props.mobile ? "0.5rem;" : "3vw")};
   width: 100%;
   height: 100%;
   display: flex;
@@ -79,6 +78,8 @@ const StyledImage = styled(Image)<ImageProps>`
   align-items: center;
   align-self: center;
   align-content: center;
+  overflow: hidden;
+  object-fit: contain;
 `;
 
 const TierStyle = styled.div<TierProps>`
@@ -90,7 +91,6 @@ const TierStyle = styled.div<TierProps>`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -98,7 +98,7 @@ const TierStyle = styled.div<TierProps>`
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid var(--black, #282828);
-  background: #d9d9d9;
+  background: #e1ebff;
   box-shadow: 0px 4px 0px 0px #282828;
   overflow: hidden;
 `;

@@ -59,7 +59,6 @@ const PolaroidWrapper = styled.div<PolaroidProps>`
 `;
 
 const PolaroidImage = styled.img`
-  padding: 0.25rem;
   width: 100%;
   height: 100%;
   -webkit-user-select: none;
@@ -70,6 +69,7 @@ const PolaroidImage = styled.img`
   -moz-user-drag: none;
   -ms-user-drag: none;
   user-drag: none;
+  border-radius: 15px;
 `;
 
 const StickerContainer = styled.img<Sticker>`

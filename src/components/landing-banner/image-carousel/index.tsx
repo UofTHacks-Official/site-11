@@ -32,16 +32,19 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval }) => {
 
   return (
     <div>
-      {images.map((image: any, index: number) => (
-        <ImageInQuadrant
-          key={index}
-          src={image}
-          alt={`Image ${index + 1}`}
-          style={{
-            display: index === currentImageIndex ? "block" : "none",
-          }}
-        />
-      ))}
+      {images.map(
+        (image: any, index: number) =>
+          image && (
+            <ImageInQuadrant
+              key={index}
+              src={image}
+              alt={`Image ${index + 1}`}
+              style={{
+                display: index === currentImageIndex ? "block" : "none",
+              }}
+            />
+          )
+      )}
     </div>
   );
 };
