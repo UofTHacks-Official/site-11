@@ -1,5 +1,6 @@
 import NavBar from "@/components/navbar";
 import LandingPage from "@/modules/landing-page";
+import EmailForm from "@/modules/email-form";
 import AboutUs from "@/modules/about-us";
 import Sponsors from "@/modules/Sponsorship";
 import FAQ from "@/modules/FAQ";
@@ -18,6 +19,7 @@ const Site11 = () => {
     <MainContainer id="start">
       <NavBar />
       <LandingPage />
+      <EmailForm />
       <AboutUs />
       <Stats />
       <Sponsors />
