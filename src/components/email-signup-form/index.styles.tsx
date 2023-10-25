@@ -56,32 +56,27 @@ const SignupForm = styled.form`
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  border: black;
   margin-bottom: 10px;
-  &:focus-within {
-    border-radius: 5px;
-    outline: 1px solid #282828;
-  }
 `;
 
 const SignupInput = styled.input`
   flex: 1;
-  border: 1px solid black;
+  border: 2px solid var(--black, #282828);
+  border-right: 1px solid var(--black, #282828);
   padding: 10px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-right: none;
   &:focus {
-    outline: 1px solid #282828;
+    outline: none;
   }
   height: ${height};
 `;
 
 const SignupButton = styled.button`
-  border: 1px solid black;
+  border: 2px solid var(--black, #282828);
+  border-left: 1px solid var(--black, #282828);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  border-left: none;
   background-color: #2850a0;
   color: white;
   cursor: pointer;
