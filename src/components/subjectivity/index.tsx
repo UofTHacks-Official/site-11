@@ -22,7 +22,6 @@ const SubjectivityFont = css`
 const StyledSubjectivityText = styled.p<StyledSubjectivityTextProps>`
   ${SubjectivityFont}
   font-family: Subjectivity;
-  color: var(--dark-blue, #2850a0);
   text-align: center;
   leading-trim: both;
   text-edge: cap;

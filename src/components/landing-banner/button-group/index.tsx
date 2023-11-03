@@ -27,18 +27,9 @@ const ButtonCollection = ({ appsOpen }: ButtonProps) => {
     <ButtonGroupContainer>
       <PrimaryButtonContainer onClick={() => handleButtonClick(primaryLink)}>
         <PrimaryButtonTextContainer>
-          <Inter>{appsOpen ? "APPLY" : "INTERESTED IN SPONSORING?"}</Inter>
+          <Inter>{appsOpen ? "APPLY HERE" : "INTERESTED IN SPONSORING?"}</Inter>
         </PrimaryButtonTextContainer>
       </PrimaryButtonContainer>
-      {appsOpen && (
-        <SecondaryButtonContainer
-          onClick={() => handleButtonClick(sponsorLink)}
-        >
-          <SecondaryButtonTextContainer>
-            <Inter>SPONSOR</Inter>
-          </SecondaryButtonTextContainer>
-        </SecondaryButtonContainer>
-      )}
     </ButtonGroupContainer>
   );
 };

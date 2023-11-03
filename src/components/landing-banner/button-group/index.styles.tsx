@@ -11,6 +11,7 @@ const ButtonGroupContainer = styled.div`
 
 const PrimaryButtonContainer = styled.button`
   margin: 1rem;
+  min-width: 280px;
   padding: 1rem 3rem;
   border: none;
   border-radius: 10px;
@@ -18,6 +19,11 @@ const PrimaryButtonContainer = styled.button`
   border-radius: 15px;
   border: 2px solid var(--black, #282828);
   background: var(--black, #282828);
+  border-radius: 5px;
+  border: 2px solid var(--Black, #282828);
+  background: var(--Blue, #2850a0);
+  /* Default Shadow */
+  box-shadow: 0px 4px 0px 0px #282828;
   &:hover {
     transform: scale(1.05);
   }
