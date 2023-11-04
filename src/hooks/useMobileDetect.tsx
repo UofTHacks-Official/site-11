@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
 // Custom hook to detect mobile devices
-export const useMobileDetect = (
-  widthThreshold: number = 875
-): boolean | null => {
+export const useMobileDetect = (): boolean | null => {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
+
+  const widthThreshold = 875;
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= widthThreshold);
