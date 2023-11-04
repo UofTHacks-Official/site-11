@@ -18,7 +18,7 @@ const MainContainer = styled.div`
 const Site11 = () => {
   return (
     <MainContainer id="start">
-      <MLHBanner />
+      {/* <MLHBanner /> */}
       <NavBar />
       <LandingPage />
       <EmailForm />
