@@ -8,7 +8,7 @@ const MLHContainer = styled.a<MLHContainerProps>`
   max-width: 100px;
   min-width: 60px;
   position: fixed;
-  right: ${(props) => (props.isMobile ? "47.5px" : "25px")};
+  right: ${(props) => (props.isMobile ? "11%" : "1%")};
   top: 0;
   width: 10%;
   z-index: 10000;
