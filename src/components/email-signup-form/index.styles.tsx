@@ -12,6 +12,7 @@ const height = "40px";
 
 const SignupContainer = styled.div`
   width: 100%;
+  padding: 50px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -25,9 +26,7 @@ const StyledHeader = styled(Inter)<StyledInterProps>`
   color: var(--Black, var(--black, #282828));
   text-align: center;
   leading-trim: both;
-
   text-edge: cap;
-  /* H4 */
   font-family: Inter;
   font-style: normal;
   font-weight: 700;

@@ -7,6 +7,7 @@ import FAQ from "@/modules/FAQ";
 import Stats from "@/modules/stats";
 import Footer from "@/modules/footer";
 import styled from "styled-components";
+import MLHBanner from "@/components/mlh-banner";
 
 const MainContainer = styled.div`
   background-color: #f9f9f9;
@@ -17,6 +18,7 @@ const MainContainer = styled.div`
 const Site11 = () => {
   return (
     <MainContainer id="start">
+      <MLHBanner />
       <NavBar />
       <LandingPage />
       <EmailForm />
