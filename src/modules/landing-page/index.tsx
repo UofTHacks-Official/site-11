@@ -12,7 +12,6 @@ const LandingPage = () => {
     color: "var(--Blue, #2850A0)",
     textAlign: "right",
     fontFamily: "Inter, sans-serif",
-    fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 600,
     textDecoration: "underline",
