@@ -19,7 +19,7 @@ const Site11 = () => {
     <MainContainer id="start">
       <NavBar />
       <LandingPage />
-      <EmailForm />
+      {/* <EmailForm /> */}
       <AboutUs />
       <Stats />
       <Sponsors />
