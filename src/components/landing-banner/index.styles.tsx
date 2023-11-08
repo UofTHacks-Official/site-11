@@ -14,6 +14,7 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--black, #282828);
   height: 100%;
+  max-height: 650px;
 
   ${(props) =>
     props.mobile
@@ -45,6 +46,7 @@ const Quadrant = styled.div`
   height: 100%;
   flex: 1;
   width: 100%;
+  border: 0.5px solid var(--black, #282828);
 `;
 
 const SponsorshipLinkContainer = styled.div<SponsorshipLinkProps>`
