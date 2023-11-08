@@ -13,6 +13,7 @@ const LandingBannerContainer = styled.div<LandingBannerProps>`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   border: 1px solid var(--black, #282828);
+  height: 100%;
 
   ${(props) =>
     props.mobile

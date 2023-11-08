@@ -69,16 +69,16 @@ const LandingBanner = ({
 
   return (
     <LandingBannerContainer mobile={isMobile}>
-      <Quadrant style={borderRadiusStyle("topleft")}>
+      <Quadrant style={borderRadiusStyle(isMobile ? "" : "topleft")}>
         <ImageCarousel images={imageArray1} interval={interval} />
       </Quadrant>
-      <Quadrant style={borderRadiusStyle("topright")}>
+      <Quadrant style={borderRadiusStyle(isMobile ? "" : "topright")}>
         <ImageCarousel images={imageArray2} interval={interval} />
       </Quadrant>
-      <Quadrant style={borderRadiusStyle("bottomleft")}>
+      <Quadrant style={borderRadiusStyle(isMobile ? "" : "bottomleft")}>
         <ImageCarousel images={imageArray3} interval={interval} />
       </Quadrant>
-      <Quadrant style={borderRadiusStyle("bottomright")}>
+      <Quadrant style={borderRadiusStyle(isMobile ? "" : "bottomright")}>
         <ImageCarousel images={imageArray4} interval={interval} />
       </Quadrant>
       <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
