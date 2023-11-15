@@ -52,7 +52,7 @@ const Quadrant = styled.div`
 const SponsorshipLinkContainer = styled.div<SponsorshipLinkProps>`
   position: absolute;
   right: 0;
-  bottom: -30px; /* Negative value to push it outside the container */
+  bottom: -40px; /* Negative value to push it outside the container */
   width: 100%; /* Ensure it spans the width of the container */
   text-align: right; /* Align the text to the right */
 
