@@ -19,7 +19,7 @@ const InterFont = css<StyledInterTextProps>`
 const StyledInterText = styled.p<StyledInterTextProps>`
   ${InterFont}
   font-family: Inter;
-  font-size: ${(props) => (props.isMobile ? "10px" : "20px")};
+  font-size: ${(props) => (props.isMobile ? "17px" : "20px")};
   font-style: normal;
   line-height: normal;
 `;
