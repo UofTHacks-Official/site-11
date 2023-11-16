@@ -16,11 +16,13 @@ interface ButtonProps {
 const ButtonCollection = ({ appsOpen }: ButtonProps) => {
   const isMobile = useMobileDetect();
   const sponsorLink = "mailto:sponsors@uofthacks.com";
-  const primaryLink = appsOpen ? "" : sponsorLink;
+  const portalLink = "https://portal.uofthacks.com";
+  const primaryLink = appsOpen ? portalLink : sponsorLink;
   // when apps will open, change primaryLink to dashboard link
 
   const handleButtonClick = (link: string) => {
-    window.location.href = link;
+    //window.location.href = link;
+    window.open(link);
   };
 
   return (
