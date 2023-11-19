@@ -7,6 +7,14 @@ type ImageCarouselProps = {
   interval: number;
 };
 
+const OffscreenPreload = styled.div`
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+`;
+
 const ImageInQuadrant = styled(Image)`
   object-fit: contain;
   user-select: none;
@@ -31,21 +39,28 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval }) => {
   }, [currentImageIndex, images, interval]);
 
   return (
-    <div>
-      {images.map(
-        (image: any, index: number) =>
-          image && (
-            <ImageInQuadrant
-              key={index}
-              src={image}
-              alt={`Image ${index + 1}`}
-              style={{
-                display: index === currentImageIndex ? "block" : "none",
-              }}
-            />
-          )
-      )}
-    </div>
+    <>
+      <OffscreenPreload>
+        {images.map((image: any, index: number) => (
+          <Image key={index} src={image} alt={`Preload Image ${index + 1}`} />
+        ))}
+      </OffscreenPreload>
+      <div>
+        {images.map(
+          (image: any, index: number) =>
+            image && (
+              <ImageInQuadrant
+                key={index}
+                src={image}
+                alt={`Image ${index + 1}`}
+                style={{
+                  display: index === currentImageIndex ? "block" : "none",
+                }}
+              />
+            )
+        )}
+      </div>
+    </>
   );
 };
 
