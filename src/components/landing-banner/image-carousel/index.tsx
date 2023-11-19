@@ -42,7 +42,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval }) => {
     <>
       <OffscreenPreload>
         {images.map((image: any, index: number) => (
-          <Image key={index} src={image} alt={`Preload Image ${index + 1}`} />
+          <Image
+            key={index}
+            src={image}
+            alt={`Preload Image ${index + 1}`}
+            priority
+          />
         ))}
       </OffscreenPreload>
       <div>
@@ -56,6 +61,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval }) => {
                 style={{
                   display: index === currentImageIndex ? "block" : "none",
                 }}
+                priority
               />
             )
         )}
