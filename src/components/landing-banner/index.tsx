@@ -35,7 +35,7 @@ type LandingBannerProps = {
 const imageArray1 = [OrangeCrayon, PinkCrayon, PurpleCrayon, TealCrayon];
 const imageArray2 = [PinkDS, TealDS, OrangeDS, PurpleDS];
 const imageArray3 = [PurpleWii, OrangeWii, TealWii, PinkWii];
-const imageArray4 = [TealLego, PinkLego, PurpleLego, OrangeLego];
+const imageArray4 = [TealLego, PurpleLego, PinkLego, OrangeLego];
 
 const LandingBanner = ({
   mainTitle,
