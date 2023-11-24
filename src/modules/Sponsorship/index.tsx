@@ -10,7 +10,7 @@ const Sponsorship = () => {
   return (
     <SponsorshipContainer id="sponsors">
       <StyledSubjectivity>
-        Previous<ColourText> Sponsors</ColourText>
+        Current<ColourText> Sponsors</ColourText>
       </StyledSubjectivity>
       <Sponsors />
     </SponsorshipContainer>
