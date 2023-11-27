@@ -23,11 +23,10 @@ import CPPIB from "public/assets/sponsors/CPPIB.svg";
 
 // Define sponsor data
 export const sponsorsData = {
-  //rbc will be the title sponsor.
   title: [
     {
-      name: "RBC",
-      url: "https://www.rbc.com/",
+      name: "PROTOCOL",
+      url: "https://www.protocol-ai.com/",
       img: Protocol,
     },
   ],
