@@ -68,12 +68,12 @@ const Sponsors: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <SponsorsGrid mobile={isMobile}>
-        <TierComponent
+        {/* <TierComponent
           data={sponsorsData.title}
           width={"100%"}
           height={isMobile ? "20vw" : "min(200px, 20vw)"}
           maxHeight={"300px"}
-        />
+        /> */}
         <TierComponent
           data={sponsorsData.diamond}
           width={"75%"}
