@@ -69,34 +69,40 @@ const Sponsors: React.FC = () => {
     <Wrapper id="Sponsors">
       <SponsorsGrid mobile={isMobile}>
         <TierComponent
-          data={sponsorsData.diamond}
+          data={sponsorsData.title}
           width={"100%"}
+          height={isMobile ? "20vw" : "min(200px, 20vw)"}
+          maxHeight={"300px"}
+        />
+        <TierComponent
+          data={sponsorsData.diamond}
+          width={"75%"}
           height={isMobile ? "19vw" : "min(200px, 19vw)"}
           maxHeight={"290px"}
         />
         <TierComponent
-          data={sponsorsData.platinum}
+          data={sponsorsData.gold}
           width={"50%"}
           height={isMobile ? "18vw" : "min(200px, 18vw)"}
           maxHeight={"290px"}
           minWidth={isMobile ? "50%" : "20vw"}
         />
         <TierComponent
-          data={sponsorsData.gold}
+          data={sponsorsData.silver}
           width={"30%"}
           height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={"250px"}
           minWidth={isMobile ? "30%" : "16vw"}
         />
         <TierComponent
-          data={sponsorsData.silver}
+          data={sponsorsData.bronze}
           width={"23%"}
           height={isMobile ? "14vw" : "min(190px, 12vw)"}
           maxHeight={"200px"}
           minWidth={isMobile ? "23%" : "14vw"}
         />
         <TierComponent
-          data={sponsorsData.bronze}
+          data={sponsorsData.inkind}
           width={"16.5%"}
           height={isMobile ? "10vw" : "min(150px, 10vw)"}
           minWidth={isMobile ? "16.5%" : "12vw"}
