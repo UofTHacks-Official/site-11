@@ -83,18 +83,18 @@ const Sponsors: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <SponsorsGrid mobile={isMobile}>
-        <TierComponent
+        {/* <TierComponent
           data={sponsorsData.title}
           width={isMobile ? "90%" : "100%"}
           height={isMobile ? "20vw" : "min(300px, 20vw)"}
           maxHeight={isMobile ? "20vw" : "min(300px, 20vw)"}
-        />
-        <TierComponent
+        /> */}
+        {/* <TierComponent
           data={sponsorsData.diamond}
           width={isMobile ? "55%" : "85%"}
           height={isMobile ? "19vw" : "min(290px, 19vw)"}
           maxHeight={isMobile ? "19vw" : "min(290px, 19vw)"}
-        />
+        /> */}
         <TierComponent
           data={sponsorsData.gold}
           width={isMobile ? "45%" : "75%"}
