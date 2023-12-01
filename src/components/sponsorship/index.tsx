@@ -83,32 +83,32 @@ const Sponsors: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <SponsorsGrid mobile={isMobile}>
-        {/* <TierComponent
+        <TierComponent
           data={sponsorsData.title}
-          width={"100%"}
+          width={isMobile ? "90%" : "100%"}
           height={isMobile ? "20vw" : "min(300px, 20vw)"}
-          height={isMobile ? "20vw" : "min(300px, 20vw)"}
-        /> */}
-        {/* <TierComponent
+          maxHeight={isMobile ? "20vw" : "min(300px, 20vw)"}
+        />
+        <TierComponent
           data={sponsorsData.diamond}
-          width={"75%"}
+          width={isMobile ? "55%" : "85%"}
           height={isMobile ? "19vw" : "min(290px, 19vw)"}
-          height={isMobile ? "19vw" : "min(290px, 19vw)"}
-        /> */}
-        {/* <TierComponent
+          maxHeight={isMobile ? "19vw" : "min(290px, 19vw)"}
+        />
+        <TierComponent
           data={sponsorsData.gold}
-          width={"50%"}
+          width={isMobile ? "45%" : "75%"}
           height={isMobile ? "18vw" : "min(240px, 18vw)"}
           maxHeight={isMobile ? "18vw" : "min(240px, 18vw)"}
-          minWidth={isMobile ? "50%" : "20vw"}
-        /> */}
-        {/* <TierComponent
+          // minWidth={isMobile ? "50%" : "20vw"}
+        />
+        <TierComponent
           data={sponsorsData.silver}
-          width={"30%"}
+          width={isMobile ? "30%" : "35%"}
           height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={isMobile ? "16vw" : "min(200px, 16vw)"}
-          minWidth={isMobile ? "30%" : "16vw"}
-        /> */}
+          // minWidth={isMobile ? "30%" : "16vw"}
+        />
         <TierComponent
           data={sponsorsData.bronze}
           width={"23%"}
@@ -118,10 +118,9 @@ const Sponsors: React.FC = () => {
         />
         <TierComponent
           data={sponsorsData.inkind}
-          width={"23%"}
-          height={isMobile ? "12vw" : "min(190px, 12vw)"}
-          maxHeight={isMobile ? "12vw" : "min(190px, 12vw)"}
-          minWidth={isMobile ? "23%" : "14vw"}
+          width={"19%"}
+          height={isMobile ? "12vw" : "min(150px, 12vw)"}
+          minWidth={isMobile ? "19%" : "12vw"}
         />
       </SponsorsGrid>
     </Wrapper>
