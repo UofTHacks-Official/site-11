@@ -82,7 +82,7 @@ const Sponsors: React.FC = () => {
           height={isMobile ? "19vw" : "min(290px, 19vw)"}
           height={isMobile ? "19vw" : "min(290px, 19vw)"}
         /> */}
-        <TierComponent
+        {/* <TierComponent
           data={sponsorsData.gold}
           width={"50%"}
           height={isMobile ? "18vw" : "min(240px, 18vw)"}
@@ -102,7 +102,7 @@ const Sponsors: React.FC = () => {
           height={isMobile ? "14vw" : "min(200px, 12vw)"}
           maxHeight={isMobile ? "14vw" : "min(200px, 12vw)"}
           minWidth={isMobile ? "23%" : "14vw"}
-        /> 
+        />  */}
         <TierComponent
           data={sponsorsData.inkind}
           width={"23%"}
