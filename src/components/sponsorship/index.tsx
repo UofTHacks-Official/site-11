@@ -25,7 +25,14 @@ const Sponsor: React.FC<{
   const isMobile = useMobileDetect();
   return (
     <SponsorItem href={href} target="_blank" rel="noopener">
-      <StyledImage src={src} alt={name} layout="responsive" mobile={isMobile} isSpecial={isSpecial} className={isSpecial ? 'special-logo': ''}/>
+      <StyledImage
+        src={src}
+        alt={name}
+        layout="responsive"
+        mobile={isMobile}
+        isSpecial={isSpecial}
+        className={isSpecial ? "special-logo" : ""}
+      />
     </SponsorItem>
   );
 };
@@ -57,7 +64,13 @@ const TierComponent: React.FC<TierComponentProps> = ({
           minWidth={minWidth}
           key={index}
         >
-          <Sponsor href={s.url} src={s.img} name={s.name} key={index} customClass='special-logo'/>
+          <Sponsor
+            href={s.url}
+            src={s.img}
+            name={s.name}
+            key={index}
+            customClass="special-logo"
+          />
         </TierStyle>
       ))}
     </RowStyle>
@@ -88,21 +101,21 @@ const Sponsors: React.FC = () => {
           height={isMobile ? "18vw" : "min(240px, 18vw)"}
           maxHeight={isMobile ? "18vw" : "min(240px, 18vw)"}
           minWidth={isMobile ? "50%" : "20vw"}
-        />
-        <TierComponent
+        /> */}
+        {/* <TierComponent
           data={sponsorsData.silver}
           width={"30%"}
           height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={isMobile ? "16vw" : "min(200px, 16vw)"}
           minWidth={isMobile ? "30%" : "16vw"}
-        />
+        /> */}
         <TierComponent
           data={sponsorsData.bronze}
           width={"23%"}
           height={isMobile ? "14vw" : "min(200px, 12vw)"}
           maxHeight={isMobile ? "14vw" : "min(200px, 12vw)"}
           minWidth={isMobile ? "23%" : "14vw"}
-        />  */}
+        />
         <TierComponent
           data={sponsorsData.inkind}
           width={"23%"}
