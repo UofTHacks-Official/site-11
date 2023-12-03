@@ -9,6 +9,7 @@ import RPABotPro from "public/assets/sponsors/RPABotPro.svg";
 import Ubisoft from "public/assets/sponsors/Ubisoft.svg";
 import Balsamiq from "public/assets/sponsors/Balsamiq.svg";
 import UiPath from "public/assets/sponsors/UiPath.svg";
+import FASE from "public/assets/sponsors/FASE.svg";
 import StickerMule from "public/assets/sponsors/StickerMule.svg";
 import FDMGroup from "public/assets/sponsors/FDM.svg";
 import echo3D from "public/assets/sponsors/echo3D.webp";
@@ -19,6 +20,7 @@ import PnG from "public/assets/sponsors/PnG.svg";
 import CSE from "public/assets/sponsors/CSE.svg";
 import WCSA from "public/assets/sponsors/WCSA.svg";
 import CPPIB from "public/assets/sponsors/CPPIB.svg";
+import Huawei from "public/assets/sponsors/Huawei.svg";
 
 // Define sponsor data
 export const sponsorsData = {
@@ -57,16 +59,34 @@ export const sponsorsData = {
   ],
   silver: [
     {
-      name: "UbiSoft",
-      url: "https://www.ubisoft.com/en-gb/",
-      img: Ubisoft,
-      isSpecial: true,
-    },
-    {
       name: "CSE",
       url: "https://www.cse-cst.gc.ca/en",
       img: CSE,
       isSpecial: false,
+    },
+    {
+      name: "UofT Department of Computer Science",
+      url: "https://web.cs.toronto.edu/",
+      img: UofTCS,
+      isSpecial: false,
+    },
+    {
+      name: "UofT Faculty of Applied Science and Engineering",
+      url: "https://www.engineering.utoronto.ca/",
+      img: FASE,
+      isSpecial: false,
+    },
+    {
+      name: "Huawei",
+      url: "https://www.huawei.com/ca/",
+      img: Huawei,
+      isSpecial: false,
+    },
+    {
+      name: "UbiSoft",
+      url: "https://www.ubisoft.com/en-gb/",
+      img: Ubisoft,
+      isSpecial: true,
     },
   ],
   bronze: [
@@ -134,7 +154,7 @@ export const sponsorsData = {
     },
     {
       name: "Sticker Mule",
-      url: "https://www.stickermule.com/ca",
+      url: "https://www.stickermule.com/uses/laptop-stickers?utm_source=referral_us&utm_medium=sponsorships_us&utm_campaign=UofTHacks_2023",
       img: StickerMule,
       isSpecial: false,
     },
