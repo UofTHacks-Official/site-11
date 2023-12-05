@@ -21,6 +21,7 @@ import CSE from "public/assets/sponsors/CSE.svg";
 import WCSA from "public/assets/sponsors/WCSA.svg";
 import CPPIB from "public/assets/sponsors/CPPIB.svg";
 import Huawei from "public/assets/sponsors/Huawei.svg";
+import StandOut from "public/assets/sponsors/StandOut.svg";
 
 // Define sponsor data
 export const sponsorsData = {
@@ -151,6 +152,12 @@ export const sponsorsData = {
       url: "https://rpabotpro.com/",
       img: RPABotPro,
       isSpecial: true,
+    },
+    {
+      name: "StandOut Stickers",
+      url: "http://hackp.ac/mlh-StandOutStickers-hackathons",
+      img: StandOut,
+      isSpecial: false,
     },
     {
       name: "Sticker Mule",
