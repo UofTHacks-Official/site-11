@@ -7,7 +7,7 @@ import {
   PrimaryButtonTextContainer,
   VolunteerBoxContainer,
   ButtonGroupContainer,
-  TextPromptContainer
+  TextPromptContainer,
 } from "./index.styles";
 import InterSemiBold from "@/components/inter-semi-bold";
 
@@ -25,21 +25,25 @@ const VolunteerBoxComponent = () => {
   };
 
   const interStyles = (isMobile: any) => ({
-    fontSize: isMobile ? '10px' : '15px',
-    display: 'inline'
+    fontSize: isMobile ? "10px" : "15px",
+    display: "inline",
   });
 
   return (
     <PushDownContainer>
       <VolunteerBoxContainer mobile={isMobile}>
         <TextPromptContainer>
-        <Inter style={interStyles(isMobile)}>
-          Applications for <InterSemiBold style={interStyles(isMobile)}>Volunteers</InterSemiBold> & <InterSemiBold style={interStyles(isMobile)}>Mentors</InterSemiBold> are now open! Click below to
-          apply:
-        </Inter>
-
+          <Inter style={interStyles(isMobile)}>
+            Applications for{" "}
+            <InterSemiBold style={interStyles(isMobile)}>
+              Volunteers
+            </InterSemiBold>{" "}
+            &{" "}
+            <InterSemiBold style={interStyles(isMobile)}>Mentors</InterSemiBold>{" "}
+            are now open! Click below to apply:
+          </Inter>
         </TextPromptContainer>
-        
+
         <ButtonGroupContainer>
           <PrimaryButtonContainer
             onClick={() => handleButtonClick(volunteerLink)}

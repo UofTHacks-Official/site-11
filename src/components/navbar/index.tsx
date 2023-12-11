@@ -219,7 +219,6 @@ const NavBar = () => {
                 <PrimaryButtonContainer onClick={() => onHackerPortalClick()}>
                   <PrimaryButtonTextContainer>
                     <Inter style={navInterStyle()}>HACKER PORTAL</Inter>
-                  
                   </PrimaryButtonTextContainer>
                   <LinkIcon src={linkIcon} alt="Link Icon" />
                 </PrimaryButtonContainer>

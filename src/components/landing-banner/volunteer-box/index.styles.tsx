@@ -16,7 +16,7 @@ const PushDownContainer = styled.div`
 `;
 
 const TextPromptContainer = styled.div`
-  width: 60%;
+  width: 70%;
 `;
 
 const ButtonGroupContainer = styled.div`
@@ -29,7 +29,7 @@ const ButtonGroupContainer = styled.div`
 const PrimaryButtonContainer = styled.button`
   margin: 0.5rem 1rem;
   width: 35%;
-  padding: 0.5rem;
+  padding: 0.3rem;
   border: none;
   border-radius: 10px;
   cursor: pointer;
