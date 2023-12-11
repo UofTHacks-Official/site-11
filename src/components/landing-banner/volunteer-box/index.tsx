@@ -9,6 +9,7 @@ import {
   ButtonGroupContainer,
   TextPromptContainer
 } from "./index.styles";
+import InterSemiBold from "@/components/inter-semi-bold";
 
 const VolunteerBoxComponent = () => {
   const isMobile = useMobileDetect();
@@ -25,6 +26,7 @@ const VolunteerBoxComponent = () => {
 
   const interStyles = (isMobile: any) => ({
     fontSize: isMobile ? '10px' : '15px',
+    display: 'inline'
   });
 
   return (
@@ -32,7 +34,7 @@ const VolunteerBoxComponent = () => {
       <VolunteerBoxContainer mobile={isMobile}>
         <TextPromptContainer>
         <Inter style={interStyles(isMobile)}>
-          Applications for Volunteers & Mentors are now open! Click below to
+          Applications for <InterSemiBold style={interStyles(isMobile)}>Volunteers</InterSemiBold> & <InterSemiBold style={interStyles(isMobile)}>Mentors</InterSemiBold> are now open! Click below to
           apply:
         </Inter>
 

@@ -62,6 +62,8 @@ const NavLinks = styled.ul`
 
 const NavLinkItem = styled.li`
   margin-right: 20px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -73,6 +75,13 @@ const NavLink = styled.a`
   &:hover {
     color: grey;
   }
+`;
+
+const LinkIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  padding-top: 6px;
+  align-self: center; 
 `;
 
 const HamburgerMenu = styled.div<HamburgerProps>`
@@ -111,6 +120,35 @@ const MobileNavLinkItem = styled(NavLinkItem)`
   list-style-type: none;
 `;
 
+const PrimaryButtonContainer = styled.button`
+  width: 100%;
+  padding: 0.5rem;
+  align-self: center; 
+  justify-content: center;
+  margin-top: -10px; 
+  margin-bottom: auto;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 2px solid var(--black, #282828);
+  background: var(--black, #282828);
+  border-radius: 5px;
+  border: 2px solid var(--Black, #282828);
+  background: var(--Blue, #2850a0);
+  /* Default Shadow */
+  box-shadow: 0px 4px 0px 0px #282828;
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+
+const PrimaryButtonTextContainer = styled.div`
+  display: inline;
+  text-transform: uppercase;
+  color: var(--white, #f9f9f9);
+`;
+
 export {
   NavigationBar,
   Logo,
@@ -121,4 +159,7 @@ export {
   MobileMenu,
   MobileNavLinkItem,
   NavigationContainer,
+  PrimaryButtonContainer,
+  PrimaryButtonTextContainer,
+  LinkIcon
 };

@@ -11,6 +11,9 @@ import {
   HamburgerMenu,
   MobileMenu,
   MobileNavLinkItem,
+  PrimaryButtonContainer,
+  PrimaryButtonTextContainer,
+  LinkIcon
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import Image from "next/image";
@@ -35,6 +38,11 @@ const NavBar = () => {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  
+  const hackerPortalLink = "https://portal.uofthacks.com"
+  const onHackerPortalClick = () => {
+    window.open(hackerPortalLink);
+  }
 
   const [prevScrollY, setPrevScrollY] = useState(0); // Track previous scroll position
   useEffect(() => {
@@ -107,6 +115,13 @@ const NavBar = () => {
     fontSize: "20px",
   });
 
+  const navInterStyle = () => ({
+    fontSize: "17px",
+    display: "inline",
+  });
+
+  const linkIcon = "assets/extra-icons/link.svg";
+
   return (
     <>
       <NavigationContainer open={isNavBarVisible}>
@@ -118,28 +133,37 @@ const NavBar = () => {
             <div style={{ display: isMobile ? "none" : "flex" }}>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("about-us")}>
-                  <Inter>ABOUT US</Inter>
+                  <Inter style={navInterStyle()}>ABOUT US</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("statistics")}>
-                  <Inter>STATISTICS</Inter>
+                  <Inter style={navInterStyle()}>STATISTICS</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("sponsors")}>
-                  <Inter>SPONSORS</Inter>
+                  <Inter style={navInterStyle()}>SPONSORS</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("faq")}>
-                  <Inter>FAQ</Inter>
+                  <Inter style={navInterStyle()}>FAQ</Inter>
                 </NavLink>
               </NavLinkItem>
               <NavLinkItem>
                 <NavLink onClick={() => scrollToSection("footer")}>
-                  <Inter>CONTACT US</Inter>
+                  <Inter style={navInterStyle()}>CONTACT US</Inter>
                 </NavLink>
+              </NavLinkItem>
+              <NavLinkItem>
+                <PrimaryButtonContainer onClick={() => onHackerPortalClick()}>
+                  <PrimaryButtonTextContainer>
+                    <Inter style={navInterStyle()}>HACKER PORTAL</Inter>
+                  
+                  </PrimaryButtonTextContainer>
+                  <LinkIcon src={linkIcon} alt="Link Icon" />
+                </PrimaryButtonContainer>
               </NavLinkItem>
             </div>
             <HamburgerMenu
@@ -188,6 +212,17 @@ const NavBar = () => {
                 <NavLink onClick={() => scrollToSection("footer")}>
                   <Inter style={MobileInterStyle()}>CONTACT US</Inter>
                 </NavLink>
+              </NavLinkItem>
+            </MobileNavLinkItem>
+            <MobileNavLinkItem>
+            <NavLinkItem>
+                <PrimaryButtonContainer onClick={() => onHackerPortalClick()}>
+                  <PrimaryButtonTextContainer>
+                    <Inter style={navInterStyle()}>HACKER PORTAL</Inter>
+                  
+                  </PrimaryButtonTextContainer>
+                  <LinkIcon src={linkIcon} alt="Link Icon" />
+                </PrimaryButtonContainer>
               </NavLinkItem>
             </MobileNavLinkItem>
           </MobileMenu>
