@@ -5,8 +5,6 @@ import {
   ButtonGroupContainer,
   PrimaryButtonContainer,
   PrimaryButtonTextContainer,
-  SecondaryButtonContainer,
-  SecondaryButtonTextContainer,
 } from "./index.styles";
 
 interface ButtonProps {
@@ -27,11 +25,11 @@ const ButtonCollection = ({ appsOpen }: ButtonProps) => {
 
   return (
     <ButtonGroupContainer>
-      <PrimaryButtonContainer onClick={() => handleButtonClick(primaryLink)}>
-        <PrimaryButtonTextContainer>
-          <Inter>{appsOpen ? "APPLY HERE" : "INTERESTED IN SPONSORING?"}</Inter>
-        </PrimaryButtonTextContainer>
-      </PrimaryButtonContainer>
+        <PrimaryButtonContainer onClick={() => handleButtonClick(primaryLink)}>
+          <PrimaryButtonTextContainer>
+            <Inter>{appsOpen ? "APPLY HERE" : "INTERESTED IN SPONSORING?"}</Inter>
+          </PrimaryButtonTextContainer>
+        </PrimaryButtonContainer>
     </ButtonGroupContainer>
   );
 };
