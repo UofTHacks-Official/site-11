@@ -1,6 +1,6 @@
 // Import sponsor images
 import Protocol from "public/assets/sponsors/protocol-labs.svg";
-import Cohere from "public/assets/sponsors/Cohere.svg";
+import Cohere from "public/assets/sponsors/cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
 import EngSoc from "public/assets/sponsors/EngSoc.svg";
 import Rotman from "public/assets/sponsors/Rotman.svg";
