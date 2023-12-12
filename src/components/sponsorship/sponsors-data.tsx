@@ -1,6 +1,6 @@
 // Import sponsor images
 import Protocol from "public/assets/sponsors/protocol-labs.svg";
-import Cohere from "public/assets/sponsors/cohere.svg";
+import Cohere from "public/assets/sponsors/Cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
 import EngSoc from "public/assets/sponsors/EngSoc.svg";
 import Rotman from "public/assets/sponsors/Rotman.svg";
@@ -41,14 +41,7 @@ export const sponsorsData = {
       isSpecial: false,
     },
   ],
-  // Cohere will be the platinum sponsor.
   platinum: [
-    {
-      name: "Cohere",
-      url: "https://cohere.com/",
-      img: Cohere,
-      isSpecial: false,
-    },
   ],
   gold: [
     {
@@ -56,6 +49,12 @@ export const sponsorsData = {
       url: "https://digile.com/",
       img: Digile,
       isSpecial: true,
+    },
+    {
+      name: "Cohere",
+      url: "https://cohere.com/",
+      img: Cohere,
+      isSpecial: false,
     },
   ],
   silver: [
