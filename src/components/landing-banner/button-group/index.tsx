@@ -29,7 +29,7 @@ const ButtonCollection = ({ appsOpen }: ButtonProps) => {
     <ButtonGroupContainer>
       <PrimaryButtonContainer onClick={() => handleButtonClick(primaryLink)}>
         <PrimaryButtonTextContainer>
-          <Inter>{appsOpen ? "APPLY HERE" : "INTERESTED IN SPONSORING?"}</Inter>
+          <Inter>{appsOpen ? "LOGIN TO HACKER PORTAL" : "INTERESTED IN SPONSORING?"}</Inter>
         </PrimaryButtonTextContainer>
       </PrimaryButtonContainer>
     </ButtonGroupContainer>
