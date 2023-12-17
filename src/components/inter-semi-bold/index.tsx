@@ -22,7 +22,7 @@ const StyledInterText = styled.p<StyledInterTextProps>`
   ${InterSemiBoldFont}
   font-family: InterSemiBold;
   text-align: center;
-  font-size: ${(props) => (props.isMobile ? "14px" : "20px")};
+  font-size: ${(props) => (props.isMobile ? "12px" : "20px")};
   font-style: normal;
   font-weight: 700;
   line-height: normal;

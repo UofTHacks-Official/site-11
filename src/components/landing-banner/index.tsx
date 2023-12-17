@@ -25,6 +25,7 @@ import OrangeCrayon from "public/assets/landing-banner/crayon/orange.png";
 import PinkCrayon from "public/assets/landing-banner/crayon/pink.png";
 import PurpleCrayon from "public/assets/landing-banner/crayon/purple.png";
 import TealCrayon from "public/assets/landing-banner/crayon/teal.png";
+import VolunteerBox from "./volunteer-box";
 
 type LandingBannerProps = {
   mainTitle: string;
@@ -94,7 +95,8 @@ const LandingBanner = ({
         <ImageCarousel images={imageArray4} interval={interval} />
       </Quadrant>
       <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
-      <ButtonGroup appsOpen={appsOpen} />
+      {/* <ButtonGroup appsOpen={appsOpen} /> */}
+      <VolunteerBox />
       <SponsorshipLinkContainer
         mobile={isMobile}
         onClick={() => handleButtonClick()}

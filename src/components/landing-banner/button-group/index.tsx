@@ -5,8 +5,6 @@ import {
   ButtonGroupContainer,
   PrimaryButtonContainer,
   PrimaryButtonTextContainer,
-  SecondaryButtonContainer,
-  SecondaryButtonTextContainer,
 } from "./index.styles";
 
 interface ButtonProps {
