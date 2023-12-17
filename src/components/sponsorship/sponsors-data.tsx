@@ -41,14 +41,7 @@ export const sponsorsData = {
       isSpecial: false,
     },
   ],
-  // Cohere will be the platinum sponsor.
   platinum: [
-    {
-      name: "Cohere",
-      url: "https://cohere.com/",
-      img: Cohere,
-      isSpecial: false,
-    },
   ],
   gold: [
     {
@@ -56,6 +49,12 @@ export const sponsorsData = {
       url: "https://digile.com/",
       img: Digile,
       isSpecial: true,
+    },
+    {
+      name: "Cohere",
+      url: "https://cohere.com/",
+      img: Cohere,
+      isSpecial: false,
     },
   ],
   silver: [
