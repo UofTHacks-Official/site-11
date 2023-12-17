@@ -15,8 +15,8 @@ const VolunteerBoxComponent = () => {
   const isMobile = useMobileDetect();
 
   // TODO update the application links here
-  const volunteerLink = "https://portal.uofthacks.com";
-  const mentorLink = "https://portal.uofthacks.com";
+  const volunteerLink = "https://forms.gle/wRWAY8nNB9RiTGe5A";
+  const mentorLink = "https://forms.gle/5ZKSXZ7r2p4wXTva6";
   // when apps will open, change primaryLink to dashboard link
 
   const handleButtonClick = (link: string) => {
@@ -25,7 +25,7 @@ const VolunteerBoxComponent = () => {
   };
 
   const interStyles = (isMobile: any) => ({
-    fontSize: isMobile ? "10px" : "15px",
+    fontSize: isMobile ? "12px" : "15px",
     display: "inline",
   });
 
