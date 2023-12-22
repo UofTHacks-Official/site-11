@@ -22,6 +22,7 @@ import WCSA from "public/assets/sponsors/WCSA.svg";
 import CPPIB from "public/assets/sponsors/CPPIB.svg";
 import Huawei from "public/assets/sponsors/Huawei.svg";
 import StandOut from "public/assets/sponsors/StandOut.svg";
+import Fantuan from "public/assets/sponsors/Fantuan.svg";
 
 // Define sponsor data
 export const sponsorsData = {
@@ -41,8 +42,7 @@ export const sponsorsData = {
       isSpecial: false,
     },
   ],
-  platinum: [
-  ],
+  platinum: [],
   gold: [
     {
       name: "Digile",
@@ -170,6 +170,11 @@ export const sponsorsData = {
       img: WolframAlpha,
       isSpecial: false,
     },
-
+    {
+      name: "Fantuan",
+      url: "https://fantuan.ca/delivery/en/",
+      img: Fantuan,
+      isSpecial: false,
+    },
   ],
 };
