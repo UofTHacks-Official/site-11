@@ -2,8 +2,16 @@ import { AppProps } from "next/app";
 import GlobalStyles from "./global-styles";
 import React from "react";
 import Head from "next/head";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+  useEffect(() => {
+    if (router.pathname !== "/") {
+      router.push("/");
+    }
+  }, [router.pathname]);
   return (
     <>
       <Head>

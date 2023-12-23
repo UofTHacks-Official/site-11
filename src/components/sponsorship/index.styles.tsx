@@ -69,7 +69,7 @@ const RowStyle = styled.div`
   gap: 1rem;
 `;
 
-const StyledImage = styled(Image)<ImageProps>`
+const StyledImage = styled(Image)<ImageProps & { isSpecial?: boolean; className?: string }>`
   padding: ${(props) => (props.mobile ? "0.5rem;" : "3vw")};
   width: 100%;
   height: 100%;
@@ -80,6 +80,10 @@ const StyledImage = styled(Image)<ImageProps>`
   align-content: center;
   overflow: hidden;
   object-fit: contain;
+
+  &.special-logo {
+    transform: ${props => props.isSpecial && (props.mobile ? "scale(0.6)" : "scale(1)")};
+  }
 `;
 
 const TierStyle = styled.div<TierProps>`

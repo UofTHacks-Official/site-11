@@ -17,13 +17,22 @@ const Sponsor: React.FC<{
   href: string;
   src: StaticImageData;
   name: string;
+  isSpecial?: boolean;
+  customClass?: string;
   width?: number;
   height?: number;
-}> = ({ href, src, name }) => {
+}> = ({ href, src, name, customClass, isSpecial }) => {
   const isMobile = useMobileDetect();
   return (
     <SponsorItem href={href} target="_blank" rel="noopener">
-      <StyledImage src={src} alt={name} layout="responsive" mobile={isMobile} />
+      <StyledImage
+        src={src}
+        alt={name}
+        layout="responsive"
+        mobile={isMobile}
+        isSpecial={isSpecial}
+        className={isSpecial ? "special-logo" : ""}
+      />
     </SponsorItem>
   );
 };
@@ -55,7 +64,13 @@ const TierComponent: React.FC<TierComponentProps> = ({
           minWidth={minWidth}
           key={index}
         >
-          <Sponsor href={s.url} src={s.img} name={s.name} key={index} />
+          <Sponsor
+            href={s.url}
+            src={s.img}
+            name={s.name}
+            key={index}
+            customClass="special-logo"
+          />
         </TierStyle>
       ))}
     </RowStyle>
@@ -68,38 +83,44 @@ const Sponsors: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <SponsorsGrid mobile={isMobile}>
-        <TierComponent
+        {/* <TierComponent
+          data={sponsorsData.title}
+          width={isMobile ? "90%" : "100%"}
+          height={isMobile ? "20vw" : "min(300px, 20vw)"}
+          maxHeight={isMobile ? "20vw" : "min(300px, 20vw)"}
+        /> */}
+        {/* <TierComponent
           data={sponsorsData.diamond}
-          width={"100%"}
-          height={isMobile ? "19vw" : "min(200px, 19vw)"}
-          maxHeight={"290px"}
-        />
-        <TierComponent
-          data={sponsorsData.platinum}
-          width={"50%"}
-          height={isMobile ? "18vw" : "min(200px, 18vw)"}
-          maxHeight={"290px"}
-          minWidth={isMobile ? "50%" : "20vw"}
-        />
+          width={isMobile ? "55%" : "85%"}
+          height={isMobile ? "19vw" : "min(290px, 19vw)"}
+          maxHeight={isMobile ? "19vw" : "min(290px, 19vw)"}
+        /> */}
         <TierComponent
           data={sponsorsData.gold}
-          width={"30%"}
-          height={isMobile ? "16vw" : "min(200px, 16vw)"}
-          maxHeight={"250px"}
-          minWidth={isMobile ? "30%" : "16vw"}
+          width={isMobile ? "45%" : "75%"}
+          height={isMobile ? "18vw" : "min(240px, 18vw)"}
+          maxHeight={isMobile ? "18vw" : "min(240px, 18vw)"}
+          // minWidth={isMobile ? "50%" : "20vw"}
         />
         <TierComponent
           data={sponsorsData.silver}
-          width={"23%"}
-          height={isMobile ? "14vw" : "min(190px, 12vw)"}
-          maxHeight={"200px"}
-          minWidth={isMobile ? "23%" : "14vw"}
+          width={isMobile ? "30%" : "35%"}
+          height={isMobile ? "16vw" : "min(200px, 16vw)"}
+          maxHeight={isMobile ? "16vw" : "min(200px, 16vw)"}
+          // minWidth={isMobile ? "30%" : "16vw"}
         />
         <TierComponent
           data={sponsorsData.bronze}
-          width={"16.5%"}
-          height={isMobile ? "10vw" : "min(150px, 10vw)"}
-          minWidth={isMobile ? "16.5%" : "12vw"}
+          width={"23%"}
+          height={isMobile ? "14vw" : "min(200px, 12vw)"}
+          maxHeight={isMobile ? "14vw" : "min(200px, 12vw)"}
+          minWidth={isMobile ? "23%" : "14vw"}
+        />
+        <TierComponent
+          data={sponsorsData.inkind}
+          width={"19%"}
+          height={isMobile ? "12vw" : "min(150px, 12vw)"}
+          minWidth={isMobile ? "19%" : "12vw"}
         />
       </SponsorsGrid>
     </Wrapper>

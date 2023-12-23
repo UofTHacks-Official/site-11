@@ -12,9 +12,13 @@ interface TitleBoxProps {
 const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
   const isMobile = useMobileDetect();
 
+  const subjectivityStyle = {
+    color: "var(--Purple, #A050A0)",
+  };
+
   return (
     <TitleBoxContainer mobile={isMobile}>
-      <Subjectivity>
+      <Subjectivity style={subjectivityStyle}>
         {mainTitle.slice(0, 2)}
         <ShiftedContainer>{mainTitle[2]}</ShiftedContainer>
         {mainTitle.slice(3)}

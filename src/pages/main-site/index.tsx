@@ -7,8 +7,17 @@ import Sponsors from "@/modules/Sponsorship";
 import FAQ from "@/modules/FAQ";
 import Stats from "@/modules/stats";
 import Footer from "@/modules/footer";
+import styled from "styled-components";
+import MLHBanner from "@/components/mlh-banner";
 import Image from "next/image";
 import NavBarLogo from "public/assets/navbar_logo.svg";
+
+const MainContainer = styled.div`
+  background-color: #f9f9f9;
+  background-image: url("/backgroundtile.svg");
+  opacity: 1;
+  overflow: hidden;
+`;
 
 type Star = {
   x: number;
@@ -46,14 +55,11 @@ const Site11 = () => {
     setStars([...stars, newStar]);
   };
   return (
-    <div
-      style={{ backgroundColor: "#f9f9f9" }}
-      id="start"
-      onMouseDown={handleMouseDown}
-    >
+    <MainContainer id="start">
+      <MLHBanner />
       <NavBar />
       <LandingPage />
-      <EmailForm />
+      {/* <EmailForm /> */}
       <AboutUs />
       <Stats />
       <Sponsors />
@@ -62,7 +68,7 @@ const Site11 = () => {
       {stars.map((star) => (
         <StarIcon id={star.id} x={star.x} y={star.y} />
       ))}
-    </div>
+    </MainContainer>
   );
 };
 export default Site11;

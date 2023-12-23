@@ -5,8 +5,6 @@ import {
   ButtonGroupContainer,
   PrimaryButtonContainer,
   PrimaryButtonTextContainer,
-  SecondaryButtonContainer,
-  SecondaryButtonTextContainer,
 } from "./index.styles";
 
 interface ButtonProps {
@@ -16,29 +14,22 @@ interface ButtonProps {
 const ButtonCollection = ({ appsOpen }: ButtonProps) => {
   const isMobile = useMobileDetect();
   const sponsorLink = "mailto:sponsors@uofthacks.com";
-  const primaryLink = appsOpen ? "" : sponsorLink;
+  const portalLink = "https://portal.uofthacks.com";
+  const primaryLink = appsOpen ? portalLink : sponsorLink;
   // when apps will open, change primaryLink to dashboard link
 
   const handleButtonClick = (link: string) => {
-    window.location.href = link;
+    //window.location.href = link;
+    window.open(link);
   };
 
   return (
     <ButtonGroupContainer>
       <PrimaryButtonContainer onClick={() => handleButtonClick(primaryLink)}>
         <PrimaryButtonTextContainer>
-          <Inter>{appsOpen ? "APPLY" : "INTERESTED IN SPONSORING?"}</Inter>
+          <Inter>{appsOpen ? "LOGIN TO HACKER PORTAL" : "INTERESTED IN SPONSORING?"}</Inter>
         </PrimaryButtonTextContainer>
       </PrimaryButtonContainer>
-      {appsOpen && (
-        <SecondaryButtonContainer
-          onClick={() => handleButtonClick(sponsorLink)}
-        >
-          <SecondaryButtonTextContainer>
-            <Inter>SPONSOR</Inter>
-          </SecondaryButtonTextContainer>
-        </SecondaryButtonContainer>
-      )}
     </ButtonGroupContainer>
   );
 };
