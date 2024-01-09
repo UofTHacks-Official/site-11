@@ -156,7 +156,7 @@ const NavBar = () => {
                   <Inter style={navInterStyle()}>CONTACT US</Inter>
                 </NavLink>
               </NavLinkItem>
-              <NavLinkItem>
+              {/* <NavLinkItem>
                 <PrimaryButtonContainer onClick={() => onHackerPortalClick()}>
                   <PrimaryButtonTextContainer>
                     <Inter style={navInterStyle()}>HACKER PORTAL</Inter>
@@ -164,7 +164,7 @@ const NavBar = () => {
                   </PrimaryButtonTextContainer>
                   <LinkIcon src={linkIcon} alt="Link Icon" />
                 </PrimaryButtonContainer>
-              </NavLinkItem>
+              </NavLinkItem> */}
             </div>
             <HamburgerMenu
               ref={(node) => setHamburgerNode(node)}
@@ -214,7 +214,7 @@ const NavBar = () => {
                 </NavLink>
               </NavLinkItem>
             </MobileNavLinkItem>
-            <MobileNavLinkItem>
+            {/* <MobileNavLinkItem>
             <NavLinkItem>
                 <PrimaryButtonContainer onClick={() => onHackerPortalClick()}>
                   <PrimaryButtonTextContainer>
@@ -223,7 +223,7 @@ const NavBar = () => {
                   <LinkIcon src={linkIcon} alt="Link Icon" />
                 </PrimaryButtonContainer>
               </NavLinkItem>
-            </MobileNavLinkItem>
+            </MobileNavLinkItem> */}
           </MobileMenu>
         </span>
       )}

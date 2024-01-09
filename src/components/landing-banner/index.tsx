@@ -95,8 +95,8 @@ const LandingBanner = ({
         <ImageCarousel images={imageArray4} interval={interval} />
       </Quadrant>
       <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
-      {/* <ButtonGroup appsOpen={appsOpen} /> */}
-      <VolunteerBox />
+      <ButtonGroup appsOpen={appsOpen} />
+      {/* <VolunteerBox /> */}
       <SponsorshipLinkContainer
         mobile={isMobile}
         onClick={() => handleButtonClick()}
