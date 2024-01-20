@@ -8,7 +8,8 @@ import UofTCS from "public/assets/sponsors/UofTCS.svg";
 import RPABotPro from "public/assets/sponsors/RPABotPro.svg";
 import Ubisoft from "public/assets/sponsors/Ubisoft.svg";
 import Balsamiq from "public/assets/sponsors/Balsamiq.svg";
-import UiPath from "public/assets/sponsors/UiPath.svg";
+import Pinnacle from "public/assets/sponsors/Pinnacle.svg";
+import Moonshine from "public/assets/sponsors/Moonshine.svg";
 import FASE from "public/assets/sponsors/FASE.svg";
 import StickerMule from "public/assets/sponsors/StickerMule.svg";
 import FDMGroup from "public/assets/sponsors/FDM.svg";
@@ -176,5 +177,19 @@ export const sponsorsData = {
       img: Fantuan,
       isSpecial: false,
     },
+    {
+      name: "Moonshine",
+      url: "https://moonshinegaming.ca/",
+      img: Moonshine,
+      isSpecial: false,
+
+    },
+    {
+      name: "Pinnacle",
+      url: "https://pinnacle.us.org/",
+      img: Pinnacle,
+      isSpecial: false,
+
+    }
   ],
 };
