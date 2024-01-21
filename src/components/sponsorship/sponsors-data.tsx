@@ -127,12 +127,6 @@ export const sponsorsData = {
       img: Rotman,
       isSpecial: false,
     },
-    {
-      name: "WCSA",
-      url: "https://www.mywcsa.com/",
-      img: WCSA,
-      isSpecial: false,
-    },
   ],
   inkind: [
     {
@@ -146,12 +140,6 @@ export const sponsorsData = {
       url: "https://www.echo3d.com/",
       img: echo3D,
       isSpecial: false,
-    },
-    {
-      name: "RPABot Pro",
-      url: "https://rpabotpro.com/",
-      img: RPABotPro,
-      isSpecial: true,
     },
     {
       name: "StandOut Stickers",
