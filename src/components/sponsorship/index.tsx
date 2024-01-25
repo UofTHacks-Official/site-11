@@ -100,14 +100,12 @@ const Sponsors: React.FC = () => {
           width={isMobile ? "45%" : "75%"}
           height={isMobile ? "18vw" : "min(240px, 18vw)"}
           maxHeight={isMobile ? "18vw" : "min(240px, 18vw)"}
-          // minWidth={isMobile ? "50%" : "20vw"}
         />
         <TierComponent
           data={sponsorsData.silver}
           width={isMobile ? "30%" : "35%"}
           height={isMobile ? "16vw" : "min(200px, 16vw)"}
           maxHeight={isMobile ? "16vw" : "min(200px, 16vw)"}
-          // minWidth={isMobile ? "30%" : "16vw"}
         />
         <TierComponent
           data={sponsorsData.bronze}

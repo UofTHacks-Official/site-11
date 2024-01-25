@@ -2,10 +2,8 @@
 import Protocol from "public/assets/sponsors/protocol-labs.svg";
 import Cohere from "public/assets/sponsors/cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
-import EngSoc from "public/assets/sponsors/EngSoc.svg";
 import Rotman from "public/assets/sponsors/Rotman.svg";
 import UofTCS from "public/assets/sponsors/UofTCS.svg";
-import RPABotPro from "public/assets/sponsors/RPABotPro.svg";
 import Ubisoft from "public/assets/sponsors/Ubisoft.svg";
 import Balsamiq from "public/assets/sponsors/Balsamiq.svg";
 import Pinnacle from "public/assets/sponsors/Pinnacle.svg";
@@ -19,11 +17,11 @@ import Modiface from "public/assets/sponsors/Modiface.svg";
 import WolframAlpha from "public/assets/sponsors/WolframAlpha.svg";
 import PnG from "public/assets/sponsors/PnG.svg";
 import CSE from "public/assets/sponsors/CSE.svg";
-import WCSA from "public/assets/sponsors/WCSA.svg";
 import CPPIB from "public/assets/sponsors/CPPIB.svg";
 import Huawei from "public/assets/sponsors/Huawei.svg";
 import StandOut from "public/assets/sponsors/StandOut.svg";
 import Fantuan from "public/assets/sponsors/Fantuan.svg";
+import NordVPN from "public/assets/sponsors/NordVPN.svg"
 
 // Define sponsor data
 export const sponsorsData = {
@@ -178,6 +176,12 @@ export const sponsorsData = {
       img: Pinnacle,
       isSpecial: false,
 
-    }
+    },
+    {
+      name: "Nord VPN",
+      url: "https://nordvpn.com/",
+      img: NordVPN,
+      isSpecial: true,
+    },
   ],
 };
