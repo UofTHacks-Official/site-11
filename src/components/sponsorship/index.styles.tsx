@@ -73,6 +73,7 @@ const StyledImage = styled(Image)<ImageProps & { isSpecial?: boolean; className?
   padding: ${(props) => (props.mobile ? "0.5rem;" : "3vw")};
   width: 100%;
   height: 100%;
+  margin-left: ${(props) => (props.isSpecial ? "5%;" : "0%")};
   display: flex;
   justify-content: center;
   align-items: center;
