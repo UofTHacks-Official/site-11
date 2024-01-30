@@ -1,5 +1,5 @@
 // Import sponsor images
-import Protocol from "public/assets/sponsors/protocol-labs.svg";
+import RBC from "public/assets/sponsors/RBCBanner.png";
 import Cohere from "public/assets/sponsors/cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
 import Rotman from "public/assets/sponsors/Rotman.svg";
@@ -26,11 +26,17 @@ import NordVPN from "public/assets/sponsors/NordVPN.svg"
 // Define sponsor data
 export const sponsorsData = {
   title: [
+    // {
+    //   name: "PROTOCOL",
+    //   url: "https://www.protocol-ai.com/",
+    //   img: Protocol,
+    //   isSpecial: false,
+    // },
     {
-      name: "PROTOCOL",
-      url: "https://www.protocol-ai.com/",
-      img: Protocol,
-      isSpecial: false,
+      name: "RBC",
+      url: "https://www.rbcroyalbank.com/personal.html",
+      img: RBC,
+      isSpecial: true,
     },
   ],
   diamond: [
