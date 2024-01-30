@@ -21,7 +21,7 @@ const Sponsor: React.FC<{
   customClass?: string;
   width?: number;
   height?: number;
-}> = ({ href, src, name, customClass, isSpecial }) => {
+}> = ({ href, src, name, customClass, isSpecial}) => {
   const isMobile = useMobileDetect();
   return (
     <SponsorItem href={href} target="_blank" rel="noopener">
@@ -45,6 +45,7 @@ type TierComponentProps = {
   height: string;
   maxHeight?: string;
   minWidth?: string;
+  isSpecial?: boolean;
 };
 
 const TierComponent: React.FC<TierComponentProps> = ({
@@ -70,6 +71,7 @@ const TierComponent: React.FC<TierComponentProps> = ({
             name={s.name}
             key={index}
             customClass="special-logo"
+            isSpecial={s.isSpecial}
           />
         </TierStyle>
       ))}
@@ -85,9 +87,9 @@ const Sponsors: React.FC = () => {
       <SponsorsGrid mobile={isMobile}>
         <TierComponent
           data={sponsorsData.title}
-          width={isMobile ? "70%" : "80%"}
+          width={isMobile ? "90%" : "100%"}
           height={isMobile ? "20vw" : "min(300px, 20vw)"}
-          maxHeight={isMobile ? "20vw" : "min(300px, 20vw)"}
+          maxHeight={isMobile ? "20vw" : "min(350px, 25vw)"}
         />
         {/* <TierComponent
           data={sponsorsData.diamond}

@@ -1,5 +1,5 @@
 // Import sponsor images
-import RBC from "public/assets/sponsors/RBCBanner.png";
+import RBC from "public/assets/sponsors/RBC.png";
 import Cohere from "public/assets/sponsors/cohere.svg";
 import Accenture from "public/assets/sponsors/Accenture.svg";
 import Rotman from "public/assets/sponsors/Rotman.svg";
