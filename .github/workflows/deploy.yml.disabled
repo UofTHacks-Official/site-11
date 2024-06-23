@@ -1,0 +1,31 @@
+name: Deploy to Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        
+      - name: List Git Remotes
+        run: git remote -v
+
+      - name: Deploy to Test
+        env:
+          PAT_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+        run: |
+          git config --global user.email "webmaster@uofthacks.com"
+          git config --global user.name "UoftHacks-Admin"
+          git clone https://UoftHacks-Admin:${{ secrets.GH_ACCESS_TOKEN }}@github.com/UoftHacks-Admin/test-dashboard-11.git
+          cd test-dashboard-11
+          git remote add this-repo https://UoftHacks-Admin:${{ secrets.GH_ACCESS_TOKEN }}@github.com/UofTHacks-Official/dashboard-11.git
+          git fetch this-repo main:deploy
+          git checkout deploy
+          git push -f https://UoftHacks-Admin:${{ secrets.GH_ACCESS_TOKEN }}@github.com/UoftHacks-Admin/test-dashboard-11.git deploy
