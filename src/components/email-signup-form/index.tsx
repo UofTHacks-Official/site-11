@@ -18,7 +18,7 @@ const EmailSignupForm = () => {
     setMessage("");
     e.preventDefault();
 
-    const endpoint = "https://api.uofthacks.com/xi/email_list/add";
+    const endpoint = "https://api.uofthacks.com/12/email_list/add";
 
     try {
       const response = await fetch(endpoint, {
@@ -46,7 +46,7 @@ const EmailSignupForm = () => {
   return (
     <SignupContainer>
       <StyledHeader isMobile={isMobile}>
-        Want to be the first to know when applications open up?
+        Want to be the first to know when applications for UoftHacks 12 open up?
       </StyledHeader>
       <StyledInter isMobile={isMobile}>
         We will email you when applications open!
