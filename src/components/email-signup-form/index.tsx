@@ -18,7 +18,7 @@ const EmailSignupForm = () => {
     setMessage("");
     e.preventDefault();
 
-    const endpoint = "https://api.uofthacks.com/xii/email_list/add";
+    const endpoint = "https://api.uofthacks.com/12/email_list/add";
 
     try {
       const response = await fetch(endpoint, {
