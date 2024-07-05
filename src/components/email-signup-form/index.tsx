@@ -46,10 +46,10 @@ const EmailSignupForm = () => {
   return (
     <SignupContainer>
       <StyledHeader isMobile={isMobile}>
-        Want to be the first to know when applications for UoftHacks 12 open up?
+        Want to be the first to know when the UoftHacks 12 site opens up?
       </StyledHeader>
       <StyledInter isMobile={isMobile}>
-        We will email you when applications open!
+        We will email you when the new site is open!
       </StyledInter>
       <SignupForm onSubmit={handleSignup}>
         <SignupInput
