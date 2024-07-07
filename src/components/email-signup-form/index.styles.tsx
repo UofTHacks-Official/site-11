@@ -69,7 +69,7 @@ const SignupInput = styled.input`
   height: ${height};
 
   font-family: Inter;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
