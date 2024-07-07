@@ -12,7 +12,7 @@ const AboutUs = () => {
       consecutive year!
       <br />
       <br />
-      Our event brings together over 600 innovators, developers, designers, and
+      Our event brings together over 500 innovators, developers, designers, and
       entrepreneurs for a memorable 36-hour in-person hackathon, where they
       collaboratively craft unique and meaningful projects.
       <br />
