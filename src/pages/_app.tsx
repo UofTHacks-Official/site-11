@@ -25,7 +25,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <meta name="title" content="UofTHacks 11" />
         <meta
           name="description"
-          content="Join 600+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻"
+          content="Join 500+ hackers for a great weekend of learning, building, and networking at University of Toronto's largest annual hackathon 💻"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.uofthacks.com/" />
