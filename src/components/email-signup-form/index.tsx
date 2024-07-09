@@ -27,7 +27,7 @@ const EmailSignupForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          user_email: email,
+          "user_email": email,
         }),
       });
 
