@@ -11,7 +11,7 @@ npm i
 Then start the development server by running:
 
 ```bash
-npm run dev
+npm start
 ```
 
 Open your web browser and go to http://localhost:3000 to view the app.

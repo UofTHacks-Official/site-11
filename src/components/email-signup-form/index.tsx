@@ -35,8 +35,16 @@ const EmailSignupForm = () => {
         setMessage(
           "Your email has successfully been added to the mailing list!"
         );
+      } else if (response.status === 400) {
+        const responseData = await response.json()
+
+        if (responseData.message.includes("invalid")) {
+          setMessage("The email you entered is invalid, please try again.")
+        } else {
+          setMessage("Your email has already been added to the mailing list.");
+        }
       } else {
-        setMessage("Your email has already been added to the mailing list.");
+        setMessage("Error submitting email");
       }
     } catch (error) {
       setMessage("Error submitting email");
