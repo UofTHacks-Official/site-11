@@ -39,7 +39,28 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
   gap: 1.25rem;
 `;
 
-// Style for individual project items
+// Style for rows
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+// Style for columns
+const Column = styled.div<ColumnProps>`
+  position: relative;
+  object-fit: cover;
+
+  flex: ${(props) => (props.thirdRow ? "1 1 32%" : "1 1 48%")};
+  max-width: ${(props) => (props.thirdRow ? "32%" : "48%")};
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    margin-right: ${(props) => (props.thirdRow ? "1.5%" : "4%")};
+  }
+`;
+
+// Style for individual project item links
 const ProjectItem = styled.a`
   display: flex;
 
@@ -63,41 +84,14 @@ const ProjectItem = styled.a`
   }
 `;
 
-// Style for rows
-const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-`;
-
-// Style for columns
-const Column = styled.div<ColumnProps>`
-  position: relative;
-
-  flex: ${(props) => (props.thirdRow ? "1 1 32%" : "1 1 48%")};
-  max-width: ${(props) => (props.thirdRow ? "32%" : "48%")};
-  box-sizing: border-box;
-
-  &:not(:last-child) {
-    margin-right: ${(props) => (props.thirdRow ? "1.5%" : "4%")};
-  }
-`;
-
 // Style for image
 const StyledImage = styled(Image)<
   ImageProps & { isSpecial?: boolean; className?: string }
 >`
-  padding: ${(props) => (props.mobile ? "0.5rem;" : "3vw")};
   width: 100%;
   height: 100%;
-  margin-left: ${(props) => (props.isSpecial ? "5%;" : "0%")};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  align-content: center;
   overflow: hidden;
-  object-fit: fill;
+  object-fit: cover;
 
   &.special-logo {
     transform: ${(props) =>
@@ -113,7 +107,7 @@ const SubtitleBox = styled.div`
   margin: 20px 20px 20px 20px;
   width: calc(100% - 40px);
   background-color: white;
-  
+
   box-sizing: border-box;
   border-radius: 3px;
   border: 1px solid var(--black, #282828);
@@ -130,7 +124,6 @@ const Tier1 = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
 
 const Tier2 = styled.div`
   display: block;
@@ -149,4 +142,16 @@ const StyledInterSemiBold = styled(InterSemiBoldFont)`
   letter-spacing: 0.72px;
 `;
 
-export { Wrapper, ProjectsGrid, ProjectItem, Row, Column, StyledImage, SubtitleBox, Tier1, Tier2, StyledInter, StyledInterSemiBold };
+export {
+  Wrapper,
+  ProjectsGrid,
+  ProjectItem,
+  Row,
+  Column,
+  StyledImage,
+  SubtitleBox,
+  Tier1,
+  Tier2,
+  StyledInter,
+  StyledInterSemiBold,
+};

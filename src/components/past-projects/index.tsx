@@ -38,7 +38,6 @@ const Project: React.FC<{
         isSpecial={isSpecial}
         className={isSpecial ? "special-logo" : ""}
       />
-
     </ProjectItem>
   );
 };
@@ -63,8 +62,12 @@ const PastProjects: React.FC = () => {
               />
               <SubtitleBox>
                 <Tier1>
-                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold> 
-                  <StyledInter>{s.name}<br></br>{s.description}</StyledInter>
+                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold>
+                  <StyledInter>
+                    {s.name}
+                    <br></br>
+                    {s.description}
+                  </StyledInter>
                 </Tier1>
               </SubtitleBox>
             </Column>
@@ -84,7 +87,7 @@ const PastProjects: React.FC = () => {
               />
               <SubtitleBox>
                 <Tier2>
-                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold> 
+                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold>
                   <StyledInter>{s.description}</StyledInter>
                 </Tier2>
               </SubtitleBox>
