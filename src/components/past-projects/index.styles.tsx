@@ -21,7 +21,7 @@ type ColumnProps = {
 const Wrapper = styled.section`
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   justify-content: center;
   align-items: center;
   align-self: center;
@@ -52,12 +52,10 @@ const Column = styled.div<ColumnProps>`
   position: relative;
   object-fit: cover;
 
-  flex: ${(props) => (props.thirdRow ? "1 1 32%" : "1 1 48%")};
-  max-width: ${(props) => (props.thirdRow ? "32%" : "48%")};
   box-sizing: border-box;
 
   &:not(:last-child) {
-    margin-right: ${(props) => (props.thirdRow ? "1.5%" : "4%")};
+    margin-right: 1.5%;
   }
 `;
 
