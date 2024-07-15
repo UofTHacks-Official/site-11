@@ -42,7 +42,6 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
 // Style for individual project items
 const ProjectItem = styled.a`
   display: flex;
-  position: relative;
 
   width: 100%;
   height: 100%;
@@ -73,6 +72,8 @@ const Row = styled.div`
 
 // Style for columns
 const Column = styled.div<ColumnProps>`
+  position: relative;
+
   flex: ${(props) => (props.thirdRow ? "1 1 32%" : "1 1 48%")};
   max-width: ${(props) => (props.thirdRow ? "32%" : "48%")};
   box-sizing: border-box;
@@ -107,8 +108,6 @@ const StyledImage = styled(Image)<
 // Style for subtitle
 const SubtitleBox = styled.div`
   position: absolute;
-  display: flex;
-  justify-content: space-between;
   bottom: 0px;
   left: 0px;
   margin: 20px 20px 20px 20px;
@@ -127,16 +126,27 @@ const SubtitleBox = styled.div`
   z-index: 1;
 `;
 
+const Tier1 = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+
+const Tier2 = styled.div`
+  display: block;
+`;
+
 const StyledInter = styled(InterFont)`
   color: #000;
-  font-size: 1rem;
+  font-size: 0.75rem;
   letter-spacing: 0.72px;
 `;
 
 const StyledInterSemiBold = styled(InterSemiBoldFont)`
+  text-align: left;
   color: #000;
   font-size: 1rem;
   letter-spacing: 0.72px;
 `;
 
-export { Wrapper, ProjectsGrid, ProjectItem, Row, Column, StyledImage, SubtitleBox, StyledInter, StyledInterSemiBold };
+export { Wrapper, ProjectsGrid, ProjectItem, Row, Column, StyledImage, SubtitleBox, Tier1, Tier2, StyledInter, StyledInterSemiBold };

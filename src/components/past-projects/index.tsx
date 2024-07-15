@@ -9,6 +9,8 @@ import {
   Row,
   Column,
   SubtitleBox,
+  Tier1,
+  Tier2,
   StyledInter,
   StyledInterSemiBold,
 } from "./index.styles";
@@ -36,11 +38,6 @@ const Project: React.FC<{
         isSpecial={isSpecial}
         className={isSpecial ? "special-logo" : ""}
       />
-      
-      <SubtitleBox>
-        <StyledInterSemiBold>{name}</StyledInterSemiBold> 
-        <StyledInter>{description}</StyledInter>
-      </SubtitleBox>
 
     </ProjectItem>
   );
@@ -64,6 +61,12 @@ const PastProjects: React.FC = () => {
                 customClass="special-logo"
                 isSpecial={s.isSpecial}
               />
+              <SubtitleBox>
+                <Tier1>
+                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold> 
+                  <StyledInter>{s.name}<br></br>{s.description}</StyledInter>
+                </Tier1>
+              </SubtitleBox>
             </Column>
           ))}
         </Row>
@@ -79,6 +82,12 @@ const PastProjects: React.FC = () => {
                 description={s.description}
                 isSpecial={s.isSpecial}
               />
+              <SubtitleBox>
+                <Tier2>
+                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold> 
+                  <StyledInter>{s.description}</StyledInter>
+                </Tier2>
+              </SubtitleBox>
             </Column>
           ))}
         </Row>
