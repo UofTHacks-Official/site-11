@@ -13,10 +13,15 @@ import {
   Tier2,
   StyledInter,
   StyledInterSemiBold,
+  StyledDecalImage,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import { projectData } from "@/components/past-projects/project-data";
 import { StyledSubjectivity } from "../about-us/desktop/index.styles";
+
+import Star1 from 'public/assets/past-projects/Star1st.svg';
+import Star2 from 'public/assets/past-projects/Star2nd.svg';
+
 
 // Project Item component
 const Project: React.FC<{
@@ -51,6 +56,7 @@ const PastProjects: React.FC = () => {
         <Row>
           {projectData.tier1.map((s, index) => (
             <Column key={index}>
+              <StyledDecalImage src={s.decal} alt={"Star1"}></StyledDecalImage>
               <Project
                 href={s.url}
                 src={s.img}
@@ -64,7 +70,7 @@ const PastProjects: React.FC = () => {
                 <Tier1>
                   <StyledInterSemiBold>{s.name}</StyledInterSemiBold>
                   <StyledInter>
-                    {s.name}
+                    Project {s.name}
                     <br></br>
                     {s.description}
                   </StyledInter>

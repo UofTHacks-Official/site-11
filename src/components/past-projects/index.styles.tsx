@@ -4,6 +4,7 @@ import styled from "styled-components";
 import InterFont from "@/components/inter";
 import InterSemiBoldFont from "@/components/inter-semi-bold";
 
+
 type ProjectsGridProps = {
   mobile?: boolean | null;
 };
@@ -76,12 +77,6 @@ const ProjectItem = styled.a`
   box-shadow: 0px 4px 0px 0px #282828;
 
   object-fit: cover;
-
-  &:hover {
-    transition: all 0.3s ease 0s;
-    transform: scale(1.01);
-    cursor: pointer;
-  }
 `;
 
 // Style for image
@@ -96,6 +91,12 @@ const StyledImage = styled(Image)<
   &.special-logo {
     transform: ${(props) =>
       props.isSpecial && (props.mobile ? "scale(0.6)" : "scale(1)")};
+  }
+
+  &:hover {
+    transition: all 0.3s ease 0s;
+    transform: scale(1.01);
+    cursor: pointer;
   }
 `;
 
@@ -123,6 +124,7 @@ const SubtitleBox = styled.div`
 const Tier1 = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-right: 10px;
 `;
 
 const Tier2 = styled.div`
@@ -138,9 +140,20 @@ const StyledInter = styled(InterFont)`
 const StyledInterSemiBold = styled(InterSemiBoldFont)`
   text-align: left;
   color: #000;
-  font-size: 1rem;
+  font-size: 1.35rem;
   letter-spacing: 0.72px;
 `;
+
+// Styled component for star decals
+const StyledDecalImage = styled(Image)`
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 90px;
+  height: auto;
+  z-index: 1;
+`;
+
 
 export {
   Wrapper,
@@ -154,4 +167,5 @@ export {
   Tier2,
   StyledInter,
   StyledInterSemiBold,
+  StyledDecalImage,
 };

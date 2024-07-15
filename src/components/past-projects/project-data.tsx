@@ -5,7 +5,8 @@ import BasicWeb from "public/assets/past-projects/BasicWeb.svg";
 import Memomi from "public/assets/past-projects/Memomi.svg";
 import IMissYou from "public/assets/past-projects/IMissYou.svg";
 import BackToTheMarket from "public/assets/past-projects/BackToTheMarket.svg";
-
+import Star1 from 'public/assets/past-projects/Star1st.svg';
+import Star2 from 'public/assets/past-projects/Star2nd.svg';
 
 // Define project data
 export const projectData = {
@@ -22,6 +23,7 @@ export const projectData = {
       img: FurMe,
       isSpecial: true,
       description: "1st Overall",
+      decal: Star1,
     },
     {
       name: "BASIC Web",
@@ -29,6 +31,7 @@ export const projectData = {
       img: BasicWeb,
       isSpecial: false,
       description: "2nd Overall, CSE",
+      decal: Star2,
     },
   ],
   tier2: [
