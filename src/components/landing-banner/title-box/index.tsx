@@ -7,9 +7,10 @@ import InterSemiBold from "@/components/inter-semi-bold";
 interface TitleBoxProps {
   mainTitle: string;
   subTitle: string;
+  subTitle2: string;
 }
 
-const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
+const TitleBox = ({ mainTitle, subTitle, subTitle2 }: TitleBoxProps) => {
   const isMobile = useMobileDetect();
 
   const subjectivityStyle = {
@@ -24,6 +25,7 @@ const TitleBox = ({ mainTitle, subTitle }: TitleBoxProps) => {
         {mainTitle.slice(3)}
       </Subjectivity>
       <InterSemiBold>{subTitle}</InterSemiBold>
+      <InterSemiBold>{subTitle2}</InterSemiBold>
     </TitleBoxContainer>
   );
 };
