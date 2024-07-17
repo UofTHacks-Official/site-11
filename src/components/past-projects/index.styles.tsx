@@ -4,7 +4,6 @@ import styled from "styled-components";
 import InterFont from "@/components/inter";
 import InterSemiBoldFont from "@/components/inter-semi-bold";
 
-
 type ProjectsGridProps = {
   mobile?: boolean | null;
 };
@@ -15,6 +14,11 @@ type ImageProps = {
 
 type ColumnProps = {
   thirdRow?: boolean;
+  mobile?: boolean | null;
+};
+
+type SubtitleProps = {
+  mobile?: boolean | null;
 };
 
 // Style for the sponsors container
@@ -25,7 +29,6 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   align-self: center;
-  overflow: hidden;
   padding-bottom: 10px;
 `;
 
@@ -41,27 +44,33 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
 `;
 
 // Style for rows
-const Row = styled.div`
+const Row = styled.div<ProjectsGridProps>`
   display: flex;
-  justify-content: space-between;
+  flex-direction: ${(props) => (props.mobile ? "column" : "row")};
+  justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
   width: 100%;
+  gap: ${(props) => (props.mobile ? "1.25rem" : "0")};
 `;
 
 // Style for columns
 const Column = styled.div<ColumnProps>`
   position: relative;
   object-fit: cover;
-
+  flex: ${(props) => (props.mobile ? "1 1 100%" : "1 1 48%")};
+  max-width: ${(props) => (props.mobile ? "100%" : "48%")};
   box-sizing: border-box;
 
   &:not(:last-child) {
-    margin-right: 1.5%;
+    margin-right: ${(props) => (props.thirdRow ? "1.5%" : "1.5%")};
+    margin-bottom: ${(props) => (props.mobile ? "1.25rem" : "0")};
   }
 `;
 
 // Style for individual project item links
 const ProjectItem = styled.a`
   display: flex;
+  flex-direction: column;
+  position: relative;
 
   width: 100%;
   height: 100%;
@@ -78,28 +87,20 @@ const ProjectItem = styled.a`
 `;
 
 // Style for image
-const StyledImage = styled(Image)<
-  ImageProps & { isSpecial?: boolean; className?: string }
->`
+const StyledImage = styled(Image)<ImageProps>`
   width: 100%;
   height: 100%;
-  overflow: hidden;
   object-fit: cover;
-
-  &.special-logo {
-    transform: ${(props) =>
-      props.isSpecial && (props.mobile ? "scale(0.6)" : "scale(1)")};
-  }
 
   &:hover {
     transition: all 0.3s ease 0s;
-    transform: scale(1.01);
+    transform: scale(1.05);
     cursor: pointer;
   }
 `;
 
 // Style for subtitle
-const SubtitleBox = styled.div`
+const SubtitleBox = styled.div<SubtitleProps>`
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -113,9 +114,7 @@ const SubtitleBox = styled.div`
   box-shadow: 0px 4px 0px 0px #282828;
 
   color: #000;
-  font-size: 1rem;
-
-  padding: 20px 15px 20px 15px;
+  padding: ${(props) => (props.mobile ? "10px 5px 10px 5px" : "20px 15px 20px 15px")};
   z-index: 1;
 `;
 
@@ -125,8 +124,9 @@ const Tier1 = styled.div`
   margin-right: 10px;
 `;
 
-const Tier2 = styled.div`
-  display: block;
+const Tier2 = styled.div<SubtitleProps>`
+  display: ${(props) => (props.mobile ? "flex" : "block")};
+  justify-content: ${(props) => (props.mobile ? "space-between" : "")};
 `;
 
 const StyledInter = styled(InterFont)`
@@ -135,23 +135,22 @@ const StyledInter = styled(InterFont)`
   letter-spacing: 0.72px;
 `;
 
-const StyledInterSemiBold = styled(InterSemiBoldFont)`
+const StyledInterSemiBold = styled(InterSemiBoldFont)<SubtitleProps>`
   text-align: left;
   color: #000;
-  font-size: 1.35rem;
+  font-size: ${(props) => (props.mobile ? "1rem" : "1.35rem")};
   letter-spacing: 0.72px;
 `;
 
 // Styled component for star decals
-const StyledDecalImage = styled(Image)`
+const StyledDecalImage = styled(Image)<ImageProps>`
   position: absolute;
-  top: -40px;
-  left: -40px;
-  width: 90px;
+  top: ${(props) => (props.mobile ? "-20px" : "-40px")};
+  left: ${(props) => (props.mobile ? "-20px" : "-40px")};
+  width: ${(props) => (props.mobile ? "60px" : "90px")};
   height: auto;
   z-index: 1;
 `;
-
 
 export {
   Wrapper,

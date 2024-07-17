@@ -17,11 +17,6 @@ import {
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import { projectData } from "@/components/past-projects/project-data";
-import { StyledSubjectivity } from "../about-us/desktop/index.styles";
-
-import Star1 from 'public/assets/past-projects/Star1st.svg';
-import Star2 from 'public/assets/past-projects/Star2nd.svg';
-
 
 // Project Item component
 const Project: React.FC<{
@@ -33,15 +28,13 @@ const Project: React.FC<{
   customClass?: string;
 }> = ({ href, src, name, description, customClass, isSpecial }) => {
   const isMobile = useMobileDetect();
+  
   return (
     <ProjectItem href={href} target="_blank" rel="noopener">
       <StyledImage
         src={src}
         alt={name}
-        layout="responsive"
         mobile={isMobile}
-        isSpecial={isSpecial}
-        className={isSpecial ? "special-logo" : ""}
       />
     </ProjectItem>
   );
@@ -53,10 +46,14 @@ const PastProjects: React.FC = () => {
   return (
     <Wrapper id="Sponsors">
       <ProjectsGrid mobile={isMobile}>
-        <Row>
+        <Row mobile={isMobile}>
           {projectData.tier1.map((s, index) => (
-            <Column key={index}>
-              <StyledDecalImage src={s.decal} alt={"Star1"}></StyledDecalImage>
+            <Column key={index} mobile={isMobile}>
+              <StyledDecalImage
+                src={s.decal}
+                alt={"Star1"}
+                mobile={isMobile}
+              />
               <Project
                 href={s.url}
                 src={s.img}
@@ -66,9 +63,9 @@ const PastProjects: React.FC = () => {
                 customClass="special-logo"
                 isSpecial={s.isSpecial}
               />
-              <SubtitleBox>
+              <SubtitleBox mobile={isMobile}>
                 <Tier1>
-                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold>
+                  <StyledInterSemiBold mobile={isMobile}>{s.name}</StyledInterSemiBold>
                   <StyledInter>
                     Project {s.name}
                     <br></br>
@@ -79,9 +76,9 @@ const PastProjects: React.FC = () => {
             </Column>
           ))}
         </Row>
-        <Row>
+        <Row mobile={isMobile}>
           {projectData.tier2.map((s, index) => (
-            <Column key={index} thirdRow>
+            <Column key={index} thirdRow mobile={isMobile}>
               <Project
                 href={s.url}
                 src={s.img}
@@ -92,8 +89,8 @@ const PastProjects: React.FC = () => {
                 isSpecial={s.isSpecial}
               />
               <SubtitleBox>
-                <Tier2>
-                  <StyledInterSemiBold>{s.name}</StyledInterSemiBold>
+                <Tier2 mobile={isMobile}>
+                  <StyledInterSemiBold mobile={isMobile}>{s.name}</StyledInterSemiBold>
                   <StyledInter>{s.description}</StyledInter>
                 </Tier2>
               </SubtitleBox>
