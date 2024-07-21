@@ -57,10 +57,10 @@ const Column = styled.div<ColumnProps>`
   object-fit: cover;
   flex: ${(props) => (props.mobile ? "1 1 100%" : "1 1 48%")};
   max-width: ${(props) => (props.mobile ? "auto" : "48%")};
-  height: ${(props) => (props.mobile ? "170px" : "100%")};
+  height: ${(props) => (props.mobile ? "170px" : "")};
   width: 100%;
   box-sizing: border-box;
-  margin-right: 1.1rem;
+  margin-right: 2%;
   
   &:not(:last-child) {
     margin-bottom: ${(props) => (props.mobile ? "2rem" : "")};
