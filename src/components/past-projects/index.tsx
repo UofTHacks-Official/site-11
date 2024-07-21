@@ -14,6 +14,7 @@ import {
   StyledInter,
   StyledInterSemiBold,
   StyledDecalImage,
+  SubtitleLink,
 } from "./index.styles";
 import { useMobileDetect } from "@/hooks/useMobileDetect";
 import { projectData } from "@/components/past-projects/project-data";
@@ -28,14 +29,10 @@ const Project: React.FC<{
   customClass?: string;
 }> = ({ href, src, name, description, customClass, isSpecial }) => {
   const isMobile = useMobileDetect();
-  
+
   return (
     <ProjectItem href={href} target="_blank" rel="noopener">
-      <StyledImage
-        src={src}
-        alt={name}
-        mobile={isMobile}
-      />
+      <StyledImage src={src} alt={name} mobile={isMobile} />
     </ProjectItem>
   );
 };
@@ -49,11 +46,7 @@ const PastProjects: React.FC = () => {
         <Row mobile={isMobile}>
           {projectData.tier1.map((s, index) => (
             <Column key={index} mobile={isMobile}>
-              <StyledDecalImage
-                src={s.decal}
-                alt={"Star1"}
-                mobile={isMobile}
-              />
+              <StyledDecalImage src={s.decal} alt={"Star1"} mobile={isMobile} />
               <Project
                 href={s.url}
                 src={s.img}
@@ -63,16 +56,20 @@ const PastProjects: React.FC = () => {
                 customClass="special-logo"
                 isSpecial={s.isSpecial}
               />
-              <SubtitleBox mobile={isMobile}>
-                <Tier1>
-                  <StyledInterSemiBold mobile={isMobile}>{s.name}</StyledInterSemiBold>
-                  <StyledInter>
-                    Project {s.name}
-                    <br></br>
-                    {s.description}
-                  </StyledInter>
-                </Tier1>
-              </SubtitleBox>
+              <SubtitleLink href={s.url} target="_blank" rel="noopener">
+                <SubtitleBox mobile={isMobile}>
+                  <Tier1>
+                    <StyledInterSemiBold mobile={isMobile}>
+                      {s.name}
+                    </StyledInterSemiBold>
+                    <StyledInter>
+                      Project {s.name}
+                      <br />
+                      {s.description}
+                    </StyledInter>
+                  </Tier1>
+                </SubtitleBox>
+              </SubtitleLink>
             </Column>
           ))}
         </Row>
@@ -88,12 +85,16 @@ const PastProjects: React.FC = () => {
                 description={s.description}
                 isSpecial={s.isSpecial}
               />
-              <SubtitleBox>
-                <Tier2 mobile={isMobile}>
-                  <StyledInterSemiBold mobile={isMobile}>{s.name}</StyledInterSemiBold>
-                  <StyledInter>{s.description}</StyledInter>
-                </Tier2>
-              </SubtitleBox>
+              <SubtitleLink href={s.url} target="_blank" rel="noopener">
+                <SubtitleBox mobile={isMobile}>
+                  <Tier2 mobile={isMobile}>
+                    <StyledInterSemiBold mobile={isMobile}>
+                      {s.name}
+                    </StyledInterSemiBold>
+                    <StyledInter>{s.description}</StyledInter>
+                  </Tier2>
+                </SubtitleBox>
+              </SubtitleLink>
             </Column>
           ))}
         </Row>

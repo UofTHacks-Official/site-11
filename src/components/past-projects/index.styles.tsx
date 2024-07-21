@@ -57,7 +57,9 @@ const Column = styled.div<ColumnProps>`
   position: relative;
   object-fit: cover;
   flex: ${(props) => (props.mobile ? "1 1 100%" : "1 1 48%")};
-  max-width: ${(props) => (props.mobile ? "100%" : "48%")};
+  max-width: ${(props) => (props.mobile ? "auto" : "48%")};
+  height: ${(props) => (props.mobile ? "170px" : "100%")};
+  width: 100%;
   box-sizing: border-box;
 
   &:not(:last-child) {
@@ -88,8 +90,8 @@ const ProjectItem = styled.a`
 
 // Style for image
 const StyledImage = styled(Image)<ImageProps>`
+  height: ${(props) => (props.mobile ? "170px" : "100%")};
   width: 100%;
-  height: 100%;
   object-fit: cover;
 
   &:hover {
@@ -118,6 +120,13 @@ const SubtitleBox = styled.div<SubtitleProps>`
   z-index: 1;
 `;
 
+// Style for subtitle link
+const SubtitleLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+`;
+
+
 const Tier1 = styled.div`
   display: flex;
   justify-content: space-between;
@@ -138,7 +147,7 @@ const StyledInter = styled(InterFont)`
 const StyledInterSemiBold = styled(InterSemiBoldFont)<SubtitleProps>`
   text-align: left;
   color: #000;
-  font-size: ${(props) => (props.mobile ? "1rem" : "1.35rem")};
+  font-size: ${(props) => (props.mobile ? "1rem" : "1.25rem")};
   letter-spacing: 0.72px;
 `;
 
@@ -165,4 +174,5 @@ export {
   StyledInter,
   StyledInterSemiBold,
   StyledDecalImage,
+  SubtitleLink,
 };

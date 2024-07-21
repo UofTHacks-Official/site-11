@@ -7,9 +7,12 @@ const ProjectsContainer = styled.div`
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   overflow: hidden;
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 2rem;  
 `;
 
 const ColourText = styled.span`
