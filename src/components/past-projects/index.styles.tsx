@@ -40,7 +40,7 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
   height: 100%;
   box-sizing: border-box;
   padding: ${(props) => (props.mobile ? "0" : "50px")};
-  gap: ${(props) => (props.mobile ? "2rem" : "1.25rem")};
+  gap: ${(props) => (props.mobile ? "1.5rem" : "1.25rem")};
 `;
 
 // Style for rows
@@ -55,15 +55,14 @@ const Row = styled.div<ProjectsGridProps>`
 const Column = styled.div<ColumnProps>`
   position: relative;
   object-fit: cover;
-  flex: ${(props) => (props.mobile ? "1 1 100%" : "1 1 48%")};
-  max-width: ${(props) => (props.mobile ? "auto" : "48%")};
+  max-width: ${(props) => (props.mobile ? "auto" : "100%")};
   height: ${(props) => (props.mobile ? "170px" : "")};
   width: 100%;
   box-sizing: border-box;
-  margin-right: 2%;
   
   &:not(:last-child) {
-    margin-bottom: ${(props) => (props.mobile ? "2rem" : "")};
+    margin-right: 1.5%;
+    margin-bottom: ${(props) => (props.mobile ? "1.5rem" : "")};
   }
 
 `;
