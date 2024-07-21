@@ -40,7 +40,7 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
   height: 100%;
   box-sizing: border-box;
   padding: ${(props) => (props.mobile ? "0" : "50px")};
-  gap: 1.25rem;
+  gap: ${(props) => (props.mobile ? "2rem" : "1.25rem")};
 `;
 
 // Style for rows
@@ -49,7 +49,6 @@ const Row = styled.div<ProjectsGridProps>`
   flex-direction: ${(props) => (props.mobile ? "column" : "row")};
   justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
   width: 100%;
-  gap: ${(props) => (props.mobile ? "1.25rem" : "0")};
 `;
 
 // Style for columns
@@ -61,11 +60,12 @@ const Column = styled.div<ColumnProps>`
   height: ${(props) => (props.mobile ? "170px" : "100%")};
   width: 100%;
   box-sizing: border-box;
-
+  margin-right: 1.1rem;
+  
   &:not(:last-child) {
-    margin-right: ${(props) => (props.thirdRow ? "1.5%" : "1.5%")};
-    margin-bottom: ${(props) => (props.mobile ? "1.25rem" : "0")};
+    margin-bottom: ${(props) => (props.mobile ? "2rem" : "")};
   }
+
 `;
 
 // Style for individual project item links
