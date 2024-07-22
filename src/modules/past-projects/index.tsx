@@ -1,6 +1,6 @@
 import {
+  Container,
   ProjectsContainer,
-  ColourText,
   StyledSubjectivity,
   StarImage
 } from "./index.styles";
@@ -13,15 +13,15 @@ const Projects = () => {
   const isMobile = useMobileDetect();
 
   return (
-    <ProjectsContainer id="projects">
-      <StyledSubjectivity>
-        <ColourText>Past Projects</ColourText>
-      </StyledSubjectivity>
-      <PastProjects />
-      <StarImage mobile={isMobile}>
-        <Image src={Star} alt="Star" width={100} height={100} />
-      </StarImage>
-    </ProjectsContainer>
+    <Container>
+      <ProjectsContainer id="projects">
+        <StyledSubjectivity mobile={isMobile}>Past Projects</StyledSubjectivity>
+        <PastProjects />
+        <StarImage mobile={isMobile}>
+          <Image src={Star} alt="Star" width={100} height={100} />
+        </StarImage>
+      </ProjectsContainer>
+    </Container>
   );
 };
 

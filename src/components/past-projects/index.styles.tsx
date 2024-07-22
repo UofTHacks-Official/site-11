@@ -4,20 +4,7 @@ import styled from "styled-components";
 import InterFont from "@/components/inter";
 import InterSemiBoldFont from "@/components/inter-semi-bold";
 
-type ProjectsGridProps = {
-  mobile?: boolean | null;
-};
-
-type ImageProps = {
-  mobile?: boolean | null;
-};
-
-type ColumnProps = {
-  thirdRow?: boolean;
-  mobile?: boolean | null;
-};
-
-type SubtitleProps = {
+type MobileProps = {
   mobile?: boolean | null;
 };
 
@@ -33,7 +20,7 @@ const Wrapper = styled.section`
 `;
 
 // Style for the sponsors grid
-const ProjectsGrid = styled.div<ProjectsGridProps>`
+const ProjectsGrid = styled.div<MobileProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -44,7 +31,7 @@ const ProjectsGrid = styled.div<ProjectsGridProps>`
 `;
 
 // Style for rows
-const Row = styled.div<ProjectsGridProps>`
+const Row = styled.div<MobileProps>`
   display: flex;
   flex-direction: ${(props) => (props.mobile ? "column" : "row")};
   justify-content: ${(props) => (props.mobile ? "center" : "space-between")};
@@ -52,7 +39,7 @@ const Row = styled.div<ProjectsGridProps>`
 `;
 
 // Style for columns
-const Column = styled.div<ColumnProps>`
+const Column = styled.div<MobileProps>`
   position: relative;
   object-fit: cover;
   max-width: ${(props) => (props.mobile ? "auto" : "100%")};
@@ -88,7 +75,7 @@ const ProjectItem = styled.a`
 `;
 
 // Style for image
-const StyledImage = styled(Image)<ImageProps>`
+const StyledImage = styled(Image)<MobileProps>`
   height: ${(props) => (props.mobile ? "170px" : "100%")};
   width: 100%;
   object-fit: cover;
@@ -101,7 +88,7 @@ const StyledImage = styled(Image)<ImageProps>`
 `;
 
 // Style for subtitle
-const SubtitleBox = styled.div<SubtitleProps>`
+const SubtitleBox = styled.div<MobileProps>`
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -132,7 +119,7 @@ const Tier1 = styled.div`
   margin-right: 10px;
 `;
 
-const Tier2 = styled.div<SubtitleProps>`
+const Tier2 = styled.div<MobileProps>`
   display: ${(props) => (props.mobile ? "flex" : "block")};
   justify-content: ${(props) => (props.mobile ? "space-between" : "")};
 `;
@@ -143,7 +130,7 @@ const StyledInter = styled(InterFont)`
   letter-spacing: 0.72px;
 `;
 
-const StyledInterSemiBold = styled(InterSemiBoldFont)<SubtitleProps>`
+const StyledInterSemiBold = styled(InterSemiBoldFont)<MobileProps>`
   text-align: left;
   color: #000;
   font-size: ${(props) => (props.mobile ? "1rem" : "1.25rem")};
@@ -151,7 +138,7 @@ const StyledInterSemiBold = styled(InterSemiBoldFont)<SubtitleProps>`
 `;
 
 // Styled component for star decals
-const StyledDecalImage = styled(Image)<ImageProps>`
+const StyledDecalImage = styled(Image)<MobileProps>`
   position: absolute;
   top: ${(props) => (props.mobile ? "-20px" : "-40px")};
   left: ${(props) => (props.mobile ? "-20px" : "-40px")};

@@ -1,48 +1,43 @@
 import styled from "styled-components";
 import Subjectivity from "@/components/subjectivity";
 
-type StarImageProps = {
+type MobileProps = {
   mobile?: boolean;
 };
 
-const ProjectsContainer = styled.div`
-  position: relative;
+const Container = styled.div`
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: center;
   padding-left: 2rem;
   padding-right: 2rem;  
 `;
 
-const ColourText = styled.span`
-  color: #f0a0c8;
+const ProjectsContainer = styled.div`
+  position: relative;
+  flex-direction: column;
+  max-width: 1240px;
 `;
 
-const StyledSubjectivity = styled(Subjectivity)`
+const StyledSubjectivity = styled(Subjectivity)<MobileProps>`
   color: #f9f9f9;
-  font-size: 48px;
+  font-size: ${(props) => (props.mobile ? "36px" : "48px")};
   letter-spacing: 0.72px;
   -webkit-text-stroke: 1.7px #282828;
   margin-bottom: 4rem;
-  text-align: left;
+  text-align: ${(props) => (props.mobile ? "center" : "left")};
   width: 100%;
-  padding-left: 8rem;
-
-  @media (max-width: 768px) {
-    font-size: 36px;
-    text-align: center;
-    padding-left: 0rem;
-  }
+  margin-left: ${(props) => (props.mobile ? "0rem" : "2.75rem")};
+  color: #f0a0c8;
 `;
 
-const StarImage = styled.div<StarImageProps>`
+const StarImage = styled.div<MobileProps>`
   position: absolute;
   bottom: ${(props) => (props.mobile ? "10px" : "-35px")};
   right: ${(props) => (props.mobile ? "10px" : "200px")};
   z-index: 2;
 `;
 
-export { ProjectsContainer, ColourText, StyledSubjectivity, StarImage };
+export { Container, ProjectsContainer, StyledSubjectivity, StarImage };
