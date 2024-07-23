@@ -1,8 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import { CarouselContainer, StyledImage, StyledSubjectivity, ColourText } from "./index.styles";
+import { CarouselContainer, StyledImage, StyledSubjectivity, ColourText,  NextArrow, PrevArrow} from "./index.styles";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 
 import pic1 from "public/assets/photo-carousel/pic1.svg";
 import pic2 from "public/assets/photo-carousel/pic2.svg";
@@ -15,6 +16,8 @@ const PhotoCarousel: React.FC = () => {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 768,
@@ -26,6 +29,7 @@ const PhotoCarousel: React.FC = () => {
     ],
   };
 
+  
   return (
     <CarouselContainer>
         <StyledSubjectivity>

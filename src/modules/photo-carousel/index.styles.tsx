@@ -2,6 +2,10 @@ import styled from "styled-components";
 import Image from "next/image";
 import Subjectivity from "@/components/subjectivity";
 
+import nextArrowIcon from "public/assets/photo-carousel/nextArrow.png";
+import prevArrowIcon from "public/assets/photo-carousel/prevArrow.png";
+
+
 export const CarouselContainer = styled.div`
   .slick-slide {
     padding: 10px;
@@ -14,7 +18,22 @@ export const CarouselContainer = styled.div`
     align-self: center;
     display: flex;
   }
+
+  .slick-arrow.slick-next,
+  .slick-arrow.slick-prev {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    display: none;
+  }
 `;
+
 
 export const StyledImage = styled(Image)`
   width: 100%;
@@ -43,3 +62,44 @@ export const StyledSubjectivity = styled(Subjectivity)`
 export const ColourText = styled.span`
   color: #F0C800;
 `;
+
+
+export const Arrow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1;
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <Arrow
+      className={className}
+      style={{ ...style, right: 10 }}
+      onClick={onClick}
+    >
+      <Image src={nextArrowIcon} alt="Next" width={40} height={40} />
+    </Arrow>
+  );
+};
+
+export const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <Arrow
+      className={className}
+      style={{ ...style, left: 10 }}
+      onClick={onClick}
+    >
+      <Image src={prevArrowIcon} alt="Previous" width={40} height={40} />
+    </Arrow>
+  );
+};
+
