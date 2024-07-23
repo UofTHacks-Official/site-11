@@ -24,8 +24,8 @@ const Site11 = () => {
       <LandingPage />
       <EmailForm />
       <AboutUs />
-      <Stats />
       <PhotoCarousel />
+      <Stats />
       <Sponsors />
       <FAQ />
       <Footer />

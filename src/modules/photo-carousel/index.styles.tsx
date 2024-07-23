@@ -7,7 +7,12 @@ export const CarouselContainer = styled.div`
     padding: 10px;
     width: 100%;
     box-sizing: border-box; 
-    //margin-top: 5rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    display: flex;
   }
 `;
 
