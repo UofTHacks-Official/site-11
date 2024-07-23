@@ -4,6 +4,7 @@ import EmailForm from "@/modules/email-form";
 import AboutUs from "@/modules/about-us";
 import Sponsors from "@/modules/Sponsorship";
 import FAQ from "@/modules/FAQ";
+import PastProjects from "@/modules/past-projects";
 import Stats from "@/modules/stats";
 import Footer from "@/modules/footer";
 import styled from "styled-components";
@@ -24,6 +25,7 @@ const Site11 = () => {
       <EmailForm />
       <AboutUs />
       <Stats />
+      <PastProjects />
       <Sponsors />
       <FAQ />
       <Footer />
