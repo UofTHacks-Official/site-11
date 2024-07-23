@@ -46,12 +46,11 @@ const Column = styled.div<MobileProps>`
   height: ${(props) => (props.mobile ? "170px" : "")};
   width: 100%;
   box-sizing: border-box;
-  
+
   &:not(:last-child) {
     margin-right: 1.5%;
     margin-bottom: ${(props) => (props.mobile ? "1.5rem" : "")};
   }
-
 `;
 
 // Style for individual project item links
@@ -102,7 +101,8 @@ const SubtitleBox = styled.div<MobileProps>`
   box-shadow: 0px 4px 0px 0px #282828;
 
   color: #000;
-  padding: ${(props) => (props.mobile ? "10px 5px 10px 5px" : "20px 15px 20px 15px")};
+  padding: ${(props) =>
+    props.mobile ? "10px 5px 10px 5px" : "20px 15px 20px 15px"};
   z-index: 1;
 `;
 
@@ -111,7 +111,6 @@ const SubtitleLink = styled.a`
   text-decoration: none;
   color: inherit;
 `;
-
 
 const Tier1 = styled.div`
   display: flex;

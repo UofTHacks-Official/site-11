@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Subjectivity from "@/components/subjectivity";
 
 type MobileProps = {
-  mobile?: boolean;
+  mobile?: boolean | null;
 };
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 2rem;
-  padding-right: 2rem;  
+  padding-right: 2rem;
 `;
 
 const ProjectsContainer = styled.div`

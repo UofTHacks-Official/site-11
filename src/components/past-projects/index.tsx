@@ -75,7 +75,7 @@ const PastProjects: React.FC = () => {
         </Row>
         <Row mobile={isMobile}>
           {projectData.tier2.map((s, index) => (
-            <Column key={index} thirdRow mobile={isMobile}>
+            <Column key={index} mobile={isMobile}>
               <Project
                 href={s.url}
                 src={s.img}

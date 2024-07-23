@@ -2,7 +2,7 @@ import {
   Container,
   ProjectsContainer,
   StyledSubjectivity,
-  StarImage
+  StarImage,
 } from "./index.styles";
 import PastProjects from "@/components/past-projects";
 import Star from "public/assets/past-projects/Star5Point.svg";
