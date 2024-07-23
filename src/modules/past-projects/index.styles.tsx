@@ -26,18 +26,20 @@ const StyledSubjectivity = styled(Subjectivity)<MobileProps>`
   font-size: ${(props) => (props.mobile ? "36px" : "48px")};
   letter-spacing: 0.72px;
   -webkit-text-stroke: 1.7px #282828;
-  margin-bottom: 4rem;
   text-align: ${(props) => (props.mobile ? "center" : "left")};
   width: 100%;
+  margin-bottom: ${(props) => (props.mobile ? "2rem" : "1rem")};
   margin-left: ${(props) => (props.mobile ? "0rem" : "2.75rem")};
   color: #f0a0c8;
 `;
 
 const StarImage = styled.div<MobileProps>`
   position: absolute;
-  bottom: ${(props) => (props.mobile ? "10px" : "-35px")};
-  right: ${(props) => (props.mobile ? "10px" : "200px")};
+  bottom: ${(props) => (props.mobile ? "-90px" : "-40px")};
+  right: ${(props) => (props.mobile ? "30px" : "60px")};
   z-index: 2;
+  width: ${(props) => (props.mobile ? "30px" : "60px")};
+  height: auto;
 `;
 
 export { Container, ProjectsContainer, StyledSubjectivity, StarImage };
