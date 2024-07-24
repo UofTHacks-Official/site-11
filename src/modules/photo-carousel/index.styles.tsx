@@ -38,7 +38,7 @@ export const CarouselContainer = styled.div`
 
 export const StyledImage = styled(Image)`
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   height: 100%;
   aspect-ratio: 1;
   object-fit: contain;
@@ -74,7 +74,7 @@ export const Arrow = styled.div`
   cursor: pointer;
   z-index: 1;
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
   }
 `;
 
