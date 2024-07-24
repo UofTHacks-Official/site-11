@@ -4,6 +4,7 @@ import Subjectivity from "@/components/subjectivity";
 
 import nextArrowIcon from "public/assets/photo-carousel/nextArrow.png";
 import prevArrowIcon from "public/assets/photo-carousel/prevArrow.png";
+import {CSSProperties, MouseEventHandler} from "react";
 
 
 export const CarouselContainer = styled.div`
@@ -77,8 +78,13 @@ export const Arrow = styled.div`
   }
 `;
 
-export const NextArrow = (props) => {
-  const { className, style, onClick } = props;
+interface ArrowProps {
+  className?: string;
+  style?: CSSProperties;
+  onClick?: MouseEventHandler<HTMLDivElement>;
+}
+
+export const NextArrow = ({ className, style, onClick }: ArrowProps) => {
   return (
     <Arrow
       className={className}
@@ -90,8 +96,7 @@ export const NextArrow = (props) => {
   );
 };
 
-export const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
+export const PrevArrow = ({ className, style, onClick }: ArrowProps) => {
   return (
     <Arrow
       className={className}

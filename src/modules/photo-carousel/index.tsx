@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-import pic1 from "public/assets/photo-carousel/pic1.svg";
-import pic2 from "public/assets/photo-carousel/pic2.svg";
-import pic3 from "public/assets/photo-carousel/pic3.svg";
+import pic1 from "public/assets/photo-carousel/pic1.png";
+import pic2 from "public/assets/photo-carousel/pic2.png";
+import pic3 from "public/assets/photo-carousel/pic3.png";
 
-const PhotoCarousel: React.FC = () => {
+const PhotoCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
