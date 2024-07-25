@@ -30,6 +30,7 @@ import VolunteerBox from "./volunteer-box";
 type LandingBannerProps = {
   mainTitle: string;
   subTitle: string;
+  subTitle2: string;
   appsOpen: boolean;
 };
 
@@ -41,6 +42,7 @@ const imageArray4 = [TealLego, PurpleLego, PinkLego, OrangeLego];
 const LandingBanner = ({
   mainTitle,
   subTitle,
+  subTitle2,
   appsOpen,
 }: LandingBannerProps) => {
   const sponsorLink = "mailto:sponsors@uofthacks.com";
@@ -94,8 +96,12 @@ const LandingBanner = ({
       <Quadrant style={borderRadiusStyle(isMobile ? "" : "bottomright")}>
         <ImageCarousel images={imageArray4} interval={interval} />
       </Quadrant>
-      <TitleBox mainTitle={mainTitle} subTitle={subTitle} />
-      <ButtonGroup appsOpen={appsOpen} />
+      <TitleBox
+        mainTitle={mainTitle}
+        subTitle={subTitle}
+        subTitle2={subTitle2}
+      />
+      {/* <ButtonGroup appsOpen={appsOpen} /> */}
       {/* <VolunteerBox /> */}
       <SponsorshipLinkContainer
         mobile={isMobile}
