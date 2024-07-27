@@ -6,7 +6,6 @@ import nextArrowIcon from "public/assets/photo-carousel/nextArrow.png";
 import prevArrowIcon from "public/assets/photo-carousel/prevArrow.png";
 import {CSSProperties, MouseEventHandler} from "react";
 
-
 export const CarouselContainer = styled.div`
   .slick-slide {
     padding: 10px;
@@ -33,8 +32,11 @@ export const CarouselContainer = styled.div`
   .slick-next::before {
     display: none;
   }
+  .slick-slide > div {
+    pointer-events: none;
+  }
+  }
 `;
-
 
 export const StyledImage = styled(Image)`
   width: 100%;
@@ -63,7 +65,6 @@ export const StyledSubjectivity = styled(Subjectivity)`
 export const ColourText = styled.span`
   color: #F0C800;
 `;
-
 
 export const Arrow = styled.div`
   display: flex;

@@ -4,7 +4,6 @@ import { CarouselContainer, StyledImage, StyledSubjectivity, ColourText,  NextAr
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-
 import pic1 from "public/assets/photo-carousel/pic1.png";
 import pic2 from "public/assets/photo-carousel/pic2.png";
 import pic3 from "public/assets/photo-carousel/pic3.png";
@@ -16,20 +15,13 @@ const PhotoCarousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "15%",  
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+
   };
 
-  
   return (
     <CarouselContainer>
         <StyledSubjectivity>
