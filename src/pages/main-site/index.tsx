@@ -6,6 +6,7 @@ import Sponsors from "@/modules/Sponsorship";
 import FAQ from "@/modules/FAQ";
 import PastProjects from "@/modules/past-projects";
 import Stats from "@/modules/stats";
+import PhotoCarousel from "@/modules/photo-carousel";
 import Footer from "@/modules/footer";
 import styled from "styled-components";
 import MLHBanner from "@/components/mlh-banner";
@@ -24,6 +25,7 @@ const Site11 = () => {
       <LandingPage />
       <EmailForm />
       <AboutUs />
+      <PhotoCarousel />
       <Stats />
       <PastProjects />
       <Sponsors />
