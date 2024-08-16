@@ -6,7 +6,7 @@ import {
   SubContainer,
   StyledImage,
 } from "./index.styles";
-import StatHacker from "public/assets/500_hackers.svg";
+import StatHacker from "public/assets/stats/Stat_Hacker_500.png";
 import StatPrizes from "public/assets/stats/Stat_Prizes.png";
 import StatProject from "public/assets/stats/Stat_Project.png";
 import StatSchools from "public/assets/stats/Stat_Schools.png";
